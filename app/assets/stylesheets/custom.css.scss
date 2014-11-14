@@ -10,6 +10,9 @@ $gray-medium-light: #eaeaea;
   -webkit-box-sizing: border-box;
   box-sizing:         border-box;
 }
+
+
+
 /* universal */
 
 html {
@@ -17,7 +20,7 @@ html {
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 30px;
 }
 
 section {
@@ -31,8 +34,60 @@ textarea {
 .center {
   text-align: center;
   h1 {
-    margin-bottom: 10px;
   }
+}
+.landing {
+  position:relative;
+  overflow:hidden;
+}
+.overlay{
+  margin: 0;
+  position:absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,0,0.1);  
+}
+.text-overlay{
+  margin-top: 15%;
+  color: rgba(42, 119, 159, 0.9);
+  font-size:2rem;
+  text-align:center;
+  font-family: Helvetica;   
+}
+.landing video{
+  width:100%;
+  height:auto;
+}
+
+.landing-statement {
+
+}
+// Cursor Effect
+#typed-cursor{
+    opacity: 1;
+    font-weight: 100;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    -ms-animation: blink 0.7s infinite;
+    -o-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
 
 /* typography */
