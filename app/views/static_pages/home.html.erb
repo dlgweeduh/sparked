@@ -2,17 +2,19 @@
 
 <section class="landing">	
 			<video autoplay="true" loop="true" muted="true">
-				<source src="http://sparkedtech.s3.amazonaws.com/Sparked_landing_v04.mov" type="video/webm">		
+				<source src="http://sparkedtech.s3.amazonaws.com/Sparked_landing_low.webm" type="video/webm">		
+				<source src="http://sparkedtech.s3.amazonaws.com/Sparked_landing_low.mp4" type="video/mp4">		
 			</video>	
 		<div class="overlay">	
 			<div class="container-fluid">
 				<div class="row">						
 					<div class="text-overlay col-sm-12">					
-						<h1 class="landing-statement">Empowering the next generation of <br><span class="word-swap"></span></h1>
+						<h1 class="landing-statement">We are <br><span class="word-swap"></span></h1>
 					</div>
 				</div>
 			</div>
 		</div>					
   <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
 </section>
+	<%= link_to 'My Blog', controller: 'blog' %>
 

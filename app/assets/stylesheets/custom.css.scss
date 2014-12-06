@@ -1,5 +1,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "fonts";
+
+
+
+// ProximaNova Font Type
+
+$fontregular: 'ProximaNova-Reg' !important;
+$fontregularit: 'ProximaNova-RegIt';
+$fontthin: 'ProximaNova-Thin';
+$fontthinit: 'ProximaNova-ThinIt';
+$fontbold: 'ProximaNova-Bold';
+$fontsbold: 'ProximaNova-Sbold';
+$fontboldit: 'ProximaNova-BoldIt';
 
 /* mixins, variables, etc. */
 
@@ -54,7 +67,6 @@ textarea {
   color: rgba(42, 119, 159, 0.9);
   font-size:2rem;
   text-align:center;
-  font-family: Helvetica;   
 }
 .landing video{
   width:100%;
@@ -62,7 +74,7 @@ textarea {
 }
 
 .landing-statement {
-
+  font-family: $fontregular;   
 }
 // Cursor Effect
 #typed-cursor{
@@ -124,6 +136,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
+  font-family: $fontsbold;
   color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
