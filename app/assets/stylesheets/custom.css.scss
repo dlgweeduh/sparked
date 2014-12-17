@@ -1,28 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "fonts";
-
-
-// ProximaNova Font Type
-
-$fontregular: 'ProximaNova-Reg';
-$fontregularit: 'ProximaNova-RegIt';
-$fontthin: 'ProximaNova-Thin';
-$fontthinit: 'ProximaNova-ThinIt';
-$fontbold: 'ProximaNova-Bold';
-$fontsbold: 'ProximaNova-Sbold';
-$fontboldit: 'ProximaNova-BoldIt';
-
-/* mixins, variables, etc. */
-
-$gray-medium-light: #eaeaea;
-
-@mixin box_sizing {
-  -moz-box-sizing:    border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
-}
-
+@import "mixins";¡
 
 
 /* universal */
@@ -32,7 +11,7 @@ html {
 }
 
 body {
-  padding-top: 30px;
+  padding-top: 50px;
   font-family: $fontregular;
 }
 
@@ -125,7 +104,8 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
+  color: $green;
+  font-family: $fontthin;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;

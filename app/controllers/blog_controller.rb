@@ -28,11 +28,15 @@ def update
   end
 end
 
+def show
+  @article = Article.find(params[:id])
+end
+
 def destroy
   @blog = Blog.find(params[:id])
   @blog.destroy
  
-  redirect_to articles_path
+  redirect_to @blog
 end
 
 private 

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   root             'static_pages#home'
   get 'about'   => 'static_pages#about'
   get 'programs'=> 'static_pages#programs'
-  get 'blog' => 'blog#new'
+  get 'blog' => 'blog#index'
   get 'faq'     => 'static_pages#faq'
   get 'contact' => 'static_pages#contact'
   get 'signup'  => 'users#new'

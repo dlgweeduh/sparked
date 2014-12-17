@@ -1,0 +1,25 @@
+$fontregular: 'ProximaNova-Reg';
+$fontregularit: 'ProximaNova-RegIt';
+$fontthin: 'ProximaNova-Thin';
+$fontthinit: 'ProximaNova-ThinIt';
+$fontbold: 'ProximaNova-Bold';
+$fontsbold: 'ProximaNova-Sbold';
+$fontboldit: 'ProximaNova-BoldIt';
+
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
+
+
+/*~ Colors */
+
+  $green: rgba(129, 176, 60, 0.9);
+  $blue: rgba(42, 119, 159, 0.9);
+  $clear: rgba(0,0,0,0);
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}

@@ -1,0 +1,16 @@
+@import "mixins";
+
+.blog {
+}
+
+#blog_title {
+	border: 2px solid transparent;
+}
+
+#blog_text {
+	border: 2px solid transparent;	
+input, textarea, select, button {
+		text-decoration: none;
+	}
+}
+
