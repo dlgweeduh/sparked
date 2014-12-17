@@ -1,18 +1,52 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "fonts";
+@import url('//fonts.googleapis.com/css?family=Quicksand:300,400,700');
 
+
+$qs-bold: 'Quicksand';  
+
+@font-face {
+    font-family: 'ProximaNova-Reg';
+    src: url('/assets/ProximaNova-Reg.otf') format('opentype'); /* IE6-IE8, Modern Browsers */ 
+}
+
+// @font-face {
+//     font-family: 'ProximaNova-RegIt';
+//     src: url('ProximaNova-RegIt.otf') format('opentype'); /* IE6-IE8, Modern Browsers */
+// }
+
+// @font-face {
+//     font-family: 'ProximaNova-Thin';
+//     src: url('ProximaNova-Thin.otf') format('opentype'); /* IE6-IE8, Modern Browsers */
+// }
+
+// @font-face {
+//     font-family: 'ProximaNova-ThinIt';
+//     src: url('ProximaNova-ThinIt.otf') format('opentype'); /* IE6-IE8, Modern Browsers */ 
+// }
+// @font-face {
+//     font-family: 'ProximaNova-Bold';
+//     src: url('ProximaNova-Bold.otf') format('opentype'); /* IE6-IE8, Modern Browsers */ 
+// }
+// @font-face {
+//     font-family: 'ProximaNova-Sbold';
+//     src: url('ProximaNova-Sbold.otf') format('opentype'); /* IE6-IE8, Modern Browsers */ 
+// }
+// @font-face {
+//     font-family: 'ProximaNova-BoldIt';
+//     src: url('ProximaNova-BoldIt.otf') format('opentype'); /* IE6-IE8, Modern Browsers */ 
+// }
 
 
 // ProximaNova Font Type
 
-$fontregular: 'ProximaNova-Reg' !important;
-$fontregularit: 'ProximaNova-RegIt';
-$fontthin: 'ProximaNova-Thin';
-$fontthinit: 'ProximaNova-ThinIt';
-$fontbold: 'ProximaNova-Bold';
-$fontsbold: 'ProximaNova-Sbold';
-$fontboldit: 'ProximaNova-BoldIt';
+// $fontregular: 'ProximaNova-Reg';
+// $fontregularit: 'ProximaNova-RegIt';
+// $fontthin: 'ProximaNova-Thin';
+// $fontthinit: 'ProximaNova-ThinIt';
+// $fontbold: 'ProximaNova-Bold';
+// $fontsbold: 'ProximaNova-Sbold';
+// $fontboldit: 'ProximaNova-BoldIt';
 
 /* mixins, variables, etc. */
 
@@ -34,6 +68,7 @@ html {
 
 body {
   padding-top: 30px;
+  font-family: $qs-bold;
 }
 
 section {
@@ -44,37 +79,26 @@ textarea {
   resize: vertical;
 }
 
-.center {
-  text-align: center;
-  h1 {
-  }
-}
 .landing {
   position:relative;
   overflow:hidden;
+
 }
-.overlay{
-  margin: 0;
-  position:absolute;
-  top: 0;
-  left: 0;
-  width:100%;
-  height:100%;
-  background-color: rgba(0,0,0,0.1);  
-}
+
 .text-overlay{
   margin-top: 15%;
-  color: rgba(42, 119, 159, 0.9);
   font-size:2rem;
   text-align:center;
+  color: white;
 }
 .landing video{
   width:100%;
   height:auto;
 }
 
-.landing-statement {
-  font-family: $fontregular;   
+#landing-statement {
+  font-family: $qs-bold; 
+  color: white;  
 }
 // Cursor Effect
 #typed-cursor{
@@ -109,6 +133,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  font-family: $qs-bold;
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
@@ -136,7 +161,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  font-family: $fontsbold;
+  font-family: $qs-bold;
   color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -155,6 +180,8 @@ footer {
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
+  font-family: $qs-bold;
+
   a {
     color: $gray;
     &:hover {
