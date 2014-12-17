@@ -1,52 +1,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import url('//fonts.googleapis.com/css?family=Quicksand:300,400,700');
-
-
-$qs-bold: 'Quicksand';  
-
-@font-face {
-    font-family: 'ProximaNova-Reg';
-    src: url('/assets/ProximaNova-Reg.otf') format('opentype'); /* IE6-IE8, Modern Browsers */ 
-}
-
-// @font-face {
-//     font-family: 'ProximaNova-RegIt';
-//     src: url('ProximaNova-RegIt.otf') format('opentype'); /* IE6-IE8, Modern Browsers */
-// }
-
-// @font-face {
-//     font-family: 'ProximaNova-Thin';
-//     src: url('ProximaNova-Thin.otf') format('opentype'); /* IE6-IE8, Modern Browsers */
-// }
-
-// @font-face {
-//     font-family: 'ProximaNova-ThinIt';
-//     src: url('ProximaNova-ThinIt.otf') format('opentype'); /* IE6-IE8, Modern Browsers */ 
-// }
-// @font-face {
-//     font-family: 'ProximaNova-Bold';
-//     src: url('ProximaNova-Bold.otf') format('opentype'); /* IE6-IE8, Modern Browsers */ 
-// }
-// @font-face {
-//     font-family: 'ProximaNova-Sbold';
-//     src: url('ProximaNova-Sbold.otf') format('opentype'); /* IE6-IE8, Modern Browsers */ 
-// }
-// @font-face {
-//     font-family: 'ProximaNova-BoldIt';
-//     src: url('ProximaNova-BoldIt.otf') format('opentype'); /* IE6-IE8, Modern Browsers */ 
-// }
+@import "fonts";
 
 
 // ProximaNova Font Type
 
-// $fontregular: 'ProximaNova-Reg';
-// $fontregularit: 'ProximaNova-RegIt';
-// $fontthin: 'ProximaNova-Thin';
-// $fontthinit: 'ProximaNova-ThinIt';
-// $fontbold: 'ProximaNova-Bold';
-// $fontsbold: 'ProximaNova-Sbold';
-// $fontboldit: 'ProximaNova-BoldIt';
+$fontregular: 'ProximaNova-Reg';
+$fontregularit: 'ProximaNova-RegIt';
+$fontthin: 'ProximaNova-Thin';
+$fontthinit: 'ProximaNova-ThinIt';
+$fontbold: 'ProximaNova-Bold';
+$fontsbold: 'ProximaNova-Sbold';
+$fontboldit: 'ProximaNova-BoldIt';
 
 /* mixins, variables, etc. */
 
@@ -68,7 +33,7 @@ html {
 
 body {
   padding-top: 30px;
-  font-family: $qs-bold;
+  font-family: $fontregular;
 }
 
 section {
@@ -97,8 +62,7 @@ textarea {
 }
 
 #landing-statement {
-  font-family: $qs-bold; 
-  color: white;  
+  font-family: $fontregularit;
 }
 // Cursor Effect
 #typed-cursor{
@@ -133,11 +97,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-family: $qs-bold;
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  font-family: $fontregular;
 }
 
 h2 {
@@ -161,7 +125,6 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  font-family: $qs-bold;
   color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -173,6 +136,9 @@ p {
   }
 }
 
+.test {
+  font-family: $fontregular;
+}
 /* footer */
 
 footer {
@@ -180,7 +146,6 @@ footer {
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
-  font-family: $qs-bold;
 
   a {
     color: $gray;
