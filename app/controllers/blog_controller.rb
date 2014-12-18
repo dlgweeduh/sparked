@@ -1,10 +1,14 @@
 class BlogController < ApplicationController
 
+def new
+  @blog = Blog.new
+end
+ 
 def create
   @blog = Blog.new(blog_params)
  
   if @blog.save
-  redirect_to @blog
+    redirect_to @blog
   else
     render 'new'
   end
@@ -29,7 +33,7 @@ def update
 end
 
 def show
-  @article = Article.find(params[:id])
+  @blog = Blog.find(params[:id])
 end
 
 def destroy
