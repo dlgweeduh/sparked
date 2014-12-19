@@ -1,13 +1,31 @@
-<div data-magellan-expedition="fixed">
-      <dl class="sub-nav">
-        <dd data-magellan-arrival="whybrainstation">
-          <a href="/home">spark<i></i></a>
-          <a href="/about" data-dropdown="hover1" data-options="is_hover:true">about<i></i></a>
-          <a href="curriculum.html" data-dropdown="hover2" data-options="is_hover:true">curiculum<i></i></a>
-          <a href="/learn" data-dropdown="hover3" data-options="is_hover:true">learn<i></i></a>
-          <a href="/courses">courses<i></i></a>
-        </dd>                  
-          <img src="assets/robots/teslabot.svg"/>
-          <a class="typeform-share link radius button join" href="https://brainstation.typeform.com/to/BsOx5r" data-mode="2" target="_blank"><strong>Join the Movement</strong></button></a>            
-    </dl>  
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "sparked", root_path , id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav pull-right">
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Programs",  programs_path %></li>
+        <li><%= link_to "FAQ",   faq_path %></li>        
+        <% if logged_in? %>
+          <li><%= link_to "Users", users_path %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Account <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Profile", current_user %></li>
+              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to "Log out", logout_path, method: "delete" %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to "Log in", login_path %></li>
+        <% end %>
+      </ul>
+    </nav>
   </div>
+</header>
