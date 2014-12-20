@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   root             'static_pages#home'
   get 'about'   => 'static_pages#about'
   get 'programs'=> 'static_pages#programs'
-  get 'blog' => 'blog#index'
   get 'workshops'     => 'static_pages#workshops'
   get 'hoc' => 'static_pages#hoc'
   get 'contact' => 'static_pages#contact'
@@ -21,9 +20,7 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'  
   resources :users
-  resources :blog do
-    resources :comments
-  end
+
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
   # The priority is based upon order of creation: first created -> highest priority.

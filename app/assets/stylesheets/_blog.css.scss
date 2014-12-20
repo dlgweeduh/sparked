@@ -1,11 +1,18 @@
 @import "settings";
 
 .blog {
+	td {
+		padding: 10px;
+	}
+	table {
+
+	}
 }
 
 #blog_title {
 	border: 2px solid transparent;
 }
+
 
 #blog_text {
 	border: 2px solid transparent;	
