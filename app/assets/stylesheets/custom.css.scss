@@ -1,7 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "fonts";
-@import "mixins";¡
+@import "settings";¡
 
 
 /* universal */
@@ -11,8 +11,7 @@ html {
 }
 
 body {
-  padding-top: 50px;
-  font-family: $fontregular;
+  font-family: $fontregular, sans-serif;
 }
 
 section {
@@ -23,26 +22,26 @@ textarea {
   resize: vertical;
 }
 
-.landing {
-  position:relative;
-  overflow:hidden;
-
-}
+// .landing {
+//   position: relative;
+//   overflow: hidden;
+//   height: 100%;
+//   background-repeat: no-repeat no-repeat;
+//   background-color: $blue;
+//   @include background-size;
+  // @media screen and (max-width: 480px) {
+  //    height:400px;
+  //    background-image: url('fbHoC23.jpg');
+//   }
+// }
 
 .text-overlay{
-  margin-top: 15%;
   font-size:2rem;
   text-align:center;
-  color: white;
-}
-.landing video{
-  width:100%;
-  height:auto;
+  color: $blue;
 }
 
-#landing-statement {
-  font-family: $fontregularit;
-}
+
 // Cursor Effect
 #typed-cursor{
     opacity: 1;
@@ -103,22 +102,110 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
+  height: 55px;
   color: $green;
-  font-family: $fontthin;
+  font-family: $fontregular;
   text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
+  span {
+    color: $blue;
+  }
   &:hover {
     color: white;
     text-decoration: none;
   }
 }
 
-.test {
-  font-family: $fontregular;
+
+/* Landing */
+.navbar-inverse {
+  background-color: $clear;
+  border: none;
+  .navbar-nav {
+    li {
+      a {
+        font-size: 25px;
+        color: $lightblue;   
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
 }
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: $clear;
+  color: #fff;
+}
+.offerings {
+      color: $lightblue;
+  ul {
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+.landing {
+      @media screen and (max-width: 480px) {
+         height:400px;
+      }
+   .overlay {
+     position: absolute;
+     top:0;
+     left:0;
+     height: 100%;
+     width: 100%;
+   }
+   .hero-title {
+      font-family: $fontregular;
+      color: $lightgreen;
+      font-size: 80px;
+      text-shadow: 3px 3px 6px #666;
+      padding: 15% 15% 0 15%;
+      text-align: left;
+      margin-left: 25px;
+      .word-swap{
+        color: $lightblue;
+      }
+      @media screen and (max-width: 480px) {
+         font-size:40px;
+         padding:0 2%;
+         padding:100px 0px 25px 0px;
+      }
+   }
+   span{
+   }
+    .hero-description {
+      font-family: $fontregular;
+      color: $lightgreen;
+      font-size: 40px;
+      text-shadow: 3px 3px 6px #666;
+      padding: 5% 15% 0 15%;
+      text-align: left;
+      margin-left: 25px;
+    }
+  video{
+    width:100%;
+    height:auto;
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
+  }  
+  @media screen and (max-width: 479px) {
+    background-image: image-url('fbHoC23.jpg');
+    @include background-size;
+  }
+  .scrolldown {
+    position: relative;
+    margin-top: 10%;
+    left: 50%;
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+}
+
+
 /* footer */
 
 footer {

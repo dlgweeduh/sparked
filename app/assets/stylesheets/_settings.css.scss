@@ -16,10 +16,20 @@ $gray-medium-light: #eaeaea;
 
   $green: rgba(129, 176, 60, 0.9);
   $blue: rgba(42, 119, 159, 0.9);
+  $lightblue: rgba(87, 183, 223, 0.9);
+  $green: rgba(213, 224, 83, 0.9);
+  $lightgreen: rgba(213, 224, 83, 0.9);
   $clear: rgba(0,0,0,0);
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
   box-sizing:         border-box;
+}
+
+@mixin background-size {
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

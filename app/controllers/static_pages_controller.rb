@@ -8,7 +8,10 @@ class StaticPagesController < ApplicationController
   def programs
   end
 
-  def faq
+  def hoc
+  end
+
+  def workshops
   end
 
   def contact
