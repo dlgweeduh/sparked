@@ -8,10 +8,12 @@
 
 html {
   overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 body {
   font-family: $fontregular, sans-serif;
+
 }
 
 section {
@@ -96,7 +98,36 @@ p {
   line-height: 1.7em;
 }
 
+/* buttons */
 
+.button{
+  background-color: $clear;
+  border: 2px solid $blue;
+  border-radius: none;
+  padding: 10px;
+  color: $blue;
+  font-family: $fontsbold;
+  font-size: 2rem;
+  letter-spacing: $minspacing;
+  &:link {
+    text-decoration: none;
+  }
+  @include transition((all, 200ms));
+  &:hover {
+    background-color: $lightblue;
+    border: 2px solid $lightblue;
+    color: $white;
+  }
+}
+
+.blog-button {
+  font-family: $fontthinit;
+  display: inline-block;
+}
+
+.form-button {
+  background-color: $green;
+}
 /* header */
 
 #logo {
@@ -206,6 +237,28 @@ p {
 }
 
 
+/* blog */
+
+.blog {
+  padding: 100px 0 100px 0;
+  overflow-x: hidden;
+  a {
+  }
+  td {
+    padding: 10px;
+  }
+  .titles {
+    font-family: $fontsbold;
+  }
+  .blog-text {
+    font-family: $fontregular;
+  }
+}
+
+
+
+
+
 /* footer */
 
 footer {
@@ -233,10 +286,14 @@ footer {
   }
 }
 
+
+
+
+
 /* forms */
 
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
+  border: 1px solid $clear;
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
@@ -246,9 +303,9 @@ input {
   height: auto !important;
 }
 #error_explanation {
-  color: red;
+  color: black;
   ul {
-    color: red;
+    color: black;
     margin: 0 0 30px 0;
   }
 }

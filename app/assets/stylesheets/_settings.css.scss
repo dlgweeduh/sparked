@@ -6,6 +6,11 @@ $fontbold: 'ProximaNova-Bold';
 $fontsbold: 'ProximaNova-Sbold';
 $fontboldit: 'ProximaNova-BoldIt';
 
+
+/* text-changes */
+
+$minspacing: .1rem;
+
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
@@ -20,6 +25,9 @@ $gray-medium-light: #eaeaea;
   $green: rgba(213, 224, 83, 0.9);
   $lightgreen: rgba(213, 224, 83, 0.9);
   $clear: rgba(0,0,0,0);
+  $white: #fff;
+
+  $fast: color 0.1s ease;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -32,4 +40,12 @@ $gray-medium-light: #eaeaea;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+@mixin transition($fast) {
+  -webkit-transition: $fast;
+  -moz-transition: $fast;
+  -ms-transition: $fast;
+  -o-transition: $fast;
+  transition: $fast;
 }
