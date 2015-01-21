@@ -1,7 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "fonts";
-@import "settings";¡
+@import "settings";
 
 
 /* universal */
@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: $fontregular, sans-serif;
-  padding-top: 70px;
+  // padding-top: 70px;
 }
 
 section {
@@ -153,14 +153,19 @@ p {
         @include transition((all, 200ms));        
         font-size: 15px;
         color: $blue;   
-
         &:hover, &:focus {
           color: $lightblue;
+        }
+        &:focus {
+        background-color: $white;
+        color: $lightblue !important;
         }
       }
     }
   }
 }
+
+
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
   background-color: $clear;
   color: #fff;
