@@ -7,13 +7,12 @@
 /* universal */
 
 html {
-  overflow-y: scroll;
     overflow-x: hidden;
 }
 
 body {
   font-family: $fontregular, sans-serif;
-
+  padding-top: 70px;
 }
 
 section {
@@ -78,19 +77,15 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-family: $fontregular;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  font-family: $fontbold;
 }
 
 h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: $gray-light;
+  font-size: 2em;
+  letter-spacing: 0.5px;
+  font-weight: 200;
 }
 
 p {
@@ -133,7 +128,8 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  height: 55px;
+  margin-top: -12px;
+  height: 45px;
   color: $green;
   font-family: $fontregular;
   text-transform: uppercase;
@@ -149,15 +145,17 @@ p {
 
 /* Landing */
 .navbar-inverse {
-  background-color: $clear;
-  border: none;
+  background-color: $white;
+  border: 2px solid $gray-medium-light;
   .navbar-nav {
     li {
       a {
-        font-size: 25px;
-        color: $lightblue;   
-        &:hover {
-          color: $blue;
+        @include transition((all, 200ms));        
+        font-size: 15px;
+        color: $blue;   
+
+        &:hover, &:focus {
+          color: $lightblue;
         }
       }
     }
@@ -191,7 +189,7 @@ p {
       font-family: $fontregular;
       color: $lightgreen;
       font-size: 80px;
-      text-shadow: 3px 3px 6px #666;
+      text-shadow: 1.5px 1.5px 3px #666;
       padding: 15% 15% 0 15%;
       text-align: left;
       margin-left: 25px;
@@ -210,7 +208,7 @@ p {
       font-family: $fontregular;
       color: $lightgreen;
       font-size: 40px;
-      text-shadow: 3px 3px 6px #666;
+      text-shadow: 1.5px 1.5px 3px #666;
       padding: 5% 15% 0 15%;
       text-align: left;
       margin-left: 25px;
@@ -392,3 +390,5 @@ aside {
   margin-top: 45px;
   @include box_sizing;
 }
+
+

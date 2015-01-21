@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'workshops'     => 'static_pages#workshops'
   get 'hoc' => 'static_pages#hoc'
   get 'contact' => 'static_pages#contact'
+  get 'faq' => 'static_pages#faq'
  
   get 'signup'  => 'users#new'
   get    'login'   => 'sessions#new'
