@@ -12,12 +12,15 @@ Rails.application.routes.draw do
 
   root             'static_pages#home'
   get 'about'   => 'static_pages#about'
-  get 'programs'=> 'static_pages#programs'
+  get 'junior'=> 'static_pages#junior'
+  get 'intermediate'=> 'static_pages#intermediate'
+  get 'senior'=> 'static_pages#senior'
   get 'workshops'     => 'static_pages#workshops'
   get 'hoc' => 'static_pages#hoc'
   get 'contact' => 'static_pages#contact'
   get 'faq' => 'static_pages#faq'
- 
+  get 'apply' => 'static_pages#apply'
+
   get 'signup'  => 'users#new'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'

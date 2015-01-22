@@ -1,8 +1,6 @@
 @import "bourbon"; // http://bourbon.io/
 @import "custom";
 @import "settings";
-@import "mixins"; // custom mixins
-@import "layout"; 
 
 /* -------------------------------- 
 
@@ -17,6 +15,7 @@ Primary style
 *::after, *::before {
 	content: '';
 }
+
 
 body {
 	&::after {
@@ -34,7 +33,7 @@ body {
 		transition: opacity .3s 0s, visibility 0s .3s;
 	}
 
-	&.cd-overlay::after {
+	&.sp-overlay::after {
 		visibility: visible;
 		opacity: 1;
 		-webkit-transition: opacity .3s 0s, visibility 0s 0s;
@@ -58,18 +57,26 @@ Main components
 
 header {
 	position: relative;
-	min-height: 600px;
+	min-height: 700px;
+	max-height: 1200px;
 	line-height: 180px;
 	text-align: center;
-	background-color: $lightblue;
 	display: block;
-
+	.header-blue {
+		background-color: $lightblue;
+	}
+	.header-green {
+		background-color: $lightgreen;	
+	}
+	.header-grey {
+		background-color: $grey;
+	}
 	h1 {
-		padding-top: 150px;
+		padding-top: 100px;
 		color: $white;
+		font-family: $fontbold;
 		@include font-smoothing;
-		@include font-size(20px);
-
+		@include font-size(150px);
 	}
 	h2 {
 		color: $white;
@@ -77,32 +84,77 @@ header {
 	@include MQ(L) {
 		height: 240px;
 		line-height: 240px;
-
-		h1 {
-			@include font-size(150px);
-			font-weight: 700;
-		}
 	}	
 }
 
-.cd-faq {
-	width: 90%;
-	max-width: $L; // breakpoints inside partials > _layout.scss
-	margin: 2em auto;
-	box-shadow: 0 1px 5px rgba($lightblue, .1);
-	@include clearfix;
 
-	@include MQ(M) {
-		position: relative;
-		margin: 4em auto;
-		box-shadow: none;
-	}
-	ul {
-		margin-top: 150px; 
+	
+.sp-faq {
+	.courses-container {
+		width: 90%;
+		max-width: $L; // breakpoints inside partials > _layout.scss
+		margin: 2em auto;
+		@include clearfix;
+
+		@include MQ(M) {
+			position: relative;
+			margin: 4em auto;
+			box-shadow: none;
+		}
+		ul {
+			margin-top: 150px; 
+		}
 	}
 }
 
-.cd-faq-categories {
+.instructors {
+	background-color: $green-matte;
+}
+.overview { 
+	background-image: image-url('blueprint-small.gif');
+	padding: 2rem;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: repeat;
+	background-repeat-y: repeat;
+	background-attachment: fixed;
+	background-origin: initial;
+	background-clip: initial;
+	min-height: 600px;
+	.second-container {
+		max-width: $L; // breakpoints inside partials > _layout.scss
+		margin: 2em auto;
+		@include clearfix;
+
+		@include MQ(M) {
+			position: relative;
+			margin: 4em auto;
+			box-shadow: none;
+		}
+		ul {
+			margin-top: 150px; 
+		}
+	}
+	.core-skills {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+	}
+	.core-skill {
+		img {
+			display: inline-block;
+			width: 75px;
+		}
+		p {
+			display: inline-block;
+		}
+	}
+}
+
+.sp-categories {
+	ul {
+		border-radius: 3px 3px 0 0;
+	}
 	a {
 		position: relative;
 		display: block;
@@ -141,15 +193,32 @@ header {
 	}
 	li:last-child a {
 		border-bottom: none;
+		// background-color: darken($blue, 10%);
+		height: 70px;
+		// line-height: 100px;
+		text-align: center;
+		&:focus, &:hover {
+			background-color: $blue;
+		}
+	}
+	
+	li:last-child h4 {
+		border-radius: 3px;
+		line-height: 50px;
+		font-weight: 600;
+		background-color: $lightgreen;
+  		@include transition((all, 200ms));
+		&:hover {
+			background-color: $green-matte;
+		}
 	}
 
 	@include MQ(M) {
 		width: 20%;
 		float: left;
-		box-shadow: 0 1px 2px rgba(#000, .08);
+		 // box-shadow: 0 1px 2px rgba(#000, .08);
 
 		a {
-			@include font-size(13px);
 			font-weight: 600;
 			padding-left: 24px;
 			padding: 0 24px;
@@ -191,12 +260,18 @@ header {
 		}
 
 		.selected {
-			background: darken($green, 5%) !important;
-
-			&::before {
-				opacity: 1;
-			}
+			background: darken($lightgrey, 5%) !important;
+			color: $blue;
+			border-bottom: none;	
+			// &::before {
+			// 	opacity: 1;
+			// }
 		}
+			// &::after {
+			// 	background-image: image-url('spark.png');
+			// 	position: absolute;
+			// 	content: "";
+			// }
 
 		&.is-fixed {
 			/* top and left value assigned in jQuery */
@@ -209,7 +284,9 @@ header {
 	}
 }
 
-.cd-faq-items {
+
+
+.sp-items {
 	position: fixed;
 	height: 100%;
 	width: 90%;
@@ -226,6 +303,7 @@ header {
 	-webkit-transition: -webkit-transform .3s;
 	-moz-transition: -moz-transform .3s;
 	transition: transform .3s;
+
 	a {
 		text-decoration: none;
 	}
@@ -262,7 +340,7 @@ header {
 	}
 }
 
-.cd-close-panel {
+.sp-close-panel {
 	position: fixed;
 	top: 5px;
 	right: -100%;
@@ -307,15 +385,14 @@ header {
 	}
 }
 
-.cd-faq-group {
+.sp-group {
 	/* hide group not selected */
 	display: none;
-
 	&.selected {
 		display: block;
 	}
 
-	.cd-faq-title {
+	.sp-title {
 		background: transparent;
 		box-shadow: none;
 		margin: 1em 0;
@@ -326,9 +403,9 @@ header {
 
 		h2 {
 			text-transform: uppercase;
-			@include font-size(12px);
+			@include font-size(16px);
 			font-weight: 700;
-			color: darken($color-3, 20%);
+			color: darken($lightgrey, 20%);
 		}
 	}
 
@@ -352,17 +429,19 @@ header {
 			}
 		}
 
-		.cd-faq-title {
+		.sp-title {
 			margin: 2em 0 1em;
 		}
 
-		&:first-child .cd-faq-title {
+		&:first-child .sp-title {
 			margin-top: 0;
 		}
 	}
 }
 
-.cd-faq-trigger {
+
+
+.sp-trigger {
 	position: relative;
 	display: block;
 	margin: 1.6em 0 .4em;
@@ -410,10 +489,9 @@ header {
 	}
 }
 
-.cd-faq-content {
+.sp-content {
 
 	p {
-		@include font-size(14px);
 		line-height: 1.4;
 		color: $color-4;
 	}

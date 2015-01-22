@@ -9,7 +9,6 @@ $fontboldit: 'ProximaNova-BoldIt';
 
 $color-1: #4e5359; // blue dark
 $color-2: #a9c056; // green
-$grey-light: #f3f3f5; // grey light
 $color-4: #6c7d8e; // blue light
 $color-5: #ffffff; // white
 
@@ -26,14 +25,37 @@ $gray-medium-light: #eaeaea;
 /*~ Colors */
 
   $green: rgba(129, 176, 60, 0.9);
+  $green-matte: rgb(129, 176, 60); /*#81B03C*/
   $blue: rgba(42, 119, 159, 0.9);
   $lightblue: rgba(87, 183, 223, 0.9);
-  $green: rgba(213, 224, 83, 0.9);
   $lightgreen: rgba(213, 224, 83, 0.9);
+  $grey: rgba(169, 188, 184, 0.9);
+  $lightgrey: rgb(243,243,245); // grey light
   $clear: rgba(0,0,0,0);
   $white: #fff;
 
   $fast: color 0.1s ease;
+
+// rem fallback - credits: http://zerosixthree.se/
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1.5rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+// antialiasing mode font rendering
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -48,6 +70,31 @@ $gray-medium-light: #eaeaea;
   background-size: cover;
 }
 
+@mixin background-color {
+  background: #ececec;
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgb(236, 236, 236);
+}
+@mixin background-repeat {
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: repeat;
+  background-repeat-y: repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+}
+
 @mixin transition($fast) {
   -webkit-transition: $fast;
   -moz-transition: $fast;
@@ -55,3 +102,24 @@ $gray-medium-light: #eaeaea;
   -o-transition: $fast;
   transition: $fast;
 }
+
+// breakpoints
+   
+$S:     480px;   
+$M:     768px;     
+$L:     1024px;     
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; } 
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; } 
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; } 
+  }
+}
+

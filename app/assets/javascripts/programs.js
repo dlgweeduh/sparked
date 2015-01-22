@@ -1,14 +1,15 @@
 jQuery(document).ready(function($){
 	//update these values if you change these breakpoints in the style.css file (or _layout.scss if you use SASS)
+	
 	var MqM= 768,
 		MqL = 1024;
 
-	var faqsSections = $('.cd-faq-group'),
-		faqTrigger = $('.cd-faq-trigger'),
-		faqsContainer = $('.cd-faq-items'),
-		faqsCategoriesContainer = $('.cd-faq-categories'),
+	var faqsSections = $('.sp-group'),
+		faqTrigger = $('.sp-trigger'),
+		faqsContainer = $('.sp-items'),
+		faqsCategoriesContainer = $('.sp-categories'),
 		faqsCategories = faqsCategoriesContainer.find('a'),
-		closeFaqsContainer = $('.cd-close-panel');
+		closeFaqsContainer = $('.sp-close-panel');
 	
 	//select a faq section 
 	faqsCategories.on('click', function(event){
@@ -18,7 +19,7 @@ jQuery(document).ready(function($){
 		if( $(window).width() < MqM) {
 			faqsContainer.scrollTop(0).addClass('slide-in').children('ul').removeClass('selected').end().children(selectedHref).addClass('selected');
 			closeFaqsContainer.addClass('move-left');
-			$('body').addClass('cd-overlay');
+			$('body').addClass('sp-overlay');
 		} else {
 	        $('body,html').animate({ 'scrollTop': target.offset().top - 19}, 200); 
 		}
@@ -26,7 +27,7 @@ jQuery(document).ready(function($){
 
 	//close faq lateral panel - mobile only
 	$('body').bind('click touchstart', function(event){
-		if( $(event.target).is('body.cd-overlay') || $(event.target).is('.cd-close-panel')) { 
+		if( $(event.target).is('body.sp-overlay') || $(event.target).is('.sp-close-panel')) { 
 			closePanel(event);
 		}
 	});
@@ -37,7 +38,7 @@ jQuery(document).ready(function($){
 	//show faq content clicking on faqTrigger
 	faqTrigger.on('click', function(event){
 		event.preventDefault();
-		$(this).next('.cd-faq-content').slideToggle(200).end().parent('li').toggleClass('content-visible');
+		$(this).next('.sp-content').slideToggle(200).end().parent('li').toggleClass('content-visible');
 	});
 
 	//update category sidebar while scrolling
@@ -68,7 +69,7 @@ jQuery(document).ready(function($){
 		e.preventDefault();
 		faqsContainer.removeClass('slide-in').find('li').show();
 		closeFaqsContainer.removeClass('move-left');
-		$('body').removeClass('cd-overlay');
+		$('body').removeClass('sp-overlay');
 	}
 
 	function updateCategory(){
@@ -77,8 +78,8 @@ jQuery(document).ready(function($){
 	}
 
 	function updateCategoryPosition() {
-		var top = $('.cd-faq').offset().top,
-			height = jQuery('.cd-faq').height() - jQuery('.cd-faq-categories').height(),
+		var top = $('.sp-faq').offset().top,
+			height = jQuery('.sp-faq').height() - jQuery('.sp-categories').height(),
 			margin = 20;
 		if( top - margin <= $(window).scrollTop() && top - margin + height > $(window).scrollTop() ) {
 			var leftValue = faqsCategoriesContainer.offset().left,
@@ -112,8 +113,8 @@ jQuery(document).ready(function($){
 	function updateSelectedCategory() {
 		faqsSections.each(function(){
 			var actual = $(this),
-				margin = parseInt($('.cd-faq-title').eq(1).css('marginTop').replace('px', '')),
-				activeCategory = $('.cd-faq-categories a[href="#'+actual.attr('id')+'"]'),
+				margin = parseInt($('.sp-title').eq(1).css('marginTop').replace('px', '')),
+				activeCategory = $('.sp-categories a[href="#'+actual.attr('id')+'"]'),
 				topSection = (activeCategory.parent('li').is(':first-child')) ? 0 : Math.round(actual.offset().top);
 			
 			if ( ( topSection - 20 <= $(window).scrollTop() ) && ( Math.round(actual.offset().top) + actual.height() + margin - 20 > $(window).scrollTop() ) ) {

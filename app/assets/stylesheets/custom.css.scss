@@ -87,7 +87,9 @@ h2 {
   letter-spacing: 0.5px;
   font-weight: 200;
 }
-
+h3 {
+  font-family: $fontsbold;
+}
 p {
   font-size: 1.1em;
   line-height: 1.7em;
@@ -96,23 +98,44 @@ p {
 /* buttons */
 
 .button{
-  background-color: $clear;
-  border: 2px solid $blue;
   border-radius: none;
-  padding: 10px;
+  padding: 1rem 2rem 1rem;
   color: $blue;
-  font-family: $fontsbold;
+  font-family: $fontbold;
   font-size: 2rem;
-  letter-spacing: $minspacing;
+  border-radius: 3px;
   &:link {
     text-decoration: none;
   }
-  @include transition((all, 200ms));
-  &:hover {
-    background-color: $lightblue;
-    border: 2px solid $lightblue;
-    color: $white;
+  &.blue {
+    background-color: $clear;
+    border: 10px solid $lightblue;
+    &:hover {
+      background-color: $blue;
+      border: 10px solid $blue;
+      color: $white;
+    }
   }
+  &.green {
+    background-color: $clear;
+    border: 10px solid $lightgreen;
+    color: $green;
+    &:hover {
+      background-color: $green;
+      border: 10px solid $green;
+    }
+  }
+  &.grey {
+    background-color: $clear;
+    border: 10px solid $lightgrey;
+    color: $lightgrey;
+    &:hover {
+      background-color: $grey;
+      border: 10px solid $grey;
+      color: $blue;
+    }
+  }
+  @include transition((all, 200ms));
 }
 
 .blog-button {
@@ -166,10 +189,22 @@ p {
 }
 
 
+/* Mobile Toggle Icon Color */
+
+.navbar-inverse .navbar-toggle .icon-bar {
+   background-color: $blue;
+   border-color: $blue;
+} 
+
+
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
   background-color: $clear;
-  color: #fff;
 }
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+  color: $blue !important;
+}
+
+
 .offerings {
       color: $lightblue;
   ul {
