@@ -42,7 +42,6 @@ textarea {
   color: $blue;
 }
 
-
 // Cursor Effect
 #typed-cursor{
     opacity: 1;
@@ -229,7 +228,7 @@ p {
       font-family: $fontregular;
       color: $lightgreen;
       font-size: 80px;
-      text-shadow: 1.5px 1.5px 3px #666;
+      @include text-shadow; 
       padding: 15% 15% 0 15%;
       text-align: left;
       margin-left: 25px;

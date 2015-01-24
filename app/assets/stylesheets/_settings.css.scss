@@ -30,10 +30,12 @@ $gray-medium-light: #eaeaea;
   $lightblue: rgba(87, 183, 223, 0.9);
   $lightgreen: rgba(213, 224, 83, 0.9);
   $grey: rgba(169, 188, 184, 0.9);
-  $lightgrey: rgb(243,243,245); // grey light
+  $lightgrey: rgba(243,243,245, 0.9); // grey light
+  $mediumgrey: #808080;
   $clear: rgba(0,0,0,0);
   $white: #fff;
-
+  $black: #000;
+  $offblack: #333;
   $fast: color 0.1s ease;
 
 // rem fallback - credits: http://zerosixthree.se/
@@ -101,6 +103,10 @@ $gray-medium-light: #eaeaea;
   -ms-transition: $fast;
   -o-transition: $fast;
   transition: $fast;
+}
+
+@mixin text-shadow {
+  text-shadow: 1.5px 1.5px 3px #666;
 }
 
 // breakpoints
