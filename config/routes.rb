@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact'
   get 'faq' => 'static_pages#faq'
   get 'apply' => 'static_pages#apply'
+  get 'demopage' => 'static_pages#demopage'
 
   get 'signup'  => 'users#new'
   get    'login'   => 'sessions#new'

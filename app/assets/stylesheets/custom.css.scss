@@ -22,12 +22,18 @@ body {
 }
 
 section {
+    position: relative;
+  text-align: center;
 }
 
 textarea {
   resize: vertical;
 }
 
+.copy {
+  text-align: justify;
+  padding: 2rem;
+}
 // .landing {
 //   position: relative;
 //   overflow: hidden;
@@ -123,8 +129,228 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
+ /* Gradient color1 - color2 - color1 */
+ 
+hr.style-one {   
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}    
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background: $black;
+    background-image: -webkit-linear-gradient(left, #ccc, $black, #ccc); 
+    background-image:    -moz-linear-gradient(left, #ccc, $black, #ccc); 
+    background-image:     -ms-linear-gradient(left, #ccc, $black, #ccc); 
+    background-image:      -o-linear-gradient(left, #ccc, $black, #ccc); 
+} 
 
 /* buttons */
+
+/* General button style (reset) */
+.bttn {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 25px 80px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+    &.link {
+      text-decoration: none;
+      cursor: pointer;
+      // ~fix
+    }
+}
+
+.bttn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* Button 2 */
+.bttn-2 {
+  background: $lightgreen;
+  color: #fff;
+  box-shadow: 0 6px $green;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+
+/* Button 2a */
+.bttn-2a {
+  border-radius: 0 0 5px 5px;
+}
+
+.bttn-2a:hover {
+  box-shadow: 0 4px $green;
+  top: 2px;
+}
+
+.bttn-2a:active {
+  box-shadow: 0 0 $green;
+  top: 6px;
+}
+
+/* Button 2b */
+.bttn-2b {
+  border-radius: 0 0 5px 5px;
+}
+
+.bttn-2b:hover {
+  box-shadow: 0 8px $green;
+  top: -2px;
+}
+
+.bttn-2b:active {
+  box-shadow: 0 0 $green;
+  top: 6px;
+}
+
+/* Button 2c */
+.bttn-2c {
+  border-radius: 5px;
+}
+
+.bttn-2c:hover {
+  box-shadow: 0 4px $green;
+  top: 2px;
+}
+
+.bttn-2c:active {
+  box-shadow: 0 0 $green;
+  top: 6px;
+}
+
+/* Button 2d */
+.bttn-2d {
+  border-radius: 5px;
+}
+
+.bttn-2d:hover {
+  box-shadow: 0 8px $green;
+  top: -2px;
+}
+
+.bttn-2d:active {
+  box-shadow: 0 0 $green;
+  top: 6px;
+}
+
+/* Button 2e */
+.bttn-2e {
+  border-radius: 5px;
+  box-shadow: -6px 0 $green;
+}
+
+.bttn-2e:hover {
+  box-shadow: -4px 0 $green;
+  left: -2px;
+}
+
+.bttn-2e:active {
+  box-shadow: 0 0 $green;
+  left: -6px;
+}
+
+/* Button 2f */
+.bttn-2f {
+  border-radius: 5px;
+  box-shadow: 6px 0 $green;
+}
+
+.bttn-2f:hover {
+  box-shadow: 4px 0 $green;
+  left: 2px;
+}
+
+.bttn-2f:active {
+  box-shadow: 0 0 $green;
+  left: 6px;
+}
+
+/* Button 2g */
+.bttn-2g {
+  border-radius: 40px;
+}
+
+.bttn-2g:hover {
+  box-shadow: 0 4px $green;
+  top: 2px;
+}
+
+.bttn-2g:active {
+  box-shadow: 0 0 $green;
+  top: 6px;
+}
+
+/* Button 2h */
+.bttn-2h {
+  border-radius: 20px;
+}
+
+.bttn-2h:hover {
+  box-shadow: 0 4px $green;
+  top: 2px;
+}
+
+.bttn-2h:active {
+  box-shadow: 0 0 $green;
+  top: 6px;
+}
+
+/* Button 2i */
+.bttn-2i {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  padding: 0;
+}
+
+.bttn-2i:hover {
+  box-shadow: 0 4px $green;
+  top: 2px;
+}
+
+.bttn-2i:active {
+  box-shadow: 0 0 $green;
+  top: 6px;
+}
+
+/* Button 2j */
+.bttn-2j {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  padding: 0;
+}
+
+.bttn-2j:hover {
+  box-shadow: 0 8px $green;
+  top: -2px;
+}
+
+.bttn-2j:active {
+  box-shadow: 0 0 $green;
+  top: 6px;
+}
+
 
 .button{
   border-radius: none;
@@ -224,15 +450,102 @@ header {
     line-height: 240px;
   } 
 }
+
+// ~!~ Section Settings
+
+.section-header {
+  padding: 3rem 0;
+  h1 {
+    margin: 5rem auto;
+    text-align: center;
+  }
+  h4 {
+    text-align: center;
+    line-height: 4rem;
+    font-size: 2rem;
+  }
+  h5 {
+      text-align: left;
+      line-height: 4rem;
+      font-size: 2rem;
+    }  
+  p {
+      text-align: left;
+      font-size: 2rem;
+    }    
+    hr {
+      margin: 0 3rem 0 3rem; 
+    }  
+    h3 {
+      text-align: center;
+    }
+}
+.skills-head {
+  min-height: 300px;
+  margin: 20% 0 0 0;
+}
+.skills-description {
+  padding: 3rem;
+}
+// ~!~ Backgrounds
+
+.green-bg {
+  background-color: $green;
+  &.underline {
+    border-bottom: 5px solid $blue;
+  }
+}
+.black-bg{
+  background-color: $black;
+  color: $lightblue;
+  &.underline {
+    border-bottom: 5px solid $blue;
+  }
+}
+.blue-bg{
+  background-color: $blue;
+  color: $white;
+  &.underline {
+    border-bottom: 5px solid $blue;
+  }
+}
+
 .lightgrey-bg {
   background-color: $lightgrey2;
 }
-
-.skyline {
-  background: image-url('skyline.png') 0 0 repeat-x;
-  padding: 3rem 0 3rem 0;
+.green-transparent {
+  background-color: $green-transparent;
 }
+.blue-transparent {
+  background-color: $blue-transparent;
+}
+.grey-transparent {
+  background-color: $grey-transparent;
+}
+.yellow-transparent {
+  background-color: $yellow-transparent;
+}
+.skyline {
+  background: image-url('skyline-full.png') 0 0 repeat-x $green;
+  padding: 20rem 0 3rem 0;
+}
+.water-bg {
+  background-image: image-url('concrete-texture.jpg');
+  margin-top: -100px;
+}
+/* Stamp */
 
+#stamp path {
+  fill: $green;
+  stroke: $green; /* avoid gap in FF */
+}
+#clouds path {
+  fill: $lightgrey;
+  stroke: $lightgrey;
+}
+.container {
+  overflow: hidden;
+}
 .header-blue {
   background-color: $lightblue;
   background-image: image-url('bc-lightblue.jpg');
@@ -297,13 +610,12 @@ header {
   background-size: initial;
   background-repeat-x: repeat;
   background-repeat-y: repeat;
-  background-attachment: fixed;
   background-origin: initial;
   background-clip: initial;    
 }
-.curriculum {
-  background-image: image-url('hoc-student.jpg');
-  min-height: 600px;
+.about-header {
+  background-image: image-url('hoc-rocc.jpg');
+  min-height: 700px;
   background-position-y: 60%;
   background-repeat: no-repeat;
  // background-attachment:fixed;
@@ -311,6 +623,37 @@ header {
  -moz-background-size: cover;
  -o-background-size: cover;
  background-size:cover;    
+}
+.quote {
+  padding: 2% 10%;
+  text-align: justify;
+  margin: 0;
+  line-height: 4rem;
+  h4 {
+    border-left: 1px solid $blue;
+    border-right: 1px solid $blue;    
+    font-size: 2.5rem;
+  }
+}
+
+.combo {
+  background: image-url('bg-amp.png') center 150px no-repeat;
+  text-align: justify;
+  padding: 3rem 0;
+}
+.combo h1 {
+  text-align: center;
+}
+.combo h3 {
+  text-align: center;
+}
+.combo p {
+  margin: 1rem 0 -0.2rem 3rem;
+}
+/*~~Headshots*/
+.headshots {
+  padding: 0 15%;
+  border-radius: 50%;
 }
 
 
@@ -367,7 +710,22 @@ header {
 .home {
   min-height: 400px;
   padding: 5rem;
+  &.brampton {
+    margin-top: -6px;
+  }
+}
+.skills {
+  padding: 4rem 0; 
+}
+
+
+.mississauga {
+  padding:100px 0;
 } 
+.map {
+  min-height: 400px;
+  padding: 5rem 0 0 0;
+}
 
 /* Mobile Toggle Icon Color */
 
@@ -387,6 +745,9 @@ header {
   background-color: $lightgrey; 
 }
 
+.navbar-inverse .navbar-toggle {
+
+}
 
 .offerings {
       color: $lightblue;
@@ -634,7 +995,7 @@ aside {
   }
 
   hr{
-    background-color:$grey;
+    background-color:$darkgrey;
   }
   
 }
@@ -823,10 +1184,18 @@ aside {
 
 }
 
+
+// ~!~ Pictures
+
 .location {
-  width: 500
+  padding: 3rem;
 }
 
+.brick {
+  display: inline-block;
+  float: left;
+  padding: 5px;
+}
 
 
 
