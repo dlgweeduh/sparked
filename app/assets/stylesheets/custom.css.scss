@@ -8,15 +8,20 @@
 
 html {
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 body {
   font-family: $fontregular, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   // padding-top: 70px;
+
 }
 
 section {
-  overflow: auto;
 }
 
 textarea {
@@ -30,11 +35,36 @@ textarea {
 //   background-repeat: no-repeat no-repeat;
 //   background-color: $blue;
 //   @include background-size;
-  // @media screen and (max-width: 480px) {
-  //    height:400px;
-  //    background-image: url('fbHoC23.jpg');
+
+//   @media screen and (max-width: 480px) {
+//      height:400px;
+//      background-image: image-url('hoc-group.jpg');
 //   }
 // }
+
+h1 span {
+  @media screen and (max-width: 712px) {
+     font-size: 3rem;
+  }
+  @media screen and (max-width: 480px) {
+     font-size: 2rem;
+  }
+  padding: 0 1rem;
+}
+
+.green {
+  color: $green;
+  &.underline {
+    border-bottom: 5px solid $blue;
+  }
+}
+
+.blue {
+  color: $blue;
+}
+.grey {
+  color: $grey;
+}
 
 .text-overlay{
   font-size:2rem;
@@ -75,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 4rem;
   font-weight: 900;
   letter-spacing: 0.5px;
   font-family: $fontbold;
@@ -102,38 +132,51 @@ p {
   color: $blue;
   font-family: $fontbold;
   font-size: 2rem;
-  border-radius: 3px;
-  &:link {
-    text-decoration: none;
-  }
-  &.blue {
-    background-color: $clear;
-    border: 10px solid $lightblue;
-    &:hover {
-      background-color: $blue;
-      border: 10px solid $blue;
-      color: $white;
+  // border-radius: 3px;
+  &.link {
+      text-decoration: none;
+      cursor: pointer;
+      // ~fix
     }
-  }
-  &.green {
-    background-color: $clear;
-    border: 10px solid $lightgreen;
-    color: $green;
-    &:hover {
-      background-color: $green;
+    &.blue {
+      background-color: $clear;
+      border: 10px solid $lightblue;
+      &:hover, &:focus {
+        background-color: $blue;
+        border: 10px solid $blue;
+        color: $white;
+      }
+    }
+    &.green {
+      background-color: $clear;
       border: 10px solid $green;
+      color: $green;
+      &:hover, &:focus {
+        background-color: $green;
+        border: 10px solid $green;
+        color: $white;
+      }
     }
-  }
-  &.grey {
-    background-color: $clear;
-    border: 10px solid $lightgrey;
-    color: $lightgrey;
-    &:hover {
-      background-color: $grey;
-      border: 10px solid $grey;
-      color: $blue;
+    &.grey {
+      background-color: $clear;
+      border: 10px solid $lightgrey;
+      color: $lightgrey;
+      &:hover, &:focus {
+        background-color: $grey;
+        border: 10px solid $grey;
+        color: $blue;
+      }
     }
-  }
+      &.white {
+      background-color: $clear;
+      border: 10px solid $white;
+      color: $white;
+      &:hover, &:focus {
+        background-color: $white;
+        border: 10px solid $white;
+        color: $blue;
+      }
+    }
   @include transition((all, 200ms));
 }
 
@@ -147,11 +190,135 @@ p {
 }
 /* header */
 
+header h1 {
+  margin-top: 0;
+}
+
+
+header {
+  position: relative;
+  min-height: 700px;
+  top: 0;
+  max-height: 1200px;
+  line-height: 180px;
+  text-align: center;
+  display: block;
+  padding: 0;
+  margin: 0;
+  h1 {
+    padding-top: 8%;
+  }
+  h1 {
+    color: $white;
+    font-family: $fontbold;
+    @include font-smoothing;
+    @include font-size(150px);
+    @include text-shadow; 
+  }
+  h2 {
+    color: $white;
+    @include text-shadow; 
+  }
+  @include MQ(L) {
+    height: 240px;
+    line-height: 240px;
+  } 
+}
+.lightgrey-bg {
+  background-color: $lightgrey2;
+}
+
+.skyline {
+  background: image-url('skyline.png') 0 0 repeat-x;
+  padding: 3rem 0 3rem 0;
+}
+
+.header-blue {
+  background-color: $lightblue;
+  background-image: image-url('bc-lightblue.jpg');
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: repeat;
+  background-repeat-y: repeat;
+  background-attachment: fixed;
+  background-origin: initial;
+  background-clip: initial;
+  min-height: 600px;
+}
+.header-green {
+  background-color: $lightgreen;  
+  background-image: image-url('bc-lightgreen.jpg');
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: repeat;
+  background-repeat-y: repeat;
+  background-attachment: fixed;
+  background-origin: initial;
+  background-clip: initial;
+  min-height: 600px;    
+}
+.header-grey {
+  background-color: $grey;
+  background-image: image-url('bc-grey.jpg');
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: repeat;
+  background-repeat-y: repeat;
+  background-attachment: fixed;
+  background-origin: initial;
+  background-clip: initial;
+  min-height: 600px;      
+}
+.adventure {
+  background-image: #f4f7f8 url(http://sparkedtech.s3.amazonaws.com/adventure-bg.svg);  
+  background: #f4f7f8 url("http://sparkedtech.s3.amazonaws.com/adventure-bg.svg");
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: repeat;
+  background-repeat-y: repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgb(244, 247, 248);
+  -webkit-background-size: initial;
+  -moz-background-size: initial;
+  -o-background-size: initial;
+  background-size: initial;
+}
+.adventure2 {
+  background-image: #f4f7f8 url(http://sparkedtech.s3.amazonaws.com/adventure-bg2.svg);  
+  background: #f4f7f8 url("http://sparkedtech.s3.amazonaws.com/adventure-bg2.svg");
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: repeat;
+  background-repeat-y: repeat;
+  background-attachment: fixed;
+  background-origin: initial;
+  background-clip: initial;    
+}
+.curriculum {
+  background-image: image-url('hoc-student.jpg');
+  min-height: 600px;
+  background-position-y: 60%;
+  background-repeat: no-repeat;
+ // background-attachment:fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size:cover;    
+}
+
+
 #logo {
   float: left;
   margin-right: 10px;
-  margin-top: -12px;
-  height: 45px;
+  margin-top: -5px;
+  height: 35px;
   color: $green;
   font-family: $fontregular;
   text-transform: uppercase;
@@ -167,40 +334,57 @@ p {
 
 /* Landing */
 .navbar-inverse {
-  background-color: $white;
-  border: 2px solid $gray-medium-light;
+  background-color: $clear;
+  border: none;
   .navbar-nav {
     li {
       a {
         @include transition((all, 200ms));        
         font-size: 15px;
-        color: $blue;   
+        text-transform: uppercase;
+        color: $lightblue;   
+        span {
+          color: $green;
+        }
         &:hover, &:focus {
-          color: $lightblue;
+          line-height: 1.5rem;
+          color: $blue;
+          .green {
+            color: $blue;
+          }
         }
-        &:focus {
-        background-color: $white;
-        color: $lightblue !important;
-        }
+        // &:focus {
+        // background-color: $white;
+        // color: $lightblue !important;
+        // }
       }
     }
   }
 }
 
+// About Homes
+
+.home {
+  min-height: 400px;
+  padding: 5rem;
+} 
 
 /* Mobile Toggle Icon Color */
 
 .navbar-inverse .navbar-toggle .icon-bar {
-   background-color: $blue;
-   border-color: $blue;
+   background-color: $clear;
+   color: $blue;
 } 
 
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
   background-color: $clear;
+  color: $blue;
 }
 .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
   color: $blue !important;
+  line-height: 2.3rem;
+  background-color: $lightgrey; 
 }
 
 
@@ -214,6 +398,7 @@ p {
 }
 
 .landing {
+  margin: 0;
       @media screen and (max-width: 480px) {
          height:400px;
       }
@@ -260,7 +445,7 @@ p {
     }
   }  
   @media screen and (max-width: 479px) {
-    background-image: image-url('fbHoC23.jpg');
+    background-image: image-url('hoc-group.jpg');
     @include background-size;
   }
   .scrolldown {
@@ -302,30 +487,28 @@ p {
 
 /* footer */
 
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
+// footer {
+//   border-top: 1px solid $gray-medium-light;
+//   color: $gray-light;
 
-  a {
-    color: $gray;
-    &:hover {
-      color: $gray-darker;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
-    }
-  }
-}
+//   a {
+//     color: $gray;
+//     &:hover {
+//       color: $gray-darker;
+//     }
+//   }
+//   small {
+//     float: left;
+//   }
+//   ul {
+//     float: right;
+//     list-style: none;
+//     li {
+//       float: left;
+//       margin-left: 15px;
+//     }
+//   }
+// }
 
 
 
@@ -380,7 +563,6 @@ aside {
   }
   section {
     padding: 10px 0;
-    margin-top: 20px;
     &:first-child {
       border: 0;
       padding-top: 0;
@@ -430,4 +612,291 @@ aside {
   @include box_sizing;
 }
 
+/* Courses Header */
 
+.courses_header{
+  padding-top:8%;
+  min-height:300px;
+  @media screen and (max-width: 480px) {
+      margin-top:20
+    }
+
+  h2{
+    text-align:center;
+  }
+  p{
+    font-size:26px;
+    text-align:center;
+
+    @media screen and (max-width: 480px) {
+      font-size:20px;
+    }
+  }
+
+  hr{
+    background-color:$grey;
+  }
+  
+}
+
+.courses_header_box{
+  background-color: $white;
+  padding:0 5%;
+}
+
+
+
+/*Courses */
+.course-list {
+   @include background-repeat;
+      background-image: image-url('congruent_pentagon.jpg');
+   position: relative;
+   height: auto;
+   width: 100%;
+   text-align: center;
+   padding-bottom: 2%;
+   border-top: 0.5px solid rgba(23,45,53,0.08); 
+   padding-top: 7%;
+   // ~~fix
+   min-height: 550px;
+
+   h1 {
+    line-height: 1.2em;
+    text-transform: uppercase;
+    padding: 2rem 0;
+    font-size: 4.2rem;
+    border-radius: 10%;
+    margin: 2rem auto;
+    line-height: 5rem;
+    }
+
+   a {
+      text-decoration:none;
+   }
+
+    h2 {
+        color: #43c3d9;
+        line-height: 1em;
+        font-size: 100%;
+        margin: 0;
+    }
+
+    .courseborder{
+        padding:20px;
+        // border: 1px solid transparent;
+        border-radius:8px;
+        // background-image: image-url('blueprint-small.gif');
+        background-color: $white;
+        padding: 2rem;
+        background-position-x: initial;
+        background-position-y: initial;
+        background-size: initial;
+        background-repeat-x: repeat;
+        background-repeat-y: repeat;
+        background-attachment: fixed;
+        background-origin: initial;
+        background-clip: initial;
+        min-height: 325px;
+        margin: 7rem auto;
+
+        @include transition((border, .2s));
+        
+        &:hover {
+            // border: 1px solid $blue;
+        }
+    }
+
+      
+}
+
+
+.quickcourses {
+
+   padding: 1% 0;
+   margin: 0;
+   overflow: hidden;
+   text-align: center;
+   ul{
+      padding-left:0px;
+   }
+
+    li {
+      display: inline-block;
+      font-size:16px;
+      color:#fff;
+      background-color:#43c3d9;
+      padding:5px;
+      text-align:center;
+      }
+
+    .label-warning {
+      top: 7px;
+      left: 50%;
+      position: absolute;
+      background-color:#4AC948;
+   }
+   .badge_shell {
+      min-height: 120px;
+   }
+
+   a {
+      position: relative;
+      display: block;
+      text-align: center;
+
+      .label {
+         text-shadow: 1px 1px 1px #666;
+      }
+
+      .topics {
+        color: #999;
+        list-style: none;
+        margin: -10px 0 0 0 ;
+        padding: 0;
+        line-height: 1.3em;
+      }
+      .img-circle {
+
+      }
+
+      &:hover {
+         text-decoration:none;
+         .press_badge {
+            width: 105px;
+         }
+      }
+   }
+}
+
+/* Styling for Who */
+
+#write-story{
+    position:relative;
+   background-image:image-url('hoc-girl.jpg');
+   background-repeat: no-repeat;
+   // background-attachment:fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size:cover;
+   height:600px;
+ 
+    @media screen and (max-width: 480px){
+      height:550px;
+      padding-bottom:10%;
+    }
+
+    #hero-overlay {
+   position: absolute;
+   top:0;
+   left:0;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(0,0,0,0.4);
+
+   }
+
+   p{
+          text-align:center;
+          color:#fff;
+          font-size:26px;
+          padding:50px;
+          margin-top:8%;
+          @media screen and (max-width: 480px){
+            margin-top:50px;
+            font-size:20px;
+
+          }
+   }
+
+   span{
+      color:#43c3d9;
+      font-size:36px;
+
+      @media screen and (max-width: 480px) {
+      font-size:30px;
+    }
+   }
+
+   h5{
+   }
+
+}
+
+.location {
+  width: 500
+}
+
+
+
+
+/* Styling For Footer */
+
+.global-footer {
+   background-color: $white;
+   color: $blue;
+   text-align: center;
+   overflow:hidden;
+   border-top: 2px solid $lightgrey;
+   .row {
+      margin-left:0px;
+   }
+   .apply {
+    margin: 20px 0 0 0;
+   }
+   #footernav {
+      background-color: $white;
+      height:100%;
+      width:100%;
+      padding-top:50px;
+   }
+
+    .subnavtitle{
+      color: $lightblue;
+      text-align:left;
+      padding-left:40px;
+    }
+
+    .email_intake {
+      padding: 5rem 0;
+    }
+
+   li{
+      list-style:none;
+      text-align:left;
+      color:$lightgrey;
+      padding-left: 5px;
+      }
+   
+   a{
+      color: $blue;
+      font-size:16px;
+      line-height: 25px;
+      @include transition((all, 200ms));
+   }
+
+   .sitemap a:hover{
+      padding-left: 5px;
+      text-decoration:none;
+   }
+
+   p {
+      font-size: 22px;
+   }
+
+/*Footer Social Icons*/
+  .social {
+    margin: 0 auto;
+  }
+  .social a  {
+    width: 50px;
+    height: 50px;
+    float: left;
+  }
+  .social li {
+    margin: 0 auto; 
+  }
+  .social a:hover {
+    @include Opacity(0.5);
+  }
+}

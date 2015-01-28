@@ -55,70 +55,6 @@ Main components
 
 -------------------------------- */
 
-header {
-	position: relative;
-	min-height: 700px;
-	max-height: 1200px;
-	line-height: 180px;
-	text-align: center;
-	display: block;
-	.header-blue {
-		background-color: $lightblue;
-		background-image: image-url('bc-lightblue.jpg');
-		background-position-x: initial;
-		background-position-y: initial;
-		background-size: initial;
-		background-repeat-x: repeat;
-		background-repeat-y: repeat;
-		background-attachment: fixed;
-		background-origin: initial;
-		background-clip: initial;
-		min-height: 600px;
-	}
-	.header-green {
-		background-color: $lightgreen;	
-		background-image: image-url('bc-lightgreen.jpg');
-		background-position-x: initial;
-		background-position-y: initial;
-		background-size: initial;
-		background-repeat-x: repeat;
-		background-repeat-y: repeat;
-		background-attachment: fixed;
-		background-origin: initial;
-		background-clip: initial;
-		min-height: 600px;		
-	}
-	.header-grey {
-		background-color: $grey;
-		background-image: image-url('bc-grey.jpg');
-		background-position-x: initial;
-		background-position-y: initial;
-		background-size: initial;
-		background-repeat-x: repeat;
-		background-repeat-y: repeat;
-		background-attachment: fixed;
-		background-origin: initial;
-		background-clip: initial;
-		min-height: 600px;			
-	}
-	h1 {
-		padding-top: 100px;
-		color: $white;
-		font-family: $fontbold;
-		@include font-smoothing;
-		@include font-size(150px);
-		@include text-shadow; 
-	}
-	h2 {
-		color: $white;
-		@include text-shadow; 
-	}
-	@include MQ(L) {
-		height: 240px;
-		line-height: 240px;
-	}	
-}
-
 
 	
 .sp-faq {
@@ -131,7 +67,7 @@ header {
 
 		@include MQ(M) {
 			position: relative;
-			margin: 4em auto;
+			margin: 0 auto;
 			box-shadow: none;
 		}
 		ul {
@@ -153,12 +89,6 @@ header {
 		background-color: $lightgrey;
 	}
 }
-
-.curriculum {
-
-}
-
-
 
 
 
@@ -480,7 +410,7 @@ Dividers
 		display: inline-block;
 		height: 3px;
 		width: 18px;
-		background: $color-4;
+		background: $blue;
 	}
 
 	&::before {
@@ -539,7 +469,7 @@ Dividers
 			@include transition(box-shadow .2s);
 
 			.no-touch &:hover {
-				//~ box-shadow: 0 1px 10px rgba($color-4, .3);
+				//~ box-shadow: 0 1px 10px rgba($blue, .3);
 			}
 		}
 

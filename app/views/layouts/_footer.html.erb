@@ -1,14 +1,134 @@
-<div class="container">
-  <footer class="footer">
-    <small>
-      <a href="http://www.sparkeducation.ca/">Sparked Technology Education</a>
-    </small>
-    <nav>
-      <ul>
-        <li><%= link_to "About", about_path %></li>
-        <li><%= link_to "Contact", contact_path %></li>
-        <li><%= link_to "Blog", blog_path %></li>
-      </ul>
-    </nav>
-  </footer>
-</div>
+<!-- Footer -->
+<footer class="global-footer">
+  <section id="email">
+  <div class="container email_intake">
+    <h2>For more information, contact us here</h2>
+      <div class="row">
+        <div class="apply">
+         <!-- Button trigger modal -->
+            <a data-toggle="modal" data-target="#signup" class="button green link" id="apply">CONTACT</a>
+                <!-- Modal -->
+                <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                       <div class="modal-content">
+                           <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                 <h4 class="modal-title">Sparked Newsletter</h4>
+                          </div>
+                          <div class="modal-body">
+                                 <h4 class="modal-subtext">We promise, no spam! Just a weekly update from the fine folks at BrainStation.</h4>
+                                  <!-- MODAL BODY -->
+                       <form class="form-inline" role="form" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
+                                    action="https://brainstation.wufoo.eu/forms/w7x3k1/#public">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="InputFirstName">First Name</label>
+                                        <input type="text" class="form-control" id="Field7" name="Field7" placeholder="FIRST NAME" required>
+                                    </div>
+                                    <div class="form-group">
+                                         <label class="sr-only" for="InputLastName">Last Name</label>
+                                        <input type="text" id="Field8" name="Field8" class="form-control" placeholder="LAST NAME" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="InputEmail">Email address</label>
+                                        <input type="email" class="form-control" id="Field9" name="Field9" placeholder="EMAIL" required>
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="sr-only" for="InputEmail">How did you hear about us?</label>
+                                        <input id="Field11" name="Field11" type="text" class="form-control" value="" maxlength="255" onkeyup="" placeholder="HOW DID YOU HEAR ABOUT US?" required />
+                                    </div>
+                                    <div class="form-group">
+                                       <input type="hidden" id="idstamp" name="idstamp" value="s0y4V3R0LDBihS+x74GCiC9btJ/PP1HLOzX2oOhJpLI=">
+                                       <input type="submit" id="saveForm" name="saveForm" class="btn btn-default" value"Submit">
+                                    </div>                               
+                              </form>        
+                      <!--MODAL BODY -->
+                         </div>
+                         <div class="modal-footer">
+                         </div>
+                      </div><!-- /.modal-content -->
+                   </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+          </div>
+      </div>    
+  </div>
+</section>
+  
+    <div class="row" id="footernav">
+      <div class="col-sm-4">
+        <h5 class="subnavtitle">JUNIOR CREATORS</h5>
+        <ul class="sitemap">
+          <li>
+            <%= link_to 'Intro to Web Development', '/junior' %>
+          </li> 
+        </ul>
+        <h5 class="subnavtitle">INTERMEDIATE CREATORS</h5>
+        <ul class="sitemap">
+          <li>
+             <%= link_to 'UX-UI & JavaScript', '/intermediate' %>
+          </li>   
+        </ul>
+        <h5 class="subnavtitle">SENIOR CREATORS</h5>
+        <ul class="sitemap">
+          <li>
+             <%= link_to 'Android App Development', '/senior' %>
+          </li>
+          <li>
+             <%= link_to 'Programming with Python', '/senior' %>
+          </li>     
+        </ul>  
+      </div>
+
+      <div class="col-sm-4">
+        <div class="container">
+        <h5 class="subnavtitle">LEARN MORE</h5>
+        <ul class="sitemap">
+           <li>
+             <%= link_to 'Resources', '/resources' %>
+          </li>
+          <li>
+            <%= link_to 'FAQ', '/about#faq' %>
+          </li>  
+          <li>
+            <%= link_to 'About Sparked', '/about' %>
+          </li> 
+          
+          <li>
+            <%= link_to 'Blog', '/blog' %>
+          </li> 
+          <li>
+             <%= link_to 'Contact', '/contact' %>
+          </li>
+             
+        </ul>  
+      </div>
+      </div>
+        <div class="col-sm-4">
+          <h5 class="subnavtitle">CONNECT WITH US</h5>
+            <div>
+              <ul class="social">
+                <li><a href="https://twitter.com/SparkedTechEd" class="twitter"><%= image_tag "twitter.png",:class=>''%></a></li>
+                <li><a href="https://www.facebook.com/pages/Sparked-Technology-Education/842075489144646" class="facebook"><%= image_tag "facebook.png",:class=>''%></a></li>
+                <li><a href="https://twitter.com/SparkedTechEd" class="twitter"><%= image_tag "insta.png",:class=>''%></a></li>              
+              </ul>
+            </div>           
+        </div>   
+
+  </div> 
+
+  
+    <hr>
+    <div class="row">  
+      <div class="col-lg-6 copyright">
+          <h5>
+           &copy; 2015 Sparked Education Ltd.
+          </h5>
+      </div>
+      <div class="col-lg-6 copyright">
+          <h5>
+           Made with &hearts; in Mississauga, Ontario
+          </h5>
+      </div>      
+
+    </div>
+    
+</footer>
