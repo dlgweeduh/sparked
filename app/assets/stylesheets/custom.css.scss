@@ -34,6 +34,7 @@ textarea {
   text-align: justify;
   padding: 2rem;
 }
+
 // .landing {
 //   position: relative;
 //   overflow: hidden;
@@ -50,10 +51,10 @@ textarea {
 
 h1 span {
   @media screen and (max-width: 712px) {
-     font-size: 3rem;
+     // font-size: 3rem;
   }
   @media screen and (max-width: 480px) {
-     font-size: 2rem;
+     // font-size: 2rem;
   }
   padding: 0 1rem;
 }
@@ -126,8 +127,11 @@ h3 {
   font-family: $fontsbold;
 }
 p {
-  font-size: 1.1em;
+  font-size: 1.2em;
   line-height: 1.7em;
+  @media screen and (max-width: 768px) {
+
+  }
 }
  /* Gradient color1 - color2 - color1 */
  
@@ -460,9 +464,12 @@ header {
     text-align: center;
   }
   h4 {
-    text-align: center;
+    text-align: justify;
     line-height: 4rem;
     font-size: 2rem;
+    @media screen and (max-width: 650px) {
+      font-size: 1.5rem;
+    }
   }
   h5 {
       text-align: left;
@@ -471,13 +478,16 @@ header {
     }  
   p {
       text-align: left;
-      font-size: 2rem;
+      padding-top: 1.2rem;      
     }    
     hr {
       margin: 0 3rem 0 3rem; 
     }  
     h3 {
-      text-align: center;
+      text-align: left;
+      @media screen and (max-width: 495px) {
+        font-size: 2rem;
+      }
     }
 }
 .skills-head {
@@ -487,6 +497,11 @@ header {
 .skills-description {
   padding: 3rem;
 }
+
+
+
+
+
 // ~!~ Backgrounds
 
 .green-bg {
@@ -509,7 +524,20 @@ header {
     border-bottom: 5px solid $blue;
   }
 }
-
+.white-bg{
+  background-color: $white;
+  color: $black;
+  &.underline {
+    border-bottom: 5px solid $white;
+  }
+}
+.lightblue-bg{
+  background-color: $lightblue;
+  color: $white;
+  &.underline {
+    border-bottom: 5px solid $lightblue;
+  }
+}
 .lightgrey-bg {
   background-color: $lightgrey2;
 }
@@ -519,6 +547,9 @@ header {
 .blue-transparent {
   background-color: $blue-transparent;
 }
+// .lightblue-transparent {
+//   background-color: $lightblue-transparent;
+// }
 .grey-transparent {
   background-color: $grey-transparent;
 }
@@ -533,6 +564,34 @@ header {
   background-image: image-url('concrete-texture.jpg');
   margin-top: -100px;
 }
+
+
+
+// ~!~ Separators
+
+.img-divider {
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: cover;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-origin: initial;
+  background-clip: initial;
+  min-height: 600px;    
+  @include background-size;
+  &.jr {
+    background-image: image-url('hoc-rocc2.jpg');
+  }
+  &.int {
+    background-image: image-url('hoc-david.jpg');   
+  }
+  &.sr {
+    background-image: image-url('hoc-student8.jpg');    
+  }
+}
+
+
+
 /* Stamp */
 
 #stamp path {
@@ -623,6 +682,9 @@ header {
  -moz-background-size: cover;
  -o-background-size: cover;
  background-size:cover;    
+ @media screen and (max-width: 800px) {
+  background-position-x: 30%;
+ }
 }
 .quote {
   padding: 2% 10%;
@@ -683,17 +745,17 @@ header {
     li {
       a {
         @include transition((all, 200ms));        
-        font-size: 15px;
+        font-size: 17px;
         text-transform: uppercase;
-        color: $lightblue;   
+        color: $white;     
         span {
-          color: $green;
+          color: $lightgreen;
         }
         &:hover, &:focus {
           line-height: 1.5rem;
-          color: $blue;
+          color: $lightblue;
           .green {
-            color: $blue;
+            color: $lightblue;
           }
         }
         // &:focus {
@@ -708,7 +770,6 @@ header {
 // About Homes
 
 .home {
-  min-height: 400px;
   padding: 5rem;
   &.brampton {
     margin-top: -6px;
@@ -773,34 +834,48 @@ header {
    .hero-title {
       font-family: $fontregular;
       color: $lightgreen;
-      font-size: 80px;
       @include text-shadow; 
-      padding: 15% 15% 0 15%;
+      font-size: 8rem;
+      // font-size: 80px;
+      padding-top: 15%;
       text-align: left;
       margin-left: 25px;
+      word-spacing: 0;
       .word-swap{
         color: $lightblue;
+        margin-right: 0;
+        padding-right: 0;
       }
+      span {
+        margin-right: 0;
+        padding-right: 0;        
+      }
+      @media screen and (max-width: 650px) {
+        font-size: 5rem;        
+      }   
       @media screen and (max-width: 480px) {
-         font-size:40px;
-         padding:0 2%;
-         padding:100px 0px 25px 0px;
-      }
-   }
-   span{
-   }
+        font-size: 3.5rem;  
+        padding-top: 37%;      
+      }   
+    }
     .hero-description {
       font-family: $fontregular;
       color: $lightgreen;
-      font-size: 40px;
-      text-shadow: 1.5px 1.5px 3px #666;
-      padding: 5% 15% 0 15%;
       text-align: left;
+      margin-left: 25px;      
+      text-shadow: 1.5px 1.5px 3px #666;
+      padding-top: 3%;
       margin-left: 25px;
-    }
+      font-size: 3rem;
+      @media screen and (max-width: 650px) {
+        font-size: 2.5rem;
+      }            
+   }
+
   video{
     width:100%;
     height:auto;
+    margin-top: -20px;
     @media screen and (max-width: 480px) {
       display: none;
     }
@@ -811,14 +886,15 @@ header {
   }
   .scrolldown {
     position: relative;
-    margin-top: 10%;
-    left: 50%;
-    @media screen and (max-width: 600px) {
+    margin-top: 15%;
+    @media screen and (min-width:500px) and (max-width: 800px) {
+      margin-top: 5%;
+    }
+    @media screen and (max-width: 1000px) {
       display: none;
     }
   }
 }
-
 
 /* blog */
 
@@ -1058,7 +1134,7 @@ aside {
         background-origin: initial;
         background-clip: initial;
         min-height: 325px;
-        margin: 7rem auto;
+        margin: 9rem auto;
 
         @include transition((border, .2s));
         
@@ -1072,8 +1148,7 @@ aside {
 
 
 .quickcourses {
-
-   padding: 1% 0;
+   padding: 3rem 0;
    margin: 0;
    overflow: hidden;
    text-align: center;
@@ -1131,7 +1206,7 @@ aside {
 
 /* Styling for Who */
 
-#write-story{
+.exit-music{
     position:relative;
    background-image:image-url('hoc-girl.jpg');
    background-repeat: no-repeat;
@@ -1141,21 +1216,18 @@ aside {
    -o-background-size: cover;
    background-size:cover;
    height:600px;
- 
     @media screen and (max-width: 480px){
       height:550px;
       padding-bottom:10%;
-    }
-
+    }   
     #hero-overlay {
-   position: absolute;
-   top:0;
-   left:0;
-   height: 100%;
-   width: 100%;
-   background-color: rgba(0,0,0,0.4);
-
-   }
+     position: absolute;
+     top:0;
+     left:0;
+     height: 100%;
+     width: 100%;
+     background-color: rgba(0,0,0,0.4);
+    }
 
    p{
           text-align:center;
@@ -1185,10 +1257,78 @@ aside {
 }
 
 
+.classroom-overlay{
+      background-image: image-url('hoc-tutor.jpg');  
+      position: relative;
+      height: 600px;
+      @include background-size;
+      background-color: rgba(0,0,0,0.4);
+      @media screen and (min-width:898px) {
+        background-position-y: 60%;  
+      } 
+    #hero-overlay2 {
+     position: absolute;
+     top:0;
+     left:0;
+     height: 100%;
+     width: 100%;
+     background-color: rgba(0,0,0,0.7);
+    }
+
+   p{
+          @media screen and (max-width: 480px){
+
+          }
+   }
+
+   span{
+
+      @media screen and (max-width: 480px) {
+
+    }
+   }
+
+   h5{
+   }
+
+}
+
+// .classroom {
+//     background-image: image-url('hoc-tutor.jpg');  
+
+//     @media screen and (min-width:898px) {
+//       background-position-y: 60%;  
+//     }
+//     #hero-overlay {
+//       position: absolute;
+//       top:0;
+//       left:0;
+//       height: 100%;
+//       width: 100%;
+//       background-color: rgba(0,0,0,0.4);
+//    }    
+//   }
+
 // ~!~ Pictures
 
-.location {
-  padding: 3rem;
+.home-logo {
+  padding: 1rem;
+  display: inline-block;
+  float: left;
+  max-width: 200px; 
+  margin-left: 3rem;
+    @media screen and (max-width: 525px) {  
+        max-width: 150px;
+        margin: 2.5rem 0 0 1.5rem;  
+        &.lab-b {
+          margin-top: 0;
+        }
+      }
+}
+.home-address {
+  padding-right: 0.5rem;
+    @media screen and (max-width: 525px) {  
+      }
 }
 
 .brick {
@@ -1224,6 +1364,7 @@ aside {
       color: $lightblue;
       text-align:left;
       padding-left:40px;
+      font-size: 17px;
     }
 
     .email_intake {
@@ -1239,8 +1380,8 @@ aside {
    
    a{
       color: $blue;
-      font-size:16px;
-      line-height: 25px;
+      font-size: 17px;
+      line-height: 35px;
       @include transition((all, 200ms));
    }
 

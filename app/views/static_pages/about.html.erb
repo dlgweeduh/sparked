@@ -1,14 +1,16 @@
 <% provide(:title, "About") %>
 <%= render 'layouts/navbar' %>
-
-<header> 
+ 
+<header class="landing"> 
 	<div class="about-header">
-      <div class="container">
-      		<div class="row">
-      			<div class="col-sm-12">
-		          <h1 class="">Begin Your Adventure in Discovery Learning</h1>     
-		        </div>
-		    </div>
+		<div class="container">
+	        <div class="row">
+	          <div class="col-sm-12 col-xs-12">
+	      			<h1 class="hero-title">Spark a life-long adventure</h1>
+	      				<h3 class="hero-description"></h3>
+	      			</h1>
+	          </div>
+	        </div>
 		</div>
       </div>   
     </div> 
@@ -51,12 +53,12 @@
       <div class="row combo">   			
       	<div class="col-sm-6"> 
 		    		<h3 class="green">Teachers</h3>
-            <%= image_tag "brian.jpg",:class=>'headshots img-responsive'%>
+            <%= image_tag "david2.jpg",:class=>'headshots img-responsive'%> 		    		
               <p>Not everyone has the ability to shape young minds, so our OCT-teachers and tutors are hand-picked for their breadth of experience as inclusive, equitable leaders of children and youth. Ranging from Grade 4 Science Teachers to High School English teachers, our team is powered by innovative professionals who are passionate about the merging of literacy and technology. More needs to be done to equip our children with life-skills and learning-habits for an unpredictable future, and Sparked teachers know how to foster independent, caring, resilient creators.</p>         
 		    </div>
         <div class="col-sm-6">              
 					<h3 class="blue">Web Developers</h3>
-            <%= image_tag "david2.jpg",:class=>'headshots img-responsive'%> 
+            <%= image_tag "brian.jpg",:class=>'headshots img-responsive'%>
               <p>Our Developers are not just players on the global coding stage, they are generous, caring, and helpful leaders. They literally get giddy when helping someone check-out the right Git Branch or finding a more "elegant" and DRY (Do Not Repeat Yourself!) version of your code. Poets much? And Sparked's community of Web Developers is growing on the principle that there's so much heart- and brain-power out there that simply wants to help you. When looking for Developers to Tutor and run Workshops, it matters less about which prestigious University program you attended than how well you create and help others create.</p> 
        	</div>
       </div>      
@@ -85,7 +87,7 @@
 			</div>			
 	</div>
 </div> -->
-	<div class="">
+	<div class="yellow-transparent">
 		<div class="container">
 			<div class="row">
 					<div class="section-header col-sm-6 col-sm-offset-3">				
@@ -136,27 +138,80 @@
 		</div>
 	</section>
 
-	<div class="program-img-divider jr">
-    	<div class="container">
-    		<div class="row">  
-    			<div class="col-sm-6 col-sm-offset-3">
-	    		</div>
-    		</div>
-    	</div>
-	</div>	
 
-	<div class="">
+<section class="classroom-overlay">
+   <div class="" id="hero-overlay2">
+	    <div class="container">
+	      <div class="row">
+	              <h1 class="section-header">We practice  Spine Care that is:</h1> 
+	          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4"center>      
+	              <div class="classroom-info center">      
+	                 <div class="care-icons"> 
+	                      <%= image_tag "brick.png" %>
+	                    </div>
+	                    <h3>Inter-Professional</h3>                  
+	              </div>
+	          </div>
+	          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 center">            
+	              <div class="classroom-info center">                    
+	                 <div class="care-icons"> 
+	                    <%= image_tag "brick.png" %>
+	                  </div>
+	                    <h3>Volunteer-Driven </h3>
+	              </div>
+	          </div>            
+	          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 center">            
+	              <div class="classroom-info center">                    
+	                 <div class="care-icons"> 
+	                    <%= image_tag "brick.png", class: "lower-icon" %>
+	                  </div>
+	                    <h3>Transparent</h3>
+	              </div>    
+	          </div>              
+	      </div>
+	
+	      <div class="row">
+	          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 center">    
+	              <div class="classroom-info center">                  
+	                   <div class="care-icons"> 
+	                      <%= image_tag "brick.png", class: "raise-icon" %>
+	                  </div>
+	                      <h3>Research &amp Outcome Oriented</h3>                  
+	              </div>
+	          </div>
+	          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 center">            
+	              <div class="classroom-info center">                  
+	                   <div class="care-icons"> 
+	                      <%= image_tag "brick.png" %>
+	                </div>
+	                  <h3>Open-Source</h3>
+	              </div>
+	          </div>
+	          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 center">                          
+	              <div class="classroom-info center">                    
+	                 <div class="care-icons"> 
+	                    <%= image_tag "brick.png", class: "lower-icon" %>
+	                  </div>
+	                    <h3>Equal-Opportunity Employment</h3>
+	              </div>
+	          </div>  
+	          <hr>          
+	    </div>		
+	</div>
+</section>
+
+
+	<div class="lightblue-bg">
 		<div class="container">
 			<div class="row">
-					<div class="section-header col-sm-6 col-sm-offset-3 ">				
+					<div class="section-header col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">				
 						<hr>
 						<h1>Our Homes</h1>
-						<h4>Sparked homes share a lot in common. They are innovative, community-oriented and dynamic. All classes are easily accessible and have free parking nearby.</h4>
+						<h4>Sparked homes share a lot in common. They are innovative, community-oriented and dynamic. They reflect crucial changes in the delivery and experience of education -- a revolution that Sparked is proud to be a part of.</h4>
 						<hr>
 					</div>
 			</div>
 		</div>
-	</div>
 			<svg id="clouds" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
 				<path d="M-5 100 Q 0 20 5 100 Z
 						 M0 100 Q 5 0 10 100
@@ -181,23 +236,27 @@
 						 M95 100 Q 100 15 105 100 Z">
 				</path>
 			</svg>
-
+	
+	</div>
 	<div class="home lightgrey-bg brampton">
 		<div class="container">
 				<div class="row">
-		            <div class="col-sm-6 col-sm-offset-3 section-header">   	
-		               	<h1>Brampton</h1>
-		               	<h3>Lab-B:</h3>
-		               	<h4>60 Queen St E - Unit 104</h4>
+		            <div class="col-sm-6 section-header">
+		            	<div class="row">
+				               	<h1>Brampton</h1>	
+							<div class="col-xs-6 col-sm-12 col-md-6">
+					                <%= image_tag "lab-b.png",:class=>'home-logo lab-b'%>
+
+					        </div>
+					        <div class="col-xs-6 col-sm-12 col-md-6 home-address">
+				               	<h3>Lab-B</h3>
+				               	<h4>60 Queen St E</h4>
+				            </div>
+				        </div>
 		               	<hr class="style-one"></hr>
-				        <p>LAB-B is a community of passionate designers, developers, artists, entrepreneurs, founders, and writers. Lab-B believes in collaboration, creativity, knowledge sharing, and supporting one another. Lab-B is a hub of like-minded people who create an environment where happy accidents can occur. Providing a dynamic space where you can get work done -- and have fun doing it -- is what they do.</p>
+				        <p>LAB-B is a community of creative people in tech, media, and art. Located in Downtown Brampton, right across from the Public Library and beside Brampton GO Station, Lab-B is emerging as an important fixture in Peel's creative economy. Your child's learning is enhanced when exposed to Lab-B's culture.</p>
 				    </div>
-				</div>		
-				<div class="row">
-					<div class="section-header col-sm-6">
-			                <%= image_tag "lab-b-large.png",:class=>'location img-responsive map'%>
-					</div>
-					<div class="section-header col-sm-6">
+					<div class="section-header col-sm-5 col-sm-offset-1">
 						<iframe class="img-responsive map" width="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=60%20Queen%20St%20E%20-%20Unit%20104&key=AIzaSyCX98GYJ8rikYcBgFfSzjNBv6BInIHgZxA"></iframe>		
 					</div>		
 				</div>			
@@ -210,20 +269,23 @@
 		<div class="container">		
 			<div class="home green-bg">	
 			    <div class="row">
-		            <div class="col-sm-6 col-sm-offset-3 section-header">   	
-		               	<h1>Toronto</h1>
-		               	<h3>Icewire Makerspace: </h3>
-		               	<h4>1560 Bayview Avenue</h4>
+		            <div class="col-sm-6 section-header"> 
+		            	<div class="row">
+				               	<h1>Toronto</h1>     
+							<div class="col-xs-6 col-sm-12 col-md-6">
+			                	<%= image_tag "icewire.png",:class=>'home-logo'%>
+					        </div>
+					        <div class="col-xs-6 col-sm-12 col-md-6 home-address">		
+					        	<h3>Icewire Makerspace</h3>
+		               			<h4>1560 Bayview Ave</h4>			        	
+				            </div>
+				        </div>
 		               	<hr>
-				        <p class="copy">The term makerspace is new and still evolving since every makerspace is unique. For Icewire, it means a place that unlocks potential by providing an optimal environment for creation. In other words, if you have a concept in mind and you walk into a makerspace, you should think, "This is the perfect place to make it!" At the Icewire Makerspace, you’ll find electronics (hardware and software), robotics, and 3D printing, with a focus on education.</p>
+				        <p class="copy">The term makerspace is new and still evolving since every makerspace is unique. For Icewire, it means a place that unlocks potential by providing an optimal environment for creation. At the Icewire Makerspace, you’ll find electronics (hardware and software), robotics, and 3D printing, with a focus on education.</p>
 				    </div>
-				</div>	
-						<div class="section-header col-sm-6">
-							<iframe class="img-responsive map" width="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1560%20Bayview%20Avenue%2C%20Toronto%2C%20ON%2C%20Canada&key=AIzaSyCX98GYJ8rikYcBgFfSzjNBv6BInIHgZxA"></iframe>	
-						</div>			    	
-			    		<div class="section-header col-sm-6">	
-				                <%= image_tag "icewire.png",:class=>'location img-responsive'%>
-						</div>
+					<div class="section-header col-sm-5 col-sm-offset-1">
+						<iframe class="img-responsive map" width="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1560%20Bayview%20Avenue%2C%20Toronto%2C%20ON%2C%20Canada&key=AIzaSyCX98GYJ8rikYcBgFfSzjNBv6BInIHgZxA"></iframe>	
+					</div>			    	
 			    </div>   
 			</div>
 		</div>
@@ -255,24 +317,26 @@
 			</svg>   
 			<div class="water-bg">	  			
 				<div class="container">
-					<div class="row mississauga">
-			    <div class="row">
-		            <div class="col-sm-6 col-sm-offset-3 section-header">   		
-		               	<h1>Mississauga</h1>
-		               	<h3>Studio.89 Artademic Centre:</h3> 
-		               	<h4>1065 Canadian Place - Unit 104</h4>
-		               	<hr>
-				        <p class="copy">The Artademic Resource Centre upstairs is a shoe-free zone and offers a wonderful community space for hanging out, studying, meetings or participating in one of the workshops hosted by us or our friends. What does Artademic even mean? Artademic or Artademia means to infuse various art forms and academic knowledge and learning for the purpose of education, of course. Yes we made it up. The word, not the concept. See, the left and right hemispheres of the brain process information in different ways. Learners usually process information using the dominant brain hemisphere. However, the learning process is greatly enhanced when all of the senses are used. This includes using the less dominate hemisphere.</p>
-				    </div>
-				</div>		
-			    		<div class="section-header col-sm-6">	
-				         	<%= image_tag "studio89.png",:class=>'location img-responsive'%>
-						</div>									
-				                			
+					<div class="row mississauga">	
+			            <div class="col-sm-6 section-header"> 
+		            	<div class="row">
+				               	<h1>Mississauga</h1>	
+							<div class="col-xs-6 col-sm-12 col-md-6">
+				                <%= image_tag "studio89.png",:class=>'home-logo studio89'%>
+					        </div>
+					        <div class="col-xs-6 col-sm-12 col-md-6 home-address">	
+				               	<h3>Studio.89 Artademic Centre</h3> 
+				               	<h4>1065 Canadian Place</h4>		        	
+				            </div>
+				        </div>                       
+
+			               	<hr>
+					        <p class="copy">The Artademic Resource Centre offers a wonderful community space for hanging out, studying, meetings or participating in one of the workshops hosted by us or our friends. What does Artademic even mean? Artademic or Artademia means to infuse various art forms and academic knowledge and learning for the purpose of education, of course. Yes we made it up. The word, not the concept. See, the left and right hemispheres of the brain process information in different ways. Learners usually process information using the dominant brain hemisphere. However, the learning process is greatly enhanced when all of the senses are used. This includes using the less dominate hemisphere.</p>
+					    </div>
 						<div class="section-header col-sm-6">
 							<iframe class="img-responsive map" width="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1065%20Canadian%20Place%20%23104%2C%20Mississauga%2C%20ON%20L4W%200B8&key=AIzaSyCX98GYJ8rikYcBgFfSzjNBv6BInIHgZxA"></iframe>		
 						</div>						
-					</div>					                         
+					</div> 
 				</div>
 		</div>
 <!-- 	</section> -->
