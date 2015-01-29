@@ -471,6 +471,10 @@ header {
       font-size: 1.5rem;
     }
   }
+  h2 {
+    font-size: 4rem;
+    text-align: center;
+  }
   h5 {
       text-align: left;
       line-height: 4rem;
@@ -780,9 +784,9 @@ header {
 }
 
 
-.mississauga {
-  padding:100px 0;
-} 
+// .mississauga {
+//   padding:100px 0;
+// } 
 .map {
   min-height: 400px;
   padding: 5rem 0 0 0;
@@ -1282,7 +1286,6 @@ aside {
    }
 
    span{
-
       @media screen and (max-width: 480px) {
 
     }
@@ -1335,6 +1338,9 @@ aside {
   display: inline-block;
   float: left;
   padding: 5px;
+  &.right {
+    float: right;
+  }
 }
 
 
