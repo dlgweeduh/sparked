@@ -68,7 +68,8 @@ $minspacing: .1rem;
   $white: #fff; /**/
   $black: #000; /**/
   $offblack: #333; /**/
-  $fast: color 0.1s ease;
+  $fast: color 0.5s ease;
+  $medium: color 0.1s ease;
 
 // rem fallback - credits: http://zerosixthree.se/
 
@@ -136,7 +137,13 @@ $minspacing: .1rem;
   -o-transition: $fast;
   transition: $fast;
 }
-
+@mixin transition($medium) {
+  -webkit-transition: $medium;
+  -moz-transition: $medium;
+  -ms-transition: $medium;
+  -o-transition: $medium;
+  transition: $medium;
+}
 @mixin text-shadow {
   text-shadow: 1.5px 1.5px 3px #666;
 }

@@ -1,11 +1,15 @@
-<% provide(:title, "JC") %>
+<% provide(:title, "Creator Program") %>
+<%= render 'layouts/navbar' %>
+
 <header> 
 	<div class="header-blue">
 		<h1>Junior<br> Web<br> Creators</h1>
 		<h2>For bold explorers taking their first steps in code.</h2>
-		<%= link_to 'Request Info', blog_path, class: 'button white link' %>		
-		<%= link_to 'Apply', blog_path, class: 'button white link' %>
-	</div>
+        <div class="apply">
+         <!-- Button trigger modal --> 
+            <a data-toggle="modal" data-target="#signup" class="bttn bttn-2 bttn-2e link" id="apply">REQUEST INFO</a>
+            <a data-toggle="modal" data-target="#signup" class="bttn bttn-2 bttn-2f link" id="apply">REQUEST INFO</a>
+        </div>
 </header>
 
 <section class="sp-faq">
@@ -96,7 +100,8 @@
     	<div class="container">
     		<div class="row">  
     			<div class="col-sm-6 col-sm-offset-3">
-	    			<h3 class="blue">"Software touches all things you use, and tech companies are revolutionizing all different areas of the world from how we shop to how farming works... these things that aren't technical are being turned upside down by software. So being able to play in that universe really makes a difference." <br>-- <strong>Drew Houston</strong>, <i>Founder &amp CEO</i>, Dropbox</h3>
+
+                <h4 class="blue quote">"Coding is today's language of creativity. All our children deserve a chance to become creators instead consumers of computer science."<br> -- <i>Maria Klawe</i></h4>
 	    		</div>
     		</div>
     	</div>
@@ -147,6 +152,67 @@
 			</div>
 		</div>
 	</div>
+<section class="classroom-overlay">
+   <div class="" id="hero-overlay2">
+	    <div class="container">
+	      <div class="row">
+	              <h1 class="section-header">We practice  Spine Care that is:</h1> 
+	          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4"center>      
+	              <div class="classroom-info center">      
+	                 <div class="care-icons"> 
+	                      <%= image_tag "brick.png" %>
+	                    </div>
+	                    <h3>Inter-Professional</h3>                  
+	              </div>
+	          </div>
+	          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 center">            
+	              <div class="classroom-info center">                    
+	                 <div class="care-icons"> 
+	                    <%= image_tag "brick.png" %>
+	                  </div>
+	                    <h3>Volunteer-Driven </h3>
+	              </div>
+	          </div>            
+	          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 center">            
+	              <div class="classroom-info center">                    
+	                 <div class="care-icons"> 
+	                    <%= image_tag "brick.png", class: "lower-icon" %>
+	                  </div>
+	                    <h3>Transparent</h3>
+	              </div>    
+	          </div>              
+	      </div>
+	
+	      <div class="row">
+	          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 center">    
+	              <div class="classroom-info center">                  
+	                   <div class="care-icons"> 
+	                      <%= image_tag "brick.png", class: "raise-icon" %>
+	                  </div>
+	                      <h3>Research &amp Outcome Oriented</h3>                  
+	              </div>
+	          </div>
+	          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 center">            
+	              <div class="classroom-info center">                  
+	                   <div class="care-icons"> 
+	                      <%= image_tag "brick.png" %>
+	                </div>
+	                  <h3>Open-Source</h3>
+	              </div>
+	          </div>
+	          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 center">                          
+	              <div class="classroom-info center">                    
+	                 <div class="care-icons"> 
+	                    <%= image_tag "brick.png", class: "lower-icon" %>
+	                  </div>
+	                    <h3>Equal-Opportunity Employment</h3>
+	              </div>
+	          </div>  
+	          <hr>          
+	    </div>		
+	</div>
+</section>
+
 
 	<div class="courses-container">
 		<div class="sp-items">
@@ -158,6 +224,10 @@
 			</ul> <!-- sp-group -->
 		</div>
 	</div>
+
+
+
+
 	<div class="courses-container">
 		<div class="sp-items">	
 			<ul id="projects" class="sp-group">
@@ -165,6 +235,9 @@
 			</ul> <!-- sp-group -->
 		</div>
 	</div>
+
+
+
 	<div class="courses-container">
 		<div class="sp-items">	
 			<ul id="instructors" class="sp-group">

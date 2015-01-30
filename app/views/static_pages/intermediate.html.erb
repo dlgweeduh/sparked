@@ -1,9 +1,11 @@
-<% provide(:title, "IC") %>
+<% provide(:title, "Creator Program") %>
+<%= render 'layouts/navbar' %>
 <header> 
 	<div class="header-green">
 		<h1>Intermediate<br> Web<br> Creators</h1>
 		<h2>Making the Web your playground.</h2>
-		<%= link_to 'Apply', blog_path , class: 'button blue' %>
+            <a data-toggle="modal" data-target="#signup" class="bttn bttn-2 bttn-2e link blue" id="apply">REQUEST INFO</a>
+            <a data-toggle="modal" data-target="#signup" class="bttn bttn-2 bttn-2f link blue" id="apply">REQUEST INFO</a>
 	</div>
 </header>
 
@@ -93,7 +95,8 @@
     	<div class="container">
     		<div class="row">  
     			<div class="col-sm-6 col-sm-offset-3">
-	    			<h3 class="green">"Software touches all things you use, and tech companies are revolutionizing all different areas of the world from how we shop to how farming works... these things that aren't technical are being turned upside down by software. So being able to play in that universe really makes a difference." <br>-- <strong>Drew Houston</strong>, <i>Founder &amp CEO</i>, Dropbox</h3>
+
+                <h4 class="green quote">"Software touches all things you use, and tech companies are revolutionizing all different areas of the world from how we shop to how farming works... these things that aren't technical are being turned upside down by software. So being able to play in that universe really makes a difference." <i>-- Drew Houston </i></h4>
 	    		</div>
     		</div>
     	</div>

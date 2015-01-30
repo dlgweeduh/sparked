@@ -161,7 +161,7 @@ hr.style-two {
   color: inherit;
   background: none;
   cursor: pointer;
-  padding: 25px 80px;
+  padding: 15px 65px;
   display: inline-block;
   margin: 15px 30px;
   text-transform: uppercase;
@@ -169,6 +169,7 @@ hr.style-two {
   font-weight: 700;
   outline: none;
   position: relative;
+  @include transition($medium);
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
@@ -189,12 +190,18 @@ hr.style-two {
 }
 /* Button 2 */
 .bttn-2 {
+  @include transition($medium);
   background: $lightgreen;
   color: #fff;
   box-shadow: 0 6px $green;
   -webkit-transition: none;
   -moz-transition: none;
   transition: none;
+  &.blue {
+    background: $lightblue;
+    color: #fff;
+    box-shadow: 0 6px $blue;    
+  }
 }
 
 /* Button 2a */
@@ -261,11 +268,20 @@ hr.style-two {
 .bttn-2e {
   border-radius: 5px;
   box-shadow: -6px 0 $green;
+  @include transition($medium);
+  &.blue {
+    box-shadow: -6px 0 $blue;    
+  }
 }
 
 .bttn-2e:hover {
   box-shadow: -4px 0 $green;
+  color: white;
+  @include transition($medium);  
   left: -2px;
+  &.blue {
+    box-shadow: -4px 0 $blue;    
+  }
 }
 
 .bttn-2e:active {
@@ -275,13 +291,22 @@ hr.style-two {
 
 /* Button 2f */
 .bttn-2f {
+  @include transition($medium);
   border-radius: 5px;
   box-shadow: 6px 0 $green;
+  &.blue {
+    box-shadow: 4px 0 $blue;    
+  }
 }
 
 .bttn-2f:hover {
   box-shadow: 4px 0 $green;
+  color: white;
+  @include transition($medium);  
   left: 2px;
+  &.blue {
+    box-shadow: 4px 0 $blue;    
+  }
 }
 
 .bttn-2f:active {
@@ -427,10 +452,9 @@ header h1 {
 
 header {
   position: relative;
-  min-height: 700px;
+  min-height: 600px;
   top: 0;
   max-height: 1200px;
-  line-height: 180px;
   text-align: center;
   display: block;
   padding: 0;
@@ -450,8 +474,8 @@ header {
     @include text-shadow; 
   }
   @include MQ(L) {
-    height: 240px;
-    line-height: 240px;
+    // height: 240px;
+    // line-height: 240px;
   } 
 }
 
@@ -585,9 +609,15 @@ header {
   @include background-size;
   &.jr {
     background-image: image-url('hoc-rocc2.jpg');
+    @media screen and (min-width:1150px) {
+      background-position-y: 60%;
+    }
   }
   &.int {
     background-image: image-url('hoc-david.jpg');   
+    @media screen and (min-width:1050px) {
+      background-position-y: 60%;
+    }    
   }
   &.sr {
     background-image: image-url('hoc-student8.jpg');    
@@ -693,11 +723,11 @@ header {
 .quote {
   padding: 2% 10%;
   text-align: justify;
-  margin: 0;
+  margin: 30px;  
   line-height: 4rem;
-  h4 {
-    border-left: 1px solid $blue;
-    border-right: 1px solid $blue;    
+  border-left: 1px solid $white;
+  border-right: 1px solid $white; 
+  h4 {   
     font-size: 2.5rem;
   }
 }
@@ -1291,7 +1321,8 @@ aside {
     }
    }
 
-   h5{
+   h1{ 
+    color: $white;
    }
 
 }
@@ -1416,3 +1447,58 @@ aside {
     @include Opacity(0.5);
   }
 } 
+
+.footerlogo {
+  display: inline-block;
+  height: 82px;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-top: 0px;
+  width: 60px;
+  line-height: 0px;
+  pointer: cursor;  
+/*  padding-top: 4px;*/
+  margin-top: 0;
+}
+
+.footerlogo:hover, .footerlogo:focus {
+  border: 0;
+  border-top-color: initial;
+  border-top-style: initial;
+  border-top-width: 0px;
+  border-right-color: initial;
+  border-right-style: initial;
+  border-right-width: 0px;
+  border-bottom-color: initial;
+  border-bottom-style: initial;
+  border-bottom-width: 0px;
+  border-left-color: initial;
+  border-left-style: initial;
+  border-left-width: 0px;
+  pointer: cursor;  
+}
+.footerlogo:hover img, .footerlogo:focus img {
+  position: relative;
+  top: -80px;
+  pointer: cursor;
+}
+
+.copyright {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  h5 {
+    line-height: 4;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    padding-bottom: 10px;
+    &:hover, &:focus {
+      padding-bottom: 5px;
+    }
+  }
+
+}

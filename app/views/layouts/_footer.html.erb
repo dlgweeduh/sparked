@@ -53,8 +53,9 @@
   </div>
 </section>
   
+
     <div class="row" id="footernav">
-      <div class="col-sm-4">
+      <div class="col-sm-2 col-sm-offset-3">
         <h5 class="subnavtitle">JUNIOR CREATORS</h5>
         <ul class="sitemap">
           <li>
@@ -78,13 +79,14 @@
         </ul>  
       </div>
 
-      <div class="col-sm-4">
+
+      <div class="col-sm-2">
         <div class="container">
-        <h5 class="subnavtitle">LEARN MORE</h5>
+        <h5 class="subnavtitle">DISCOVER</h5>
         <ul class="sitemap">
            <li>
              <%= link_to 'Home', root_path %>
-          </li>
+          </li>         
           <li>
             <%= link_to 'FAQ', '/about#faq' %>
           </li>  
@@ -99,36 +101,39 @@
              <%= link_to 'Contact', '/demopage' %>
           </li>
              
-        </ul>  
+        </ul>
+         </div>
       </div>
-      </div>
-        <div class="col-sm-4">
-          <h5 class="subnavtitle">CONNECT WITH SPARKED</h5>
-            <div>
+
+      <div class="col-sm-1">
+          <h5 class="subnavtitle">CONNECT</h5>
               <ul class="social">
                 <li><a href="https://twitter.com/SparkedTechEd" class="twitter"><%= image_tag "twitter.png",:class=>''%></a></li>
                 <li><a href="https://www.facebook.com/pages/Sparked-Technology-Education/842075489144646" class="facebook"><%= image_tag "facebook.png",:class=>''%></a></li>
                 <li><a href="https://twitter.com/SparkedTechEd" class="twitter"><%= image_tag "insta.png",:class=>''%></a></li>              
-              </ul>
-            </div>           
-        </div>   
-
-  </div> 
+              </ul>   
+      </div>      
+     </div> 
 
   
-    <hr>
-    <div class="row">  
-      <div class="col-lg-6 copyright">
-          <h5>
-           &copy; 2015 Sparked Education Ltd.
-          </h5>
+    <div class="row copyright">  
+      <div class="col-sm-8 col-sm-offset-2">
+              <hr>
+        <div class="col-sm-2 col-sm-offset-3">
+            <div class="footerlogo">    
+              <a href="/">
+                <%= image_tag "spark-nav-logo.png", height:'160', width: '60' %> 
+              </a>            
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <h5>
+             &copy; 2015 Sparked Tech Ed Ltd.
+             <br> 
+             Made with &hearts; in Mississauga, Ontario
+            </h5>            
+        </div>    
       </div>
-      <div class="col-lg-6 copyright">
-          <h5>
-           Made with &hearts; in Mississauga, Ontario
-          </h5>
-      </div>      
-
     </div>
     
 </footer>
