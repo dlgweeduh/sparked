@@ -1,7 +1,7 @@
 <%= render 'layouts/navbar' %>
-<% provide(:title, "Code + Creation") %> 
+<% provide(:title, "Code x Creation") %> 
 
-<section class="landing">	
+<header class="landing">	
 	<video autoplay="true" poster="" muted="true">
 					<source src="http://sparkedtech.s3.amazonaws.com/Sparked_landing_low.webm" type="video/webm">		
 					<source src="http://sparkedtech.s3.amazonaws.com/Sparked_landing_low.mp4" type="video/mp4">	 
@@ -26,12 +26,20 @@
           </div>
         </div>
 			</div>
-				<%= image_tag "scroll-down.svg", class: "scrolldown floating" %>
 
 		</div>
 
-</section>
+</header>
 
+    <section>
+      <a class="arrow-wrap" href="#content">
+        <span class="arrow"></span>
+        <%= image_tag "scroll-down.svg", class: "floating" %> 
+
+      </a>
+    </section>
+  <div class="content" id="content">
+  </div>
 
 <div class="courses_header courses_header_box">
   <div class="container">
@@ -46,84 +54,91 @@
   </div>
 </div>
 
- <section class="course-list" id="courses">
-    <div class="container">
-      <div class="row quickcourses clearfix">
-          <div class="row">
-            <div class="col-sm-12 responsive">
-              <h1><span class="blue">Sparked</span><span class="green underline">Creator</span><span class="grey">Programs</span></h1>
+<section class="course-list" id="courses">
+      <div class="container">
+        <div class="row quickcourses clearfix">
+            <div class="row">
+              <div class="col-sm-12 responsive">
+                <h1><span class="blue">Sparked</span><span class="green underline">Creator</span><span class="grey">Programs</span></h1>
+              </div>
             </div>
-          </div>
 
 
-          <div class="col-sm-4 col-md-4 col-lg-4">
-            <a href="/junior">            
-            <div class="courseborder">
-               <!-- <span class="label label-warning">Limited Spots</span> -->
-                <hr>                      
-                  <div class="badge_shell">  
-                    <%= image_tag "blue-badge.png",:class=>'press_badge'%>
-                  </div>
-                  <h4 class="social_sub_heading"></h4>
-                      <div class="topics">
-                         <br>
-                         <p>Junior Creators are youth who have no previous experience coding, and who want to learn to build beautiful and functional websites that scale across all devices.</p>
-                      </div>   
-               <hr>
-              <h3 class="black">Next &nbsp;<span class="blue">Junior Creator</span>&nbsp;Course:</h3>  
-                <hr>        
-                 <h4>Intro to Web Development</h4>
-              <h4>March 24, 2015</h4>  
-            </div>
-            </a>            
-          </div>  
-
-          <div class="col-sm-4 col-md-4 col-lg-4">
-            <a href="/intermediate">
-            <div class="courseborder">
-                  <!-- <span class="label label-warning">Limited Seats</span> -->
-                  <hr>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <a href="/junior">            
+              <div class="courseborder">
+                 <!-- <span class="label label-warning">Limited Spots</span> -->
+                  <hr>                      
                     <div class="badge_shell">  
-                      <%= image_tag "green-badge.png",:class=>'press_badge'%>
+                      <%= image_tag "blue-badge.png",:class=>'press_badge'%>
                     </div>
-                      <h4 class="social_sub_heading"></h4>
-                      <div class="topics">
-                         <br>
-                         <p>Intermediate Creators are youth who have deep experience  HTML &amp; CSS or who have taken a JC Course. and who want to create with attention to User Experience and Design Fundamentals.</p>
-                      </div>   
-               <hr>
-              <h3 class="black">Next &nbsp;<span class="green">Intermediate Creator</span>&nbsp;Course:</h3>      
-                <hr>                     
-                 <h4>UX/ UI &amp JavaScript</h4>
-              <h4>July 5, 2015</h4>                 
-           </div>
-          </a>
-        </div> 
+                    <h4 class="social_sub_heading"></h4>
+                        <div class="topics">
+                          <br>
+                           <p>Junior Creators have no previous experience coding, and want to learn to build beautiful and functional websites that scale across all devices.</p>
+                           <br>
+                        </div>   
+                 <hr>
+                    <div class="next_class">
+                      <h3 class="black extra">Next &nbsp;<span class="blue">Junior Creator</span>&nbsp;Course:</h3>  
+                    </div>
+                      <hr>        
+                   <h4>Intro to Web Development</h4>
+                <h4>March 24, 2015</h4>  
+              </div>
+              </a>            
+            </div>  
 
-        <div class="col-sm-4 col-md-4 col-lg-4 ">
-          <a href="/senior">            
-            <div class="courseborder">
-                <hr>                  
-                <!-- <span class="label label-warning">Introducing: Swift!</span> -->
-                    <div class="badge_shell">  
-                      <%= image_tag "grey-badge.png",:class=>'press_badge'%>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <a href="/intermediate">
+              <div class="courseborder">
+                    <!-- <span class="label label-warning">Limited Seats</span> -->
+                    <hr>
+                      <div class="badge_shell">  
+                        <%= image_tag "green-badge.png",:class=>'press_badge'%>
+                      </div>
+                        <h4 class="social_sub_heading"></h4>
+                        <div class="topics">
+                           <br>
+                           <p>Intermediate Creators have deep experience with HTML &amp; CSS, and want to craft powerful User Experiences. ICs expand functionality of sites by building with programming languages.</p>
+                        </div>   
+                 <hr>
+                    <div class="next_class">
+                      <h3 class="black">Next &nbsp;<span class="green">Intermediate Creator</span>&nbsp;Course:</h3>      
                     </div>
-                     <h4 class="social_sub_heading"></h4>
-                      <div class="topics">
-                         <br>
-                         <p>Intermediate Creators are youth who have deep experience  HTML &amp; CSS or who have taken a JC Course. and who want to begin creating with attention to User Experience and Design Fundamentals. </p>
-                      </div>   
-               <hr>
-              <h3 class="black">Next &nbsp;<span class="grey">Senior Creator</span>&nbsp;Course:</h3>  
-                <hr>        
-                 <h4>Android App Development</h4>
-              <h4>September 7, 2015</h4>        
-            </div>
+                  <hr>                     
+                   <h4>UX/ UI + JavaScript</h4>
+                <h4>July 5, 2015</h4>                 
+             </div>
             </a>
           </div> 
 
-    </div>
-  </div> 
+          <div class="col-sm-4 col-md-4 col-lg-4 ">
+            <a href="/senior">            
+              <div class="courseborder">
+                  <hr>                  
+                  <!-- <span class="label label-warning">Introducing: Swift!</span> -->
+                      <div class="badge_shell">  
+                        <%= image_tag "grey-badge.png",:class=>'press_badge'%>
+                      </div>
+                       <h4 class="social_sub_heading"></h4>
+                        <div class="topics">
+                           <br>
+                           <p>Senior Creators want to make advanced applications for the web and mobile devices. They want to learn how to take their ideas to the next level by building services that make an impact.</p>
+                        </div>   
+                 <hr>
+                <div class="next_class">
+                  <h3 class="black extra">Next &nbsp;<span class="grey">Senior Creator</span>&nbsp;Course:</h3>  
+                </div>
+                  <hr>        
+                   <h4>Android App Development</h4>
+                <h4>September 7, 2015</h4>        
+              </div>
+              </a>
+            </div> 
+
+      </div>
+    </div> 
 </section>
 
 <section class="exit-music">
@@ -142,6 +157,7 @@
   </div>
 </div>
 </section>
+
 
 
 

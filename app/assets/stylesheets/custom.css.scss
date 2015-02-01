@@ -67,6 +67,9 @@ h1 span {
 }
 .black {
   color: black;
+  &.extra {
+    padding-top: 15px;
+  }
 }
 .blue {
   color: $blue;
@@ -780,7 +783,7 @@ header {
   .navbar-nav {
     li {
       a {
-        @include transition((all, 200ms));        
+        @include transition((all, 100ms));        
         font-size: 17px;
         text-transform: uppercase;
         color: $white;     
@@ -892,7 +895,7 @@ header {
       @include text-shadow; 
       font-size: 10rem;
       // font-size: 80px;
-      padding-top: 15%;
+      padding-top: 20%;
       text-align: left;
       margin-left: 25px;
       word-spacing: 0;
@@ -978,6 +981,31 @@ header {
 
   }
 }
+
+/* the important styles */
+
+.arrow-wrap {
+  position:absolute;
+  z-index:1;
+  left:50%;
+  top:-10em;
+  margin-left:-5em;
+  display:block;
+  @media screen and (max-width: 995px) {
+    display: none;
+  }
+}
+
+.arrow {
+  float:left;
+  position:relative;
+  width: 0px;
+  height: 0px;
+
+}
+
+
+
 
 
 
@@ -1194,7 +1222,7 @@ aside {
         background-attachment: fixed;
         background-origin: initial;
         background-clip: initial;
-        min-height: 325px;
+        min-height: 550px;
         margin: 9rem auto;    
         p {
           text-align: justify;
@@ -1208,8 +1236,15 @@ aside {
          text-decoration:none;
          cursor: pointer;
          .press_badge {
-            width: 105px;
+            width: 110px;
+            @include transition($medium);
          }
+      }
+      .next_class {
+        min-height: 50px;
+        h3 {
+          vertical-align: middle;
+        }
       }
     }
 
@@ -1263,7 +1298,7 @@ aside {
         margin: -10px 0 0 0 ;
         padding: 0;
         line-height: 1.3em;
-      }
+        min-height: 175px;      }
       .img-circle {
 
       }
@@ -1286,7 +1321,7 @@ aside {
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size:cover;
-   min-height:600px;
+   min-height:700px;
     @media screen and (min-width: 768px){
       background-position-y: 60%;  
     }   
@@ -1294,7 +1329,7 @@ aside {
       background-position-x: 60%;  
     } 
     @media screen and (max-width: 480){
-      background-position-x: 80%;  
+      background-position-x: 90%;  
     }     
     #hero-overlay {
      position: absolute;
@@ -1348,7 +1383,7 @@ aside {
      left:0;
      height: 100%;
      width: 100%;
-     background-color: rgba(0,0,0,0.7);
+     background-color: rgba(0,0,0,0.6);
     }
 
    p{
@@ -1461,7 +1496,7 @@ aside {
       color: $blue;
       font-size: 17px;
       line-height: 35px;
-      @include transition((all, 200ms));
+      @include transition((all, 100ms));
    }
 
    .sitemap a:hover{
