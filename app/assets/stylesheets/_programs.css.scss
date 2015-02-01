@@ -113,25 +113,6 @@ Dividers
 	}
 }
 
-.program-img-divider {
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: cover;
-	background-repeat-x: no-repeat;
-	background-repeat-y: no-repeat;
-	background-origin: initial;
-	background-clip: initial;
-	min-height: 600px;		
-	&.jr {
-		background-image: image-url('hoc-rocc2.jpg');
-	}
-	&.int {
-		background-image: image-url('hoc-david.jpg');		
-	}
-	&.sr {
-		background-image: image-url('hoc-student8.jpg');		
-	}
-}
 
 
 .overview { 
@@ -146,6 +127,12 @@ Dividers
 	background-origin: initial;
 	background-clip: initial;
 	min-height: 600px;
+	h1 {
+		font-family: $fontregular;
+	}
+	p {
+		text-align: left;
+	}
 	.second-container {
 		max-width: $L; // breakpoints inside partials > _layout.scss
 		margin: 2em auto;

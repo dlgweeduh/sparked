@@ -65,7 +65,9 @@ h1 span {
     border-bottom: 5px solid $blue;
   }
 }
-
+.black {
+  color: black;
+}
 .blue {
   color: $blue;
 }
@@ -756,7 +758,7 @@ header {
 #logo {
   float: left;
   margin-right: 10px;
-  margin-top: -5px;
+  margin-top: -7px;
   height: 35px;
   color: $green;
   font-family: $fontregular;
@@ -824,12 +826,34 @@ header {
 
 /* Mobile Toggle Icon Color */
 
-.navbar-inverse .navbar-toggle .icon-bar {
-   background-color: $clear;
-   color: $blue;
+.navbar-inverse .navbar-toggle {
+   // color: $blue;
+   // border: 1px solid $lightblue !important;
+   // border-color: $lightblue !important;
 } 
-
-
+.navbar-inverse .navbar-toggle .icon-bar:hover, .navbar-inverse .navbar-toggle .icon-bar:focus {
+   // color: $blue !important;
+   // border: 1px solid $lightblue;
+   // background-color: white;
+} 
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+  // background-color: $white !important;
+}
+.navbar-toggle {
+  // position: relative;
+  // float: right;
+  // margin-right: 15px;
+  // padding: 9px 10px;
+  // margin-top: 8px;
+  // margin-bottom: 8px;
+  // background-color: transparent;
+  // background-image: none;
+  // border: 1px solid transparent;
+  // border-radius: 4px;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: $blue !important;
+}
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
   background-color: $clear;
   color: $blue;
@@ -840,9 +864,6 @@ header {
   background-color: $lightgrey; 
 }
 
-.navbar-inverse .navbar-toggle {
-
-}
 
 .offerings {
       color: $lightblue;
@@ -869,7 +890,7 @@ header {
       font-family: $fontregular;
       color: $lightgreen;
       @include text-shadow; 
-      font-size: 8rem;
+      font-size: 10rem;
       // font-size: 80px;
       padding-top: 15%;
       text-align: left;
@@ -884,7 +905,10 @@ header {
         margin-right: 0;
         padding-right: 0;        
       }
-      @media screen and (max-width: 650px) {
+      @media screen and (max-width: 850px) {
+        font-size: 8rem;        
+      } 
+      @media screen and (max-width: 712px) {
         font-size: 5rem;        
       }   
       @media screen and (max-width: 480px) {
@@ -900,10 +924,13 @@ header {
       text-shadow: 1.5px 1.5px 3px #666;
       padding-top: 3%;
       margin-left: 25px;
-      font-size: 3rem;
-      @media screen and (max-width: 650px) {
+      font-size: 5rem;
+      @media screen and (max-width: 850px) {
+        font-size: 3.5rem;
+      }  
+      @media screen and (max-width: 712px) {
         font-size: 2.5rem;
-      }            
+      } 
    }
 
   video{
@@ -924,7 +951,7 @@ header {
     @media screen and (min-width:500px) and (max-width: 800px) {
       margin-top: 5%;
     }
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1100px) {
       display: none;
     }
   }
@@ -1168,13 +1195,22 @@ aside {
         background-origin: initial;
         background-clip: initial;
         min-height: 325px;
-        margin: 9rem auto;
-
+        margin: 9rem auto;    
+        p {
+          text-align: justify;
+        }
+        h4 {
+          text-transform: uppercase;
+        }
         @include transition((border, .2s));
         
         &:hover {
-            // border: 1px solid $blue;
-        }
+         text-decoration:none;
+         cursor: pointer;
+         .press_badge {
+            width: 105px;
+         }
+      }
     }
 
       
@@ -1208,18 +1244,21 @@ aside {
    .badge_shell {
       min-height: 120px;
    }
-
    a {
       position: relative;
       display: block;
       text-align: center;
-
+      color: black;
+      &:hover {
+        text-decoration:none;
+        color: $lightblue;
+      }
       .label {
          text-shadow: 1px 1px 1px #666;
       }
 
       .topics {
-        color: #999;
+        color: $grey;
         list-style: none;
         margin: -10px 0 0 0 ;
         padding: 0;
@@ -1228,13 +1267,11 @@ aside {
       .img-circle {
 
       }
-
-      &:hover {
-         text-decoration:none;
-         .press_badge {
-            width: 105px;
-         }
-      }
+      h3 {
+          &:hover {
+            color: black;
+          }
+      }      
    }
 }
 
@@ -1242,18 +1279,23 @@ aside {
 
 .exit-music{
     position:relative;
-   background-image:image-url('hoc-girl.jpg');
+   background-image:image-url('stickerCover-bg.jpg');
    background-repeat: no-repeat;
    // background-attachment:fixed;
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size:cover;
-   height:600px;
-    @media screen and (max-width: 480px){
-      height:550px;
-      padding-bottom:10%;
+   min-height:600px;
+    @media screen and (min-width: 768px){
+      background-position-y: 60%;  
     }   
+    @media screen and (max-width: 767px){
+      background-position-x: 60%;  
+    } 
+    @media screen and (max-width: 480){
+      background-position-x: 80%;  
+    }     
     #hero-overlay {
      position: absolute;
      top:0;
@@ -1487,7 +1529,7 @@ aside {
 .copyright {
   margin: 0;
   padding: 0;
-  text-align: left;
+  text-align: right;
   h5 {
     line-height: 4;
     vertical-align: middle;

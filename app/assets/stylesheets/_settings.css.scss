@@ -16,24 +16,6 @@ $color-4: #ffffff; // white
 // fonts 
 $primary-font: 'Open Sans', sans-serif;
 
-// z-index 
-$secondary-bar-zindex: 1;
-$intro-zindex: 2;
-$header-zindex: 3;
-
-// header height 
-$header-S: 50px;
-$header-M: 70px;
-
-//intro height
-$intro-height-S: 300px;
-$intro-height-M: 400px;
-$intro-height-L: 600px;
-
-//secondary bar
-$bar-height-full: 100px;
-$bar-height: 70px;
-
 
 
 /* text-changes */
@@ -174,25 +156,6 @@ $L:     1024px;
    @media only screen and (min-width: $L) { @content; } 
   }
 }
-// breakpoints
-   
-// $S:     320px;   
-// $M:     768px;     
-// $L:     1170px;     
-
-// // media queries
-
-// @mixin MQ($canvas) {
-//   @if $canvas == S {
-//    @media only screen and (min-width: $S) { @content; } 
-//   }
-//   @else if $canvas == M {
-//    @media only screen and (min-width: $M) { @content; } 
-//   }
-//   @else if $canvas == L {
-//    @media only screen and (min-width: $L) { @content; } 
-//   }
-// }
 
 // super light grid - it works with the .cd-container class inside style.scss
 
@@ -221,25 +184,25 @@ $L:     1024px;
 
 // center vertically and/or horizontally an absolute positioned element
 
-@mixin center($xy:xy) {
-  @if $xy == xy {
-    left: 50%;
-    top: 50%;
-    bottom: auto;
-    right: auto;
-    @include transform(translateX(-50%) translateY(-50%));
-  }
-  @else if $xy == x {
-    left: 50%;
-    right: auto;
-    @include transform(translateX(-50%));
-  }
-  @else if $xy == y {
-    top: 50%;
-    bottom: auto;
-    @include transform(translateY(-50%));
-  }
-}
+// @mixin center($xy:xy) {
+//   @if $xy == xy {
+//     left: 50%;
+//     top: 50%;
+//     bottom: auto;
+//     right: auto;
+//     @include transform(translateX(-50%) translateY(-50%));
+//   }
+//   @else if $xy == x {
+//     left: 50%;
+//     right: auto;
+//     @include transform(translateX(-50%));
+//   }
+//   @else if $xy == y {
+//     top: 50%;
+//     bottom: auto;
+//     @include transform(translateY(-50%));
+//   }
+// }
 
 // border radius
 

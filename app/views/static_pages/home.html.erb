@@ -1,4 +1,6 @@
-  <%= render 'layouts/navbar' %>
+<%= render 'layouts/navbar' %>
+<% provide(:title, "Code + Creation") %> 
+
 <section class="landing">	
 	<video autoplay="true" poster="" muted="true">
 					<source src="http://sparkedtech.s3.amazonaws.com/Sparked_landing_low.webm" type="video/webm">		
@@ -52,60 +54,74 @@
               <h1><span class="blue">Sparked</span><span class="green underline">Creator</span><span class="grey">Programs</span></h1>
             </div>
           </div>
+
+
           <div class="col-sm-4 col-md-4 col-lg-4">
+            <a href="/junior">            
             <div class="courseborder">
-               <a href="/junior">
                <!-- <span class="label label-warning">Limited Spots</span> -->
+                <hr>                      
                   <div class="badge_shell">  
                     <%= image_tag "blue-badge.png",:class=>'press_badge'%>
                   </div>
                   <h4 class="social_sub_heading"></h4>
                       <div class="topics">
                          <br>
-                         <p>Junior Creator Courses are designed for those who want to learn to build beautiful and functional products of the web.</p>
+                         <p>Junior Creators are youth who have no previous experience coding, and who want to learn to build beautiful and functional websites that scale across all devices.</p>
                       </div>   
-               </a>
-              <p>Next Junior Creator Course Session: January 6th, 2015</p>             
-              <p>Intro to Web Development</p>         
-
+               <hr>
+              <h3 class="black">Next &nbsp;<span class="blue">Junior Creator</span>&nbsp;Course:</h3>  
+                <hr>        
+                 <h4>Intro to Web Development</h4>
+              <h4>March 24, 2015</h4>  
             </div>
+            </a>            
           </div>  
 
           <div class="col-sm-4 col-md-4 col-lg-4">
+            <a href="/intermediate">
             <div class="courseborder">
-              <a href="/intermediate">
                   <!-- <span class="label label-warning">Limited Seats</span> -->
+                  <hr>
                     <div class="badge_shell">  
                       <%= image_tag "green-badge.png",:class=>'press_badge'%>
                     </div>
                       <h4 class="social_sub_heading"></h4>
-                  <div class="topics">
-                     <br>
-                     <p>Build web applications such as LinkedIn and Twitter using Ruby on Rails, the most popular coding language and framework.</p>
-                  </div>  
-              </a>                  
-              <p>Next Junior Creator Course Session: January 6th, 2015</p>             
-              <p>Intro to Web Development</p>             
-
+                      <div class="topics">
+                         <br>
+                         <p>Intermediate Creators are youth who have deep experience  HTML &amp; CSS or who have taken a JC Course. and who want to create with attention to User Experience and Design Fundamentals.</p>
+                      </div>   
+               <hr>
+              <h3 class="black">Next &nbsp;<span class="green">Intermediate Creator</span>&nbsp;Course:</h3>      
+                <hr>                     
+                 <h4>UX/ UI &amp JavaScript</h4>
+              <h4>July 5, 2015</h4>                 
            </div>
+          </a>
         </div> 
 
-        <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="col-sm-4 col-md-4 col-lg-4 ">
+          <a href="/senior">            
             <div class="courseborder">
-                <a href="/senior">
+                <hr>                  
                 <!-- <span class="label label-warning">Introducing: Swift!</span> -->
                     <div class="badge_shell">  
                       <%= image_tag "grey-badge.png",:class=>'press_badge'%>
                     </div>
                      <h4 class="social_sub_heading"></h4>
-                        <div class="topics">
-                           <br>
-                            <p>Learn to create iOS applications such as Foursquare and publish your first app in the App Store.</p>
-                        </div>
-                </a>
-                 <p>Next Session: January 19th, 2015</p>          
+                      <div class="topics">
+                         <br>
+                         <p>Intermediate Creators are youth who have deep experience  HTML &amp; CSS or who have taken a JC Course. and who want to begin creating with attention to User Experience and Design Fundamentals. </p>
+                      </div>   
+               <hr>
+              <h3 class="black">Next &nbsp;<span class="grey">Senior Creator</span>&nbsp;Course:</h3>  
+                <hr>        
+                 <h4>Android App Development</h4>
+              <h4>September 7, 2015</h4>        
             </div>
+            </a>
           </div> 
+
     </div>
   </div> 
 </section>
@@ -126,8 +142,6 @@
   </div>
 </div>
 </section>
-
-
 
 
 
