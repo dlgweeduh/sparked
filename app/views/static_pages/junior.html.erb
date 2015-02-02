@@ -30,33 +30,35 @@
 		<div id="overview" class="sp-group">
 			<div class="container">
 				<div class="row">		
-					<div class="core-skills col-sm-6 col-sm-offset-3">		
+					<div class="core-skills col-sm-8 col-sm-offset-2">		
 						<h1>Junior Creators:</h1>
-
 						<div class="core-skill row">
-							<div class="col-sm-2">
+							<div class="col-sm-3 col-sm-offset-1">
 								<%= image_tag "puzzle.png", class: "learnicons" %>
 							</div>
-							<div class="skill-description col-sm-10">
+							<div class="skill-description col-sm-8">
 								<h3>Experiment</h3>
+								<hr>
 								<p>The interaction between people and computers is a continual process of trial and error: of learning by inquiring. Coding, by nature, promotes focus, patience, and curiosity.</p>
 							</div>
 						</div>
 						<div class="core-skill row">
-							<div class="col-sm-2">
+							<div class="col-sm-3 col-sm-offset-1">
 								<%= image_tag "brickbuild.png", class: "learnicons" %>	
 							</div>
-							<div class="skill-description col-sm-10">
+							<div class="skill-description col-sm-8">
 								<h3>Discover</h3>
+								<hr>								
 								<p>Coding promotes questioning and necessitates research. It transforms every-day browsing into inquiry. The terrain is fun, dynamic, and always-evolving.</p>
 							</div>
 						</div>
 						<div class="core-skill row">
-							<div class="col-sm-2">
+							<div class="col-sm-3 col-sm-offset-1">
 								<%= image_tag "map.png", class: "learnicons" %>
 							</div>
-								<div class="skill-description col-sm-10">
-									<h3>Solve Problems</h3>
+								<div class="skill-description col-sm-8">
+									<h3>Problem Solve</h3>
+								<hr>								
 									<p>The most exciting aspect of creating with code is learning to solve problems with others. Sparked makes collaborative problem-solving intrinsic to the learning process.</p>
 								</div>
 						</div>												
@@ -152,19 +154,83 @@
 			</div>
 		</div>
 	</div>
+
+<div class="accordion" id="accordion2">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+        Collapsible Group Item #1
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        Anim pariatur cliche...
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+        Collapsible Group Item #2
+      </a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse">
+      <div class="accordion-inner">
+        Anim pariatur cliche...
+      </div>
+    </div>
+  </div>
+</div>
+	
 <section class="classroom-overlay">
    <div class="" id="hero-overlay2">
-	   <div class="col-sm-6 col-sm-offset-3">
-	   			<h1>Classroom</h1>
-	   		<div class="col-sm-1 col-sm-offset-3">
-        		<%= image_tag "brick.png",:class=>'brick'%>	 		
-	   		</div>
-	   		<div class="col-sm-5 col-sm-offset-1">
-	   			<h2>7:1 Student to Educator Ratio</h2>
-	   		</div>
-	   		<h2></h2>
-	   </div>		
-	</div>
+   		<div class="container">
+   			<div class="row">
+			   <div class="col-sm-8 col-sm-offset-3">
+			   		<div class="classroom-structure">
+			   		<h1>Classroom</h1>
+			   		<hr class="style-blue">
+			   			<div class="row class-point">
+			   				<div class="col-sm-1">
+		        				<%= image_tag "educator.png",:class=>'overlay-icons'%>
+		        			</div>
+							<div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+		   						<h2>7 : 1 Student to Educator Ratio</h2>
+		   						<p>Sparked instructors and tutors are invested in your learning.</p>
+		   					</div>				        			
+		        		</div>   
+			   			<div class="row class-point">
+			   				<div class="col-sm-1">
+		        				<%= image_tag "flipped.png",:class=>'overlay-icons'%>
+		        			</div>
+							<div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+		   						<h2>Flipped-Classroom</h2>
+		   						<p>Sparked learners discover at home, and problem-solve in class.</p>
+		   					</div>				        			
+		        		</div>   
+			   			<div class="row class-point">
+			   				<div class="col-sm-1">
+		        				<%= image_tag "screenhero.png",:class=>'overlay-icons'%>
+		        			</div>
+							<div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+		   						<h2>HeroTime</h2>
+		   						<p>Each student is allotted 5-hours of 1-on-1 tutoring on ScreenHero</p>
+		   					</div>				        			
+		        		</div>   
+			   			<div class="row class-point">
+			   				<div class="col-sm-1">
+		        				<%= image_tag "udl.png",:class=>'overlay-icons'%>
+		        			</div>
+							<div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+		   						<h2>Universal Design Approach</h2>
+		   						<p>Courses are designed like modern-buildings: with a focus on accessibility and attention to individual	 needs.</p>
+		   					</div>				        			
+		        		</div>  		        			        			       
+		        	</div>		
+			   </div>	
+		   	</div>
+		</div>
+
 </section>
 
 

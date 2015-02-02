@@ -68,7 +68,7 @@ h1 span {
 .black {
   color: black;
   &.extra {
-    padding-top: 15px;
+    padding-top: 12px;
   }
 }
 .blue {
@@ -120,7 +120,7 @@ h1 {
   font-size: 4rem;
   font-weight: 900;
   letter-spacing: 0.5px;
-  font-family: $fontbold;
+  font-family: $fontregular;
 }
 
 h2 {
@@ -134,6 +134,7 @@ h3 {
 p {
   font-size: 1.2em;
   line-height: 1.7em;
+  font-family: $fontthin, sans-serif;
   @media screen and (max-width: 768px) {
 
   }
@@ -145,6 +146,12 @@ hr.style-one {
   height: 0;
   border-top: 1px solid rgba(0, 0, 0, 1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}   
+hr.style-blue {   
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 1);
+  border-bottom: 1px solid $lightblue;
 }    
 hr.style-two {
     border: 0;
@@ -616,6 +623,9 @@ header {
     background-image: image-url('hoc-rocc2.jpg');
     @media screen and (min-width:1150px) {
       background-position-y: 60%;
+    }
+    @media screen and (max-width:998px) {
+      background-position-x: 50%;
     }
   }
   &.int {
@@ -1330,6 +1340,7 @@ aside {
     } 
     @media screen and (max-width: 480){
       background-position-x: 90%;  
+      height: 400px;
     }     
     #hero-overlay {
      position: absolute;
@@ -1341,24 +1352,22 @@ aside {
     }
 
    p{
-          text-align:center;
-          color:#fff;
-          font-size:26px;
-          padding:50px;
-          margin-top:8%;
-          @media screen and (max-width: 480px){
-            margin-top:50px;
-            font-size:20px;
-
+    text-align:center;
+    color:#fff;
+    font-size:3rem;
+    padding:50px;
+    margin-top:8%;
+    @media screen and (max-width: 480px){
+      margin-top:50px;
+      font-size:1.5rem;
           }
    }
 
    span{
-      color:#43c3d9;
-      font-size:36px;
-
+      color: $lightblue;
+      font-size:7rem;
       @media screen and (max-width: 480px) {
-      font-size:30px;
+      font-size:4rem;
     }
    }
 
@@ -1401,7 +1410,26 @@ aside {
    h1{ 
     color: $white;
    }
+   .classroom-structure {
+      color: white;
+      .overlay-icons {
 
+      }
+    h1 {
+      padding: 2rem;
+    }
+    h2 {
+      text-align: left;
+      color: $lightblue;
+    }
+    .class-point {
+      padding: 0.5rem 0;
+    }
+    p {
+      font-family: $fontthin;
+      text-align: left;
+    }
+   }
 }
 
 // .classroom {
