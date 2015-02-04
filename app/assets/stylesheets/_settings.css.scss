@@ -1,3 +1,4 @@
+
 $fontregular: 'ProximaNova-Reg', sans-serif;
 $fontregularit: 'ProximaNova-RegIt', sans-serif;
 $fontthin: 'ProximaNova-Thin', sans-serif;
@@ -49,6 +50,7 @@ $minspacing: .1rem;
   $clear: rgba(0,0,0,0); /**/
   $white: #fff; /**/
   $black: #000; /**/
+  $black-transparent: rgba(0,0,0,0.7);
   $offblack: #333; /**/
   $fast: color 0.5s ease;
   $medium: color 0.1s ease;

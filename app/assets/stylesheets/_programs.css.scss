@@ -1,53 +1,11 @@
 @import "bourbon"; // http://bourbon.io/
 @import "custom";
 @import "settings";
-
 /* -------------------------------- 
 
 Primary style
 
 -------------------------------- */
-
-*, *::after, *::before {
-	@include box-sizing;
-}
-
-*::after, *::before {
-	content: '';
-}
-
-
-body {
-	&::after {
-		/* overlay layer visible on small devices when the right panel slides in */
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba($blue, .8);
-		visibility: hidden;
-		opacity: 0;
-		-webkit-transition: opacity .3s 0s, visibility 0s .3s;
-		-moz-transition: opacity .3s 0s, visibility 0s .3s;
-		transition: opacity .3s 0s, visibility 0s .3s;
-	}
-
-	&.sp-overlay::after {
-		visibility: visible;
-		opacity: 1;
-		-webkit-transition: opacity .3s 0s, visibility 0s 0s;
-		-moz-transition: opacity .3s 0s, visibility 0s 0s;
-		transition: opacity .3s 0s, visibility 0s 0s;
-	}
-
-	@include MQ(M) {
-		&::after {
-			display: none;
-		}
-	}
-}
-
 
 /* -------------------------------- 
 
@@ -56,149 +14,54 @@ Main components
 -------------------------------- */
 
 
-	
-.sp-faq {
-	.courses-container {
-		width: 90%;
-		max-width: $L; // breakpoints inside partials > _layout.scss
-		// ~margin: 2em auto 0 auto;
-		padding: 2em auto 0 auto;
-		@include clearfix;
 
-		@include MQ(M) {
-			position: relative;
-			margin: 0 auto;
-			box-shadow: none;
-		}
-		ul {
-			margin-top: 150px; 
-		}
-	}
-}
-
-
-.learningskills {
-	margin: 0;
-	&.blue {
-		background-color: $lightblue;
-	}
-	&.green {
-		background-color: $lightgreen;
-	}
-	&.grey {
-		background-color: $lightgrey;
-	}
-}
-
-
-
-
-/* -------------------------------- 
-
-Dividers
-
--------------------------------- */
-
-.program-divider {
-	background-color: $black;
-	min-height: 250px;
-	margin: 0;
-	h3 {
-	}
-	.blue {
-		color: $lightblue;
-	}
-	.green {
-		color: $lightgreen;
-	}
-}
-
-
-
-.overview { 
-	background-image: image-url('blueprint-small.gif');
-	padding: 2rem;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: repeat;
-	background-repeat-y: repeat;
-	// background-attachment: fixed;
-	background-origin: initial;
-	background-clip: initial;
-	min-height: 600px;
-	h1 {
-		font-family: $fontregular;
-	}
-	p {
-		text-align: left;
-	}
-	.second-container {
-		max-width: $L; // breakpoints inside partials > _layout.scss
-		margin: 2em auto;
-		@include clearfix;
-
-		@include MQ(M) {
-			position: relative;
-			// ~margin: 4em auto;
-			box-shadow: none;
-		}
-		ul {
-			margin-top: 150px; 
-		}
-	}
-	.core-skills {
-		padding-top: 4rem;
-		padding-bottom: 4rem;
-		h1 {
-			text-align: left;
-		}
-	}
-	.core-skill {
-		img {
-			display: inline-block;
-			width: 115px;
-			margin-top: 25px;
-			padding-left: 10px;
-		}
-		p {
-			display: inline-block;
-		}
-	}
-}
 
 .sp-categories {
-	ul {
-		border-radius: 3px 3px 0 0;
+	ul.nav-tabs{
+		z-index: 100;
+	    width: 140px;
+	    margin-top: 100px;
+	    border-bottom: 1px solid $clear;
+	    border-radius: 3px 3px 0 0;
+		@media screen and (max-width: 768px) {
+			width: 100%;
+		}	    
 	}
+	ul.nav-tabs li{
+	    margin: 0;
+	}
+	ul.nav-tabs li:first-child{
+	    border-top: none;
+	}
+	ul.nav-tabs li a{
+	    margin: 0;
+	    border-radius: 0;
+	    font-size: 1.5rem;
+	}
+	ul.nav-tabs li.active a {
+	    color: $offblack;
+	    background: $lightgrey;
+	    border: none;
+	}
+	ul.nav-tabs li:first-child a{
+	    border-radius: 4px 4px 0 0;
+	}
+	ul.nav-tabs li:last-child a{
+
+	}
+	ul.nav-tabs.affix{
+	    top: 30px; /* Set the top position of pinned element */
+	}	
 	a {
 		position: relative;
 		display: block;
 		overflow: hidden;
-		height: 50px;
-		line-height: 50px;
 		padding: 0 28px 0 16px;
 		background-color: #333;
 		@include font-smoothing;
 		color: $white;
 		white-space: nowrap;
-		c-bottom: 1px solid lighten($black, 3%);
-		text-overflow: ellipsis;
-
-		&::before, &::after {
-			/* plus icon on the right */
-			position: absolute;
-			top: 50%;
-			right: 16px;
-			display: inline-block;
-			height: 1px;
-			width: 10px;
-			background-color: lighten($black, 20%);
-		}
-
-		&::after {
-			@include transform(rotate(90deg));
-		}
+		// border-bottom: 1px solid lighten($black, 3%);
 	}
 
 	li {
@@ -206,21 +69,51 @@ Dividers
 		a {
 			text-decoration: none;
 			border-bottom: 1px solid $black;
+			line-height: 2rem;
 			&:focus, &:hover {
 				background-color: $offblack;
+				line-height: 2rem;				
+				background-color: #a9bcb8;		
+				color: black;
+				border: 1px solid #a9bcb8;
 			}
 		}
 	}
-	li:last-child a {
-		border-bottom: none;
-		// background-color: darken($blue, 10%);
-		height: 70px;
-		// line-height: 100px;
-		text-align: center;
+	a.jr-apply  {
+		background: darken($blue, 10%) !important;
 		&:focus, &:hover {
-			background-color: $offblack;
-		}
+			background: darken($blue, 10%) !important;					
+		}		
 	}
+
+	li:last-child a {
+		text-align: center;
+		color: white;
+		&.jr-apply {
+			background: darken($blue, 10%) !important;				
+			border: 1px solid darken($blue, 10%) !important;
+			&:focus, &:hover {
+				background-color: darken($blue, 10%);		
+				border-bottom: 1px solid $black;			
+				color: white;	
+			}
+		}	
+		&.int-apply {
+			background: darken($green, 10%) !important;	
+			border: 1px solid darken($green, 10%) !important;						
+			&:focus, &:hover {
+				background-color: darken($green, 10%);					
+			}
+		}	
+		&.sr-apply {
+			background: darken($lightgrey, 10%) !important;
+			border: 1px solid darken($lightgrey, 10%) !important;				
+			&:focus, &:hover {
+				background-color: $offblack;					
+			}
+		}							
+	}
+
 	.jr-apply h4{
 		border-radius: 3px;
 		line-height: 50px;
@@ -229,6 +122,7 @@ Dividers
   		@include transition((all, 200ms));
 			&:hover {
 			background-color: darken($lightblue, 20%);
+			color: white;
 			}
 	}	
 	.int-apply h4{
@@ -251,233 +145,160 @@ Dividers
 			background-color: darken($grey, 20%);
 			}
 	}
-	@include MQ(M) {
-		width: 20%;
-		float: left;
-		 // box-shadow: 0 1px 2px rgba(#000, .08);
+}
 
-		a {
-			font-weight: 600;
-			padding-left: 24px;
-			padding: 0 24px;
-			@include transition((background .2s, padding .2s));
-
-			&::before, &::after {
-				display: none;
-			}
-			.no-touch &:hover {
-				background-color: $grey;
-			}
-		}
-
-		.no-js & {
-			width: 100%;
-			margin-bottom: 2em;
-		}
+.program-divider {
+	background-color: $black;
+	min-height: 250px;
+	margin: 0;
+	h3 {
 	}
-
-	@include MQ(L) {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 200px;
-		z-index: 2;
-
-		a::before {
-			/* decorative rectangle on the left visible for the selected item */
-			display: block;
-			top: 0;
-			right: auto;
-			left: 0;
-			height: 100%;
-			width: 3px;
-			background-color: $lightblue;
-			opacity: 0;
-			@include transition(opacity .2s);
-		}
-
-		.selected {
-			background: darken($lightgrey, 5%) !important;
-			color: $black;
-			border-bottom: none;	
-			// &::before {
-			// 	opacity: 1;
-			// }
-		}
-			// &::after {
-			// 	background-image: image-url('spark.png');
-			// 	position: absolute;
-			// 	content: "";
-			// }
-
-		&.is-fixed {
-			/* top and left value assigned in jQuery */
-			position: fixed;
-		}
-
-		.no-js & {
-			position: relative;
-		}
+	.blue {
+		color: $lightblue;
+	}
+	.green {
+		color: $lightgreen;
 	}
 }
 
-
-
-.sp-items {
-	position: fixed;
-	height: 100%;
-	width: 90%;
-	top: 0;
-	right: 0;
-	background: $green;
-	padding: 0 5% 1em;
-	overflow: auto;
-	-webkit-overflow-scrolling: touch;
-	z-index: 1;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	@include transform(translateZ(0) translateX(100%));
-	-webkit-transition: -webkit-transform .3s;
-	-moz-transition: -moz-transform .3s;
-	transition: transform .3s;
-
-	a {
-		text-decoration: none;
+.overview { 
+	background-image: image-url('blueprint-small.gif');
+	padding: 2rem;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: repeat;
+	background-repeat-y: repeat;
+	// background-attachment: fixed;
+	background-origin: initial;
+	background-clip: initial;
+	min-height: 600px;
+	h1 {
+		font-family: $fontregular;
 	}
-	&.slide-in {
-		@include transform(translateZ(0) translateX(0%));
+	p {
+		text-align: left;
 	}
-
-	.no-js & {
-		position: static;
-		height: auto;
-		width: 100%;
-		@include transform(translateX(0));
+	.core-skills {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+		h1 {
+			text-align: left;
+		}
 	}
-
-	@include MQ(M) {
-		position: static;
-		height: auto;
-		width: 78%;
-		float: right;
-		overflow: visible;
-		@include transform(translateZ(0) translateX(0));
-		padding: 0;
-		background: transparent;
-	}
-
-	@include MQ(L) {
-		float: none;
-		width: 100%;
-		padding-left: 220px;
-
-		.no-js & {
-			padding-left: 0;
+	.core-skill {
+		img {
+			display: inline-block;
+			width: 115px;
+			margin-top: 25px;
+			padding-left: 10px;
+		}
+		p {
+			display: inline-block;
 		}
 	}
 }
+	
 
-.sp-close-panel {
-	position: fixed;
-	top: 5px;
-	right: -100%;
-	display: block;
-	height: 40px;
-	width: 40px;
-	overflow: hidden;
-	text-indent: 100%;
-	white-space: nowrap;
-	z-index: 2;
-	/* Force Hardware Acceleration in WebKit */
-	@include transform(translateZ(0));
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	@include transition(right .4s);
+.learningskills {
+	margin: 0;
+	&.blue {
+		background-color: $lightblue;
+	}
+	&.green {
+		background-color: $lightgreen;
+	}
+	&.grey {
+		background-color: $lightgrey;
+	}
+}
 
-	&::before, &::after {
-		/* close icon in CSS */
-		position: absolute;
-		top: 16px;
-		left: 12px;
+.courses {
+	.creator-courses {
+		padding: 3rem 0;
+		h1 {
+			padding-top: 6rem;
+			padding-left: 2rem;
+		}
+		ul {
+			font-family: $fontthin;
+		}
+	}
+	.course_badge {
 		display: inline-block;
-		height: 3px;
-		width: 18px;
-		background: $blue;
+		float: left;
+		padding: 10px;
 	}
-
-	&::before {
-		@include transform(rotate(45deg));
-	}
-
-	&::after {
-		@include transform(rotate(-45deg));
-	}
-
-	&.move-left {
-		right: 2%;
-	}
-
-	@include MQ(M) {
-		display: none;
+	.course-section {
+      	padding-left: 5rem;
+      	padding-right: 5rem;      	
+      	padding-top: 2rem;		
+		color: white;      	
+      h1 {
+		text-align: left;
+      }	
+      h2 {
+		text-align: left; 	
+      }	
+      h4 {
+      }
+      h5 {
+      	font-size: 1.4rem;
+      }
 	}
 }
-
-.sp-group {
-	/* hide group not selected */
-	display: none;
-	&.selected {
-		display: block;
-	}
-
-	.sp-title {
-		box-shadow: none;
-		margin: 1em 0;
-		font-size: 1.5rem;
-		.no-touch &:hover {
-			box-shadow: none;
-		}
-
-		h2 {
-			text-transform: uppercase;
-			font-weight: 700;
-			// color: darken($lightgrey, 20%);
-		}
-	}
-
-	.no-js & {
-		display: block;
-	}
-
-	@include MQ(M) {
-		/* all groups visible */
-		display: block;
-
-		> li {
-			margin-bottom: 6px;	
-			//~ box-shadow: 0 1px 2px rgba(#000, .08);
-			list-style: none;
-			@include transition(box-shadow .2s);
-			&:last-child {
-				padding-bottom: 10rem;
-			}
-			.no-touch &:hover {
-				//~ box-shadow: 0 1px 10px rgba($blue, .3);
-			}
-		}
-
-		.sp-title {
-			margin: 2em 0 1em;
-		}
-
-		&:first-child .sp-title {
-			margin-top: 0;
+.week-calendar {
+	list-style: none;
+	margin: 10px 0 10px 0;
+	padding: 0;
+	text-align: center;	
+	li {
+		display: inline-block;
+		width: 20px;
+		height: 40px;
+		line-height: 40px;
+		border-radius: 40px;
+		font-size: 18px;
+		text-transform: uppercase;
+		margin-right: 0px;
+		color: #fff;
+		background-color: #000;
+		text-align: center;
+		&.active {
+			background-color: $lightblue;
 		}
 	}
 }
 
 
 
-.sp-trigger {
+// .accordion-group [data-toggle="collapse"]:after
+// {
+//     font-family: 'Glyphicons Halflings';
+//     content: "\e072"; /* "play" icon */
+//     float: right;
+//     color: #b0c5d8;
+//     font-size: 18px;
+//     line-height: 22px;
+
+//     /* rotate "play" icon from > (right arrow) to down arrow */
+//     -webkit-transform: rotate(-90deg);
+//     -moz-transform:    rotate(-90deg);
+//     -ms-transform:     rotate(-90deg);
+//     -o-transform:      rotate(-90deg);
+//     transform:         rotate(-90deg);
+// }
+// .accordion-group [data-toggle="collapse"].collapsed:after
+// {
+//     /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+//     -webkit-transform: rotate(90deg);
+//     -moz-transform:    rotate(90deg);
+//     -ms-transform:     rotate(90deg);
+//     -o-transform:      rotate(90deg);
+//     transform:         rotate(90deg);
+// }
+
+.accordion-toggle {
 	position: relative;
 	display: block;
 	margin: 1.6em 0 .4em;
@@ -485,6 +306,10 @@ Dividers
 	font-size: 1.5rem;
 	color: $black;
 	text-align: left;
+	font-weight: 300;
+	margin: 0;
+	padding: 14px 72px 14px 24px;
+
 	&.blue {
 		border-bottom: 1px solid darken($lightblue, 10%);
 	}
@@ -494,24 +319,6 @@ Dividers
 	&.grey {
 		border-bottom: 1px solid darken($lightgrey, 10%);
 	}
-	@include MQ(M) {
-		@include font-size(24px);
-		@include transition((all, 150ms));		
-		font-weight: 300;
-		margin: 0;
-		padding: 14px 72px 14px 24px;
-		&::before, &::after {
-			/* arrow icon on the right */
-			position: absolute;
-			right: 24px;
-			top: 50%;
-			height: 2px;
-			width: 13px;
-			-webkit-backface-visibility: hidden;
-			backface-visibility: hidden;
-			@include transition-property(transform);
-			@include transition-duration(.2s);
-		}
 		&.blue {
 			&::before, &::after {
 				background: darken($lightblue, 30%);
@@ -543,21 +350,9 @@ Dividers
 			@include transform(rotate(-45deg));
 		}
 
-		.content-visible &::before {
-			@include transform(rotate(-45deg));
-		}
-		.content-visible &.sp-trigger {
-			background-color: $white;
-			color: $black;
-			border-bottom: none;
-		}
-		.content-visible &::after {
-			@include transform(rotate(45deg));
-		}
 	}
-}
 
-.sp-content {
+.accordion-body {
 	background-color: $white;
 	text-align: left;
 	p {
@@ -565,18 +360,32 @@ Dividers
 		color: $black;
 		padding: 2.5rem;
 	}
-
-	@include MQ(M) {
-		display: none;
-		//~ padding: 0 24px 30px;
-		p {
-			line-height: 1.6
-		}
-
-		.no-js & {
-			display: block;
-		}
-	}
 }
 
 
+
+// .accordion-caret .accordion-toggle:hover {
+//     text-decoration: none;
+// }
+// .accordion-caret .accordion-toggle:hover span,
+// .accordion-caret .accordion-toggle:hover strong {
+//     text-decoration: underline;
+// }
+// .accordion-caret .accordion-toggle:after {
+//     font-size: 25px;
+//     vertical-align: -3px;
+// }
+// .accordion-caret .accordion-toggle:not(.collapsed):after {
+// 	width: 0; 
+// 	height: 0; 
+// 	border-left: 5px solid transparent;
+// 	border-right: 5px solid transparent;
+// 	border-bottom: 5px solid black;
+// }
+// .accordion-caret .accordion-toggle.collapsed:after {
+// 	width: 0; 
+// 	height: 0; 
+// 	border-left: 20px solid transparent;
+// 	border-right: 20px solid transparent;
+// 	border-top: 20px solid black;
+// }

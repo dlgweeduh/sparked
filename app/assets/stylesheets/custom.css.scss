@@ -134,7 +134,7 @@ h3 {
 p {
   font-size: 1.2em;
   line-height: 1.7em;
-  font-family: $fontthin, sans-serif;
+  font-family: $fontregular, sans-serif;
   @media screen and (max-width: 768px) {
 
   }
@@ -150,7 +150,7 @@ hr.style-one {
 hr.style-blue {   
   border: 0;
   height: 0;
-  border-top: 1px solid rgba(0, 0, 0, 1);
+  border-top: 1px solid $lightblue;
   border-bottom: 1px solid $lightblue;
 }    
 hr.style-two {
@@ -392,7 +392,6 @@ hr.style-two {
   top: 6px;
 }
 
-
 .button{
   border-radius: none;
   padding: 1rem 2rem 1rem;
@@ -587,6 +586,9 @@ header {
 .blue-transparent {
   background-color: $blue-transparent;
 }
+.black-transparent {
+  background-color: $black-transparent;
+}
 // .lightblue-transparent {
 //   background-color: $lightblue-transparent;
 // }
@@ -605,7 +607,9 @@ header {
   margin-top: -100px;
 }
 
-
+.lightblue {
+  color: $lightblue;
+}
 
 // ~!~ Separators
 
@@ -836,6 +840,9 @@ header {
   min-height: 400px;
   padding: 5rem 0 0 0;
 }
+.map2 {
+  max-height: 200px;
+}
 
 /* Mobile Toggle Icon Color */
 
@@ -909,6 +916,9 @@ header {
       text-align: left;
       margin-left: 25px;
       word-spacing: 0;
+      &.about {
+        padding-top: 10%;
+      }
       .word-swap{
         color: $lightblue;
         margin-right: 0;
@@ -918,14 +928,14 @@ header {
         margin-right: 0;
         padding-right: 0;        
       }
-      @media screen and (max-width: 850px) {
+      @media screen and (max-width: 921px) {
         font-size: 8rem;        
       } 
       @media screen and (max-width: 712px) {
         font-size: 5rem;        
       }   
       @media screen and (max-width: 480px) {
-        font-size: 3.5rem;  
+        font-size: 4.5rem;  
         padding-top: 37%;      
       }   
     }
@@ -942,7 +952,7 @@ header {
         font-size: 3.5rem;
       }  
       @media screen and (max-width: 712px) {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
       } 
    }
 
@@ -957,6 +967,7 @@ header {
   @media screen and (max-width: 479px) {
     background-image: image-url('hoc-group.jpg');
     @include background-size;
+    background-position-x: 70%;    
   }
   .scrolldown {
     position: relative;
@@ -1204,6 +1215,12 @@ aside {
     border-radius: 10%;
     margin: 2rem auto;
     line-height: 5rem;
+      @media screen and (max-width: 712px) {
+        font-size: 3rem;        
+      }   
+      @media screen and (max-width: 480px) {
+        font-size: 2rem;    
+      } 
     }
 
    a {
@@ -1326,7 +1343,7 @@ aside {
     position:relative;
    background-image:image-url('stickerCover-bg.jpg');
    background-repeat: no-repeat;
-   // background-attachment:fixed;
+   background-attachment:fixed;
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
@@ -1356,10 +1373,10 @@ aside {
     color:#fff;
     font-size:3rem;
     padding:50px;
-    margin-top:8%;
+    margin-top:20%;
     @media screen and (max-width: 480px){
       margin-top:50px;
-      font-size:1.5rem;
+      font-size:2.5rem;
           }
    }
 
@@ -1367,7 +1384,7 @@ aside {
       color: $lightblue;
       font-size:7rem;
       @media screen and (max-width: 480px) {
-      font-size:4rem;
+      font-size:5rem;
     }
    }
 
@@ -1406,17 +1423,15 @@ aside {
 
     }
    }
-
-   h1{ 
-    color: $white;
-   }
    .classroom-structure {
       color: white;
       .overlay-icons {
 
       }
     h1 {
-      padding: 2rem;
+      text-align: left;
+      padding-left: 5rem;
+      padding-top: 2rem;
     }
     h2 {
       text-align: left;
