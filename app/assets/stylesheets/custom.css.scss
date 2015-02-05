@@ -658,10 +658,9 @@ header {
 .container {
   overflow: hidden;
 }
-.header-blue {
-  background-color: $lightblue;
-  background-image: image-url('bc-lightblue.jpg');
-  background-position-x: initial;
+
+.course-header {
+ background-position-x: initial;
   background-position-y: initial;
   background-size: initial;
   background-repeat-x: repeat;
@@ -670,33 +669,20 @@ header {
   background-origin: initial;
   background-clip: initial;
   min-height: 600px;
+  &.header-blue {
+    background-color: $lightblue;
+    background-image: image-url('bc-lightblue.jpg');
+  }
+  &.header-green {
+    background-color: $lightgreen;  
+    background-image: image-url('bc-lightgreen.jpg');
+  }
+  &.header-grey {
+    background-color: $grey;
+    background-image: image-url('bc-grey.jpg');    
+  }
 }
-.header-green {
-  background-color: $lightgreen;  
-  background-image: image-url('bc-lightgreen.jpg');
-  background-position-x: initial;
-  background-position-y: initial;
-  background-size: initial;
-  background-repeat-x: repeat;
-  background-repeat-y: repeat;
-  background-attachment: fixed;
-  background-origin: initial;
-  background-clip: initial;
-  min-height: 600px;    
-}
-.header-grey {
-  background-color: $grey;
-  background-image: image-url('bc-grey.jpg');
-  background-position-x: initial;
-  background-position-y: initial;
-  background-size: initial;
-  background-repeat-x: repeat;
-  background-repeat-y: repeat;
-  background-attachment: fixed;
-  background-origin: initial;
-  background-clip: initial;
-  min-height: 600px;      
-}
+
 .adventure {
   background-image: #f4f7f8 url(http://sparkedtech.s3.amazonaws.com/adventure-bg.svg);  
   background: #f4f7f8 url("http://sparkedtech.s3.amazonaws.com/adventure-bg.svg");
@@ -725,10 +711,10 @@ header {
   background-origin: initial;
   background-clip: initial;    
 }
-.about-header {
+.hero-landing {
   background-image: image-url('hoc-rocc.jpg');
   min-height: 700px;
-  background-position-y: 60%;
+  // background-position-y: 60%;
   background-repeat: no-repeat;
  // background-attachment:fixed;
  -webkit-background-size: cover;
@@ -738,6 +724,11 @@ header {
  @media screen and (max-width: 800px) {
   background-position-x: 30%;
  }
+  &.toronto {
+    background-color: $blue;  
+    min-height: 900px;
+    background-image: image-url('torontonight.jpg');   
+  }
 }
 .quote {
   padding: 2% 10%;
@@ -833,9 +824,9 @@ header {
 }
 
 
-// .mississauga {
-//   padding:100px 0;
-// } 
+.mississauga {
+  padding: 8rem 0;
+} 
 .map {
   min-height: 400px;
   padding: 5rem 0 0 0;
@@ -918,6 +909,13 @@ header {
       word-spacing: 0;
       &.about {
         padding-top: 10%;
+        @media screen and (max-width: 923px) {
+          padding-top: 20%;
+        }
+        @media screen and (max-width: 715px) {
+          font-size: 7rem;
+          padding-top: 30%;
+        }
       }
       .word-swap{
         color: $lightblue;
@@ -1194,6 +1192,34 @@ aside {
 
 
 /*Courses */
+
+// .course-section {
+//   background-image: #f4f7f8 url(http://sparkedtech.s3.amazonaws.com/adventure-bg.svg);  
+//   background: #f4f7f8 url("http://sparkedtech.s3.amazonaws.com/adventure-bg.svg");
+//   background-position-x: initial;
+//   background-position-y: initial;
+//   background-size: cover;
+//   background-repeat-x: repeat;
+//   background-repeat-y: repeat;
+//   background-attachment: initial;
+//   background-origin: initial;
+//   background-clip: initial;
+//   background-color: rgb(244, 247, 248);
+//   -webkit-background-size: initial;
+//   -moz-background-size: initial;
+//   -o-background-size: initial;
+//   background-size: initial;
+//   height: 1500px;
+//   #hero-overlay3 {
+//      position: absolute;
+//      top:0;
+//      left:0;
+//      height: 100%;
+//      width: 100%;
+//      background-color: rgba(0,0,0,0.6);
+//     }
+// }
+
 .course-list {
    @include background-repeat;
       background-image: image-url('congruent_pentagon.jpg');
@@ -1397,7 +1423,7 @@ aside {
 .classroom-overlay{
       background-image: image-url('hoc-tutor.jpg');  
       position: relative;
-      height: 600px;
+      min-height: 600px;
       @include background-size;
       background-color: rgba(0,0,0,0.4);
       @media screen and (min-width:898px) {
@@ -1411,11 +1437,8 @@ aside {
      width: 100%;
      background-color: rgba(0,0,0,0.6);
     }
-
    p{
-          @media screen and (max-width: 480px){
 
-          }
    }
 
    span{
@@ -1426,7 +1449,9 @@ aside {
    .classroom-structure {
       color: white;
       .overlay-icons {
-
+      @media screen and (max-width: 767px){
+          margin: 0 auto;
+        }
       }
     h1 {
       text-align: left;
@@ -1436,6 +1461,9 @@ aside {
     h2 {
       text-align: left;
       color: $lightblue;
+      @media screen and (min-width:769px) and (max-width: 991px) {
+        text-align: right;
+      }
     }
     .class-point {
       padding: 0.5rem 0;
