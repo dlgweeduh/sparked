@@ -1,7 +1,7 @@
 <% provide(:title, "About") %>
 <%= render 'layouts/navbar' %>
  
-<header> 
+<header class="landing"> 
 	<div class="hero-landing" id="heroLanding2"> 
 		<div class="" id="heroContent2">
 			<div class="container">
@@ -16,8 +16,17 @@
       </div>   
     </div> 
 </header>
+  
+    <section>
+      <a class="arrow-wrap" href="#content">
+        <span class="arrow"></span>
+        <%= image_tag "scroll-down.svg", class: "floating" %> 
 
-  <section class="black-bg">   
+      </a>
+    </section>
+
+
+  <section class="black-bg" id="content">   
       <div class="container">
 		<div class="row">
 			<div class="col-sm-12">

@@ -22,12 +22,15 @@
 				            <ul class="nav nav-tabs nav-stacked secondNav" id="secondNav">
 								<li class="active"><a class="" href="#overview">Overview</a></li>
 								<li><a href="#courses">Courses</a></li>
-								<li><a href="#curriculum">Curriculum</a></li>
 								<li><a href="#classroom">Classroom</a></li>
+								<li><a href="#curriculum">Curriculum</a></li>			
 								<li><a href="#instructors">Instructors</a></li>
-								<li><a href="#locations">Locations</a></li>
-								<li><a href="#tuition">Tuition</a></li>
-								<li><a class="jr-apply" href="/apply"><h4>Apply</h4></a></li>
+								<li><a href="#faq">FAQs</a></li>								
+								<li><a class="jr-apply" href="https://david153.typeform.com/to/pmRNz9" data-mode="2" target="_blank"><h4>APPLY</h4></a>
+									<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>
+								</li>
+
+
 				            </ul>
 				        </div>
 				    </div>
@@ -91,7 +94,7 @@
     		<div class="row">  
     			<div class="col-sm-6 col-sm-offset-3">
 
-                <h4 class="blue quote">"Coding is today's language of creativity. All our children deserve a chance to become creators instead consumers of computer science."<br> -- <i>Maria Klawe</i></h4>
+                <h4 class="blue quote">"Coding is today's language of creativity. All our children deserve a chance to become creators instead of consumers of computer science."<br> -- <i>Maria Klawe</i></h4>
 	    		</div>
     		</div>
     	</div>
@@ -109,50 +112,53 @@
 <div class="courses adventure2" id="courses">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-8 col-sm-offset-3 grey-transparent">
+			<div class="col-sm-9 col-sm-offset-3 grey-transparent">
 					<div class="creator-courses">
-						<%= image_tag "blue-badge.png",:class=>'course_badge'%>			
+					<!-- 	<%= image_tag "blue-badge.png",:class=>'course_badge'%>	 -->		
 						<h1>JC Courses</h1>
 						<hr class="style-blue">
 					</div>				
 			</div>
 			
-			<div class="col-sm-8 col-sm-offset-3 black-transparent">
+			<div class="col-sm-9 col-sm-offset-3 black-transparent">
 					<div class="creator-courses">
 							<div class="course-section">
-
-								<h2>Intro to Web Development</h2>
-		
-								<%= image_tag "introweb.png",:class=>'course-icons'%>									
-
-								<p></p>								
+								<div class="row">
+									<div class="col-xs-12 col-sm-3 col-md-2">
+										<%= image_tag "introweb-badge.png",:class=>'course_badge'%>	
+									</div>
+									<div class="col-xs-12 col-sm-9 col-md-10">
+										<h2 class="lightblue">Intro to Web Development</h2>		
+										<p>This course is ideal for those who want to make websites that look amazing on all devices.</p>	
+									</div>									
+								</div>							
 								
 							</div>					
 					</div>				
 			</div>				
-			<div class="col-sm-8 col-sm-offset-3 black-transparent">
-					<div class="creator-courses">
+			
+			<div class="col-sm-9 col-sm-offset-3 black-transparent">					
 							<div class="course-section">
 								<hr class="style-blue">
-								<div class="row">
-									<div class="col-sm-6">
-										<h2 class="lightblue">Locations &amp Dates</h2>
-										<ul>
-											<li>18 classes</li>
-											<li>1 -2 classes/ week</li>
-											<li>2.5 hours/ classes</li>
-											<li>Office Hours</li>
-											<li>HeroTime 1-on-1 tutoring</li>
-										</ul>
+ 								<div class="row">
+									<div class="col-sm-4 hidden-xs">
+				        				<%= image_tag "home.png",:class=>'course_icon'%>
 									</div>
-								</div>
+									<div class="col-sm-4 hidden-xs">
+				        				<%= image_tag "calendar.png",:class=>'course_icon'%>
+									</div>
+									<div class="col-sm-4 hidden-xs">
+				        				<%= image_tag "locations.png",:class=>'course_icon'%>										
+									</div>											
+								</div> 
 
-								<div class="row">
+								<div class="row">						
 									<div class="col-sm-4">
 										<h3 class="lightblue">Brampton</h3>
-										<h4>Lab-B</h4>
-										<h5 class="lightblue">March 24 - June 12</h5>
-
+										<h3>Lab-B</h3>
+										<h4>60 Queen St E</h4>
+									</div>
+									<div class="col-sm-4">
 							                <div class="row">
 							                  <div class="col-sm-12">
 							                       <ul class="week-calendar">
@@ -166,13 +172,22 @@
 							                        </ul>
 							                  </div> 
 							                </div>  
-							                <iframe class="img-responsive map2" width="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=60%20Queen%20St%20E%20-%20Unit%20104&key=AIzaSyCX98GYJ8rikYcBgFfSzjNBv6BInIHgZxA"></iframe>										
+												<h4 class="lightblue">March 24 - June 12</h4>						              
 									</div>
+									<div class="col-sm-4">									
+							                <iframe class="img-responsive map2" width="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=60%20Queen%20St%20E%20-%20Unit%20104&key=AIzaSyCX98GYJ8rikYcBgFfSzjNBv6BInIHgZxA"></iframe>
+									</div>
+								</div>
+
+								<hr class="style-three">
+
+								<div class="row">						
 									<div class="col-sm-4">
 										<h3 class="lightblue">Mississauga</h3>
-										<h4>Studio.89</h4>
-										<h5 class="lightblue">May 6 - July 29</h5>				
-
+										<h3>Studio.89</h3>
+										<h4>1065 Canadian Place	</h4>
+									</div>
+									<div class="col-sm-4">		
 							                <div class="row">
 							                  <div class="col-sm-12">
 							                       <ul class="week-calendar">
@@ -185,13 +200,23 @@
 							                            <li class="active">S</li>
 							                        </ul>
 							                  </div> 
-							                </div>  	
-							                <iframe class="img-responsive map2" width="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1560%20Bayview%20Avenue%2C%20Toronto%2C%20ON%2C%20Canada&key=AIzaSyCX98GYJ8rikYcBgFfSzjNBv6BInIHgZxA"></iframe>									
+							                </div>  
+										<h4 class="lightblue">May 6 - July 29</h4>									                
 									</div>
+									<div class="col-sm-4">									
+							                <iframe class="img-responsive map2" width="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1560%20Bayview%20Avenue%2C%20Toronto%2C%20ON%2C%20Canada&key=AIzaSyCX98GYJ8rikYcBgFfSzjNBv6BInIHgZxA"></iframe>		
+									</div>
+								</div>
+
+								<hr class="style-three">
+
+								<div class="row">						
 									<div class="col-sm-4">
 										<h3 class="lightblue">Toronto</h3>
-										<h4>Icewire Makerspace</h4>
-										<h5 class="lightblue">July 6 - August 20</h5>			
+										<h3>Icewire Makerspace</h3>
+										<h4>1560 Bayview Ave</h4>
+									</div>
+									<div class="col-sm-4">
 							                <div class="row">
 							                  <div class="col-sm-12">
 							                       <ul class="week-calendar">
@@ -204,17 +229,25 @@
 							                            <li>S</li>
 							                        </ul>
 							                  </div> 
-							                </div>
-					                		<iframe class="img-responsive map2" width="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1065%20Canadian%20Place%20%23104%2C%20Mississauga%2C%20ON%20L4W%200B8&key=AIzaSyCX98GYJ8rikYcBgFfSzjNBv6BInIHgZxA"></iframe>									
+							                </div>  
+										<h4 class="lightblue">July 6 - August 20</h4>											
+
+									</div>
+									<div class="col-sm-4">									
+					                		<iframe class="img-responsive map2" width="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1065%20Canadian%20Place%20%23104%2C%20Mississauga%2C%20ON%20L4W%200B8&key=AIzaSyCX98GYJ8rikYcBgFfSzjNBv6BInIHgZxA"></iframe>	
 									</div>
 								</div>
-								<hr class="style-blue">
-								
-								
-							</div>					
-					</div>				
-			</div>			
-			<div class="col-sm-8 col-sm-offset-3 black-transparent">
+ 								<div class="row">
+									<div class="col-sm-6">
+		
+									</div>
+								</div> 
+
+				
+						</div>		
+			</div>
+				<!--END COURSE SECTION  -->
+<!-- 			<div class="col-sm-9 col-sm-offset-3 grey-transparent">
 					<div class="creator-courses">
 							<div class="course-section">
 								<h2>Intro to Web Development</h2>
@@ -223,14 +256,15 @@
 								
 							</div>					
 					</div>				
-			</div>				
+			</div>		 -->
+
+
 		</div>						
 	</div>
 </div>
 
 
-
-<section class="classroom-overlay">
+<section class="classroom-overlay" id="classroom">
    <div class="" id="hero-overlay2">
    		<div class="container">
    			<div class="row">
@@ -281,7 +315,7 @@
 
 </section>
 
-	<div class="learningskills">
+<div class="learningskills blue" id="curriculum">
 		<div class="container">
 				<div class="row">
 					<div class="col-sm-6 col-sm-offset-3">
@@ -321,5 +355,28 @@
 		</div>
 	</div>
 
+	<div class="program-divider blue" id="instructors">
+    	<div class="container">
+    		<div class="row">  
+    			<div class="col-sm-3 col-sm-offset-3">
+    				<%= image_tag 'abhi.png', :class=>"instructor" %>
+    			</div>
+    			<div class="col-sm-9">
+                	<h4 class="blue">"Coding is today's language of creativity. All our children deserve a chance to become creators instead of consumers of computer science."<br> -- <i>Maria Klawe</i></h4>
+	    		</div>
+    		</div>
+    	</div>
+	</div>
+
+	<div class="program-divider white" id="instructors">
+    	<div class="container">
+    		<div class="row">  
+    			<div class="col-sm-9 col-sm-offset-3">
+    				<h1>Frequently Asked Questions</h1>
+                	<h4>"Coding is today's language of creativity. All our children deserve a chance to become creators instead of consumers of computer science."<br> -- <i>Maria Klawe</i></h4>
+	    		</div>
+    		</div>
+    	</div>
+	</div>
 
 	

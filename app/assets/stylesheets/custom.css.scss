@@ -163,6 +163,15 @@ hr.style-two {
     background-image:      -o-linear-gradient(left, #ccc, $black, #ccc); 
 } 
 
+hr.style-three {
+    border: 0;
+    height: 1px;
+    background: #f3f3f5;
+    background-image: -webkit-linear-gradient(left, #ccc, #f3f3f5, #ccc); 
+    background-image:    -moz-linear-gradient(left, #ccc, #f3f3f5, #ccc); 
+    background-image:     -ms-linear-gradient(left, #ccc, #f3f3f5, #ccc); 
+    background-image:      -o-linear-gradient(left, #ccc, #f3f3f5, #ccc); 
+} 
 /* buttons */
 
 /* General button style (reset) */
@@ -780,6 +789,9 @@ header {
   }
 }
 
+.affix-bottom {
+    position: absolute;
+}
 
 /* Landing */
 .navbar-inverse {
@@ -833,6 +845,7 @@ header {
 }
 .map2 {
   max-height: 200px;
+  margin-bottom: 20px;
 }
 
 /* Mobile Toggle Icon Color */
@@ -969,6 +982,7 @@ header {
   }
   .scrolldown {
     position: relative;
+    display: block;
     margin-top: 15%;
     @media screen and (min-width:500px) and (max-width: 800px) {
       margin-top: 5%;
