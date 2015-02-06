@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'users/new'
 
-  root             'static_pageshome'
+  root             'static_pages#home'
   get 'about'   => 'static_pages#about'
   get 'junior'=> 'static_pages#junior'
   get 'intermediate'=> 'static_pages#intermediate'
