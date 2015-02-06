@@ -38,7 +38,7 @@
 					<div class="core-skills col-sm-8 col-xs-12">		
 						<h1>Junior Creators</h1>
 						<div class="core-skill row">
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<%= image_tag "puzzle.png", class: "learnicons img-responsive	" %>
 							</div>
 							<div class="skill-description col-sm-8">
@@ -53,7 +53,7 @@
 							</div> -->
 						</div>
 						<div class="core-skill row">
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<%= image_tag "brickbuild.png", class: "learnicons" %>	
 							</div>
 							
@@ -69,7 +69,7 @@
 							</div>-->
 						</div>
 						<div class="core-skill row">
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<%= image_tag "map.png", class: "learnicons" %>
 							</div>
 							<div class="skill-description col-sm-8">
@@ -268,42 +268,43 @@
    <div class="" id="hero-overlay2">
    		<div class="container">
    			<div class="row">
-			   <div class="col-sm-8 col-sm-offset-3">
+			   <div class="col-sm-9 col-sm-offset-3">
 			   		<div class="classroom-structure">
-			   		<h1>Classroom</h1>
+			   		<h1 class="section-header">Classroom</h1>
 			   		<hr class="style-blue">
 			   			<div class="row class-point">
-			   				<div class="col-sm-1">
-		        				<%= image_tag "educator.png",:class=>'overlay-icons'%>
-		        			</div>
-							<div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+							<div class="col-sm-12">
+		        				<div class="overlay-icons">
+		        					<%= image_tag "educator.png",:class=>''%>
+		   						</div>
 		   						<h2>7 : 1 Student to Educator Ratio</h2>
 		   						<p>Sparked instructors and tutors are invested in your learning.</p>
 		   					</div>				        			
 		        		</div>   
 			   			<div class="row class-point">
-			   				<div class="col-sm-1">
-		        				<%= image_tag "flipped.png",:class=>'overlay-icons'%>
-		        			</div>
-							<div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+							<div class="col-sm-12">
+		        				<div class="overlay-icons">
+		        					<%= image_tag "flipped.png",:class=>''%>
+		   						</div>
 		   						<h2>Flipped-Classroom</h2>
 		   						<p>Sparked learners discover at home, and problem-solve in class.</p>
 		   					</div>				        			
 		        		</div>   
 			   			<div class="row class-point">
-			   				<div class="col-sm-1">
-		        				<%= image_tag "screenhero.png",:class=>'overlay-icons'%>
-		        			</div>
-							<div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+							<div class="col-sm-12">
+								<div class="overlay-icons">	        				
+			        				<%= image_tag "screenhero.png",:class=>''%>
+								</div>
+
 		   						<h2>HeroTime</h2>
 		   						<p>Each student is allotted 5-hours of 1-on-1 tutoring on ScreenHero</p>
 		   					</div>				        			
 		        		</div>   
 			   			<div class="row class-point">
-			   				<div class="col-sm-1">
-		        				<%= image_tag "udl.png",:class=>'overlay-icons'%>
-		        			</div>
-							<div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+							<div class="col-sm-12">
+		        				<div class="overlay-icons">
+		        					<%= image_tag "udl.png",:class=>''%>
+		   						</div>
 		   						<h2>Universal Design Approach</h2>
 		   						<p>Courses are designed like modern-buildings: with a focus on accessibility and attention to individual needs.</p>
 		   					</div>				        			
@@ -318,44 +319,58 @@
 <div class="learningskills blue" id="curriculum">
 		<div class="container">
 				<div class="row">
-					<div class="col-sm-6 col-sm-offset-3">
-							<ul id="curriculum" class="sp-group">
-								<li class="sp-title"><h2>curriculum</h2></li>
-								<li>
+					<div class="col-sm-8 col-sm-offset-3">
 									<div class="accordion" id="accordion2">
+											<h1 class="black section-header">Curriculum</h1>
+
 									  <div class="accordion-group">
 									    <div class="accordion-heading">
-									      <a class="accordion-toggle blue" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-									        Collapsible Group Item #1
+									        <h3>Module 1: Build a Basic Website</h3>									    	
+									      <a class="accordion-toggle blue" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">             <i class="icon-chevron-down"></i><h4>HTML</h4>
 									      </a>
 									    </div>
-									    <div id="collapseOne" class="accordion-body collapse in">
+									    <div id="collapseOne" class="accordion-body collapse">
 									      <div class="accordion-inner">
-									        Anim pariatur cliche...
+									        <p>Anim pariatur cliche...</p>
 									      </div>
 									    </div>
 									  </div>
-									  <div class="accordion-group accordion-caret">
+
+									  <div class="accordion-group">
 									    <div class="accordion-heading">
-									      <a class="accordion-toggle blue" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-									        Collapsible Group Item #2
+									        <h3>Module 2: Build a Responsive Website</h3>									    	
+									      <a class="accordion-toggle blue" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"><h4>HTML</h4>
 									      </a>
 									    </div>
 
 									    <div id="collapseTwo" class="accordion-body collapse">
 									      <div class="accordion-inner">
-									        Anim pariatur cliche...
+									        <p>Anim pariatur cliche...</p>
 									      </div>
 									    </div>
 									  </div>
-									</div>
-							</ul>
+
+									  <div class="accordion-group">
+									    <div class="accordion-heading">
+									        <h3>Module 3: Build an Optimized Website</h3>									
+									      <a class="accordion-toggle blue" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree"><h4>HTML</h4>
+									      </a>
+									    </div>
+
+									    <div id="collapseThree" class="accordion-body collapse">
+									      <div class="accordion-inner">
+									        <p>Anim pariatur cliche...</p>
+									      </div>
+									    </div>
+									  </div>
+									</div>		
+								<!--ACCORDION END  -->
 					</div>
 				</div>
 		</div>
 	</div>
 
-	<div class="program-divider blue" id="instructors">
+	<div class="program-divider blue instructors" id="instructors">
     	<div class="container">
     		<div class="row">  
     			<div class="col-sm-3 col-sm-offset-3">
@@ -368,15 +383,20 @@
     	</div>
 	</div>
 
-	<div class="program-divider white" id="instructors">
+<section class="faq">
+	<div class="program-divider white " id="faq">
     	<div class="container">
     		<div class="row">  
-    			<div class="col-sm-9 col-sm-offset-3">
+    			<div class="col-sm-8 col-sm-offset-3">
     				<h1>Frequently Asked Questions</h1>
-                	<h4>"Coding is today's language of creativity. All our children deserve a chance to become creators instead of consumers of computer science."<br> -- <i>Maria Klawe</i></h4>
+                	<h3><i>What is HeroTime?</i></h3>
+                	<p>We use ScreenHero, an amazing screen-sharing application to tutor students remotely. ScreenHero allows a Sparked tutor (let's call them "Heroes") to assist in building portfolio items. At the beginning of the course, students book up to 5 hours of HeroTime.</p>
+                	<h3><i>Will I have time on top of High School work?</i></h3>
+                	<p>While </p>                	
 	    		</div>
     		</div>
     	</div>
 	</div>
+</section>
 
 	

@@ -303,7 +303,25 @@ Main components
 	}
 }
 
-
+// .accordion-caret .accordion-toggle:hover {
+//     text-decoration: none;
+// }
+// .accordion-caret .accordion-toggle:hover span,
+// .accordion-caret .accordion-toggle:hover strong {
+//     text-decoration: underline;
+// }
+// .accordion-caret .accordion-toggle:before {
+//     font-size: 25px;
+//     vertical-align: -3px;
+// }
+// .accordion-caret .accordion-toggle:not(.collapsed):before {
+//     content: "▾";
+//     margin-right: 0px;
+// }
+// .accordion-caret .accordion-toggle.collapsed:before {
+//     content: "▸";
+//     margin-right: 0px;
+// }
 
 // .accordion-group [data-toggle="collapse"]:after
 // {
@@ -331,59 +349,73 @@ Main components
 //     transform:         rotate(90deg);
 // }
 
+.accordion {
+	margin: 2rem;
+	.accordion-inner {
+
+	}
+}
 .accordion-toggle {
 	position: relative;
 	display: block;
 	margin: 1.6em 0 .4em;
 	line-height: 1.2;
-	font-size: 1.5rem;
+	font-size: 2rem;
 	color: $black;
 	text-align: left;
 	font-weight: 300;
 	margin: 0;
 	padding: 14px 72px 14px 24px;
-
-	&.blue {
-		border-bottom: 1px solid darken($lightblue, 10%);
-	}
-	&.green {
-		border-bottom: 1px solid darken($lightgreen, 10%);
-	}
-	&.grey {
-		border-bottom: 1px solid darken($lightgrey, 10%);
-	}
-		&.blue {
-			&::before, &::after {
-				background: darken($lightblue, 30%);
-			}
-		}
-		&.green {
-			&::before, &::after {
-				background: darken($lightgreen, 30%);
-			}
-		}
-		&.grey {
-			&::before, &::after {
-				background: darken($lightgrey, 30%);
-			}
-		}
+	@include transition(100ms);
+	font-size: 2rem;
+	text-decoration: none;
 		&:hover {
 			padding-left: 31px;
 			color: $black;
 		}
-		&:focus, &:visited {
-			color: $black;	
+	a {
+		text-decoration: none;
+		&:hover, &:focus {
+			text-decoration: none;
 		}
-		&::before {
-			@include transform(rotate(45deg));
-			right: 32px;
-		}
-
-		&::after {
-			@include transform(rotate(-45deg));
-		}
-
+	}		
+			&.blue {
+				border-bottom: 1px solid darken($lightblue, 10%);
+			}
+			&.green {
+				border-bottom: 1px solid darken($lightgreen, 10%);
+			}
+			&.grey {
+				border-bottom: 1px solid darken($lightgrey, 10%);
+			}
+			&.blue {
+				&::before, &::after {
+					background: darken($lightblue, 30%);
+				}
+			}
+			&.green {
+				&::before, &::after {
+					background: darken($lightgreen, 30%);
+				}
+			}
+			&.grey {
+				&::before, &::after {
+					background: darken($lightgrey, 30%);
+				}
+			}
+	&:focus, &:visited {
+		color: $black;	
 	}
+	&::before {
+		@include transform(rotate(45deg));
+		right: 32px;
+	}
+
+	&::after {
+		@include transform(rotate(-45deg));
+	}
+
+}
 
 .accordion-body {
 	background-color: $white;
@@ -395,6 +427,16 @@ Main components
 	}
 }
 
+
+.instructors {
+	padding: 5rem 0;
+}
+
+.faq {
+	h3 {
+	
+	}
+}
 
 
 // .accordion-caret .accordion-toggle:hover {

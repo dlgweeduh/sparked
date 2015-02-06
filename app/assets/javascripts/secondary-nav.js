@@ -19,4 +19,7 @@ $(document).ready(function() {
 		    }             
      	}
     });
+    $('#accordion2').collapse({
+      toggle: false
+    })
 });

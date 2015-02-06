@@ -1,14 +1,14 @@
-
+<%= render 'layouts/navbar' %>
 
 <section class="blog">
   <div class="container">
 
-        <h1>Sparklers</h1>
-
-       <div class="container">
           <div class="row"> 
+              <div class="section-header">
+                <h1 class"center">Sparklers</h1>
+              </div>
             <% @articles.each do|article| %>
-              <div class="col-sm-4">   
+              <div class="col-sm-6 col-sm-offset-3">   
                 <div class="preview">
                   <p class="titles"><%= article.title %></p>
 
@@ -21,10 +21,10 @@
                   method: :delete,
                   data: { confirm: 'Are you sure?' } %></a>    
                 </div>
+                <hr>
               </div>
               <% end %>
             </div>
-          </div>
         <%= link_to 'New article', new_article_path %>
 
     </div>

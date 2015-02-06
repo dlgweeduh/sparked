@@ -4,7 +4,7 @@ $(document).ready(function(){
     $(window).scroll(function(){
         if ($(window).scrollTop() > 1){
             $('.navbar-inverse').css({ "background-color": "rgba(255, 255, 255, 0.9)",
-      "transition": ".5s"});
+      "transition": ".2s"});
             $('.navbar-nav li a').css({"font-weight":"300", "color":"#57B7DF", "text-shadow": "none"})
         } else if ($(window).scrollTop() < 1){
             $('.navbar-inverse').css({"background-color":"rgba(255, 255, 255, 0	)"});

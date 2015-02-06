@@ -11,7 +11,11 @@ html {
     margin: 0;
     padding: 0;
 }
-
+a {
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
 body {
   font-family: $fontregular, sans-serif;
   margin: 0;
@@ -23,7 +27,6 @@ body {
 
 section {
     position: relative;
-  text-align: center;
 }
 
 textarea {
@@ -34,7 +37,10 @@ textarea {
   text-align: justify;
   padding: 2rem;
 }
-
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
 // .landing {
 //   position: relative;
 //   overflow: hidden;
@@ -716,6 +722,7 @@ header {
   background-position-y: initial;
   background-size: initial;
   background-repeat-x: repeat;
+  background-attachment: fixed;
   background-repeat-y: repeat;
   background-origin: initial;
   background-clip: initial;    
@@ -751,10 +758,15 @@ header {
   }
 }
 
+.about h1 {
+  text-align: center;
+}
+
 .combo {
   background: image-url('bg-amp.png') center 150px no-repeat;
   text-align: justify;
   padding: 3rem 0;
+
 }
 .combo h1 {
   text-align: center;
@@ -818,6 +830,20 @@ header {
         // background-color: $white;
         // color: $lightblue !important;
         // }
+      }
+      &:last-child {
+        a.apply {
+          background-color: $lightgreen;
+          border-radius: 3px;
+          margin-top: 2px;
+          line-height: 15px;
+          @include transition(100ms);
+          &:hover, &.focus {
+            background-color: darken($lightgreen, 10%);
+            color: white;
+            text-shadow: 0.5px 0.5px 1.5px #666;            
+          }
+        }
       }
     }
   }
@@ -885,9 +911,16 @@ header {
 .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
   color: $blue !important;
   line-height: 2.3rem;
-  background-color: $lightgrey; 
 }
-
+ul.dropdown-menu li:first-child {
+  background-color: $blue;
+}
+ul.dropdown-menu li:last-child {
+  background-color: $lightgrey;
+}
+ul.dropdown-menu li {
+  background-color: $green;
+}
 
 .offerings {
       color: $lightblue;
@@ -1075,15 +1108,192 @@ header {
 
 /* forms */
 
+label {
+  color: black;
+  font-size: 1.3rem;
+}
+
+/* MODAL CHANGES */
+
+
+.modal-header {
+padding: 2%;
+border-bottom: 1px solid #e5e5e5;
+
+}
+
+.modal-header .close {
+  margin-top: -2px;
+  color: white;
+  opacity: .5;
+}
+
+.modal-header .close:hover {
+  color: $blue;
+  opacity: .8;
+  background-color: #151515;
+}
+
+.modal-body .modal-subtext {
+  color: $blue;
+  margin-bottom: 2rem;
+}
+
+.modal-content {
+  background-color: $lightgrey;
+  border: 1px solid rgba(0,0,0,0.7);
+  color: white;
+}
+
+.modal-footer {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 0px;
+}
+
+/*FORM FIELD OVER-RIDES */
+
+.form-group {
+  width: 60%;
+  display: inline-block;
+  padding-bottom: 2%;
+  margin: 0 auto;
+  &.long {
+    width: 80%;
+  }
+}
+.form-control {
+  background-color: #151515;
+  color: white;
+}
+
+
+#saveForm {
+  display: inline-block;
+  color: white; 
+  max-width: 200px;
+  li {
+    padding-left: 0;
+  }
+  &:hover {
+
+  }
+}
+
+
+/* Application Page */
+
+
+.admissionprocess {
+  padding-top: 100px;
+  text-align: center;
+
+    h2 {  
+      margin-bottom: 2%;
+    }
+
+    h3 {
+      padding-top: 20px;
+      color: #FE9A2E;
+    }
+
+    .processbox {
+      background-color: #151515;
+      color: #fff;
+      text-align: center;
+      padding-top: 2%;
+      padding-bottom: 2%;
+    }
+
+     .processbox-current {
+      background-color: #43c3d9;
+    }
+}
+
+.application {
+  overflow: hidden;
+  margin:20px;
+
+  @media screen and (max-width: 480px){
+      padding-bottom:50px;
+    }
+
+  .wufoo-application{
+    border:1px solid #000;
+    border-radius:8px;
+    padding:10px;
+  }
+
+
+  .contact_admissions {
+  background-color: rgba(0, 0, 0, 0.9);
+  font-family: 'ProximaNova', sans-serif;
+  color: #fff;
+  text-align: center;
+  padding:10px;
+  border-radius:8px;
+  
+
+     h2 {
+      color: #43c3d9;
+      }
+
+     span {
+      color: #43c3d9;
+      }
+  }   
+
+  .ideal-candidate {
+  background-color: rgba(0, 0, 0, 0.9);
+  font-family: 'ProximaNova', sans-serif;
+  padding:10px;
+  margin-top:20px;
+  border-radius:8px;
+  
+
+    h2 {
+      text-align: center;
+      color:#43c3d9;
+      }
+
+    p {
+      color: #fff;
+      }
+
+     ul li {
+      color:#43c3d9;
+      }
+  }   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contactForm {
+  padding: 0;
+  li {
+    // max-width: 200px;
+  }
+}
 input, textarea, select, .uneditable-input {
   border: 1px solid $clear;
   width: 100%;
   margin-bottom: 15px;
+  color: black;
   @include box_sizing;
 }
 
 input {
-  height: auto !important;
+  height: auto;
 }
 #error_explanation {
   color: black;
@@ -1437,12 +1647,19 @@ aside {
 .classroom-overlay{
       background-image: image-url('hoc-tutor.jpg');  
       position: relative;
-      min-height: 600px;
+      min-height: 650px;
       @include background-size;
       background-color: rgba(0,0,0,0.4);
-      @media screen and (min-width:898px) {
-        background-position-y: 60%;  
+
+      @media screen and (max-width: 519px) {
+        min-height: 800px;
+        background-position-x: 60%;
       } 
+
+      @media screen and (min-width:520px) and (max-width: 767px) {
+        min-height: 700px;
+      }
+
     #hero-overlay2 {
      position: absolute;
      top:0;
@@ -1451,44 +1668,36 @@ aside {
      width: 100%;
      background-color: rgba(0,0,0,0.6);
     }
-   p{
-
-   }
-
-   span{
-      @media screen and (max-width: 480px) {
-
-    }
-   }
    .classroom-structure {
       color: white;
       .overlay-icons {
-      @media screen and (max-width: 767px){
-          margin: 0 auto;
+        float: left;
+        margin-right: 2rem;
+        margin-bottom: 3rem;
+        padding-top: 1.5rem;
+        img {
+          @media screen and (max-width: 767px){
+            width: 40px;
+            margin: 2rem 1rem;
+            display: inline-block;
+            }
+          }
+        }
+    .class-point {
+      padding: 0;
+      margin: 0;
+        p {
+          max-width: 600px;  
+          font-family: $fontthin;
+          text-align: left;
+        }
+        h2 {
+          text-align: left;
+          color: $lightblue;
         }
       }
-    h1 {
-      text-align: left;
-      padding-left: 5rem;
-      padding-top: 2rem;
     }
-    h2 {
-      text-align: left;
-      color: $lightblue;
-      @media screen and (min-width:769px) and (max-width: 991px) {
-        text-align: right;
-      }
-    }
-    .class-point {
-      padding: 0.5rem 0;
-    }
-    p {
-      font-family: $fontthin;
-      text-align: left;
-    }
-   }
-}
-
+  }
 // .classroom {
 //     background-image: image-url('hoc-tutor.jpg');  
 
