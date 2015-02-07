@@ -29,6 +29,25 @@ Main components
 	}
 	ul.nav-tabs li{
 	    margin: 0;
+	    .active {
+			& a::after {
+				position: absolute;
+				content: "";
+				width: 0;
+				height: 0;
+				border-top: .5rem solid transparent;
+				border-bottom: .5rem solid transparent;
+				border-left: .5rem solid #fbd334;
+				display: block;
+				right: -0.5rem;
+				top: 50%;
+				margin-top: -0.5rem;
+				-webkit-transition: all .15s ease-in-out;
+				-moz-transition: all .15s ease-in-out;
+				-o-transition: all .15s ease-in-out;
+				transition: all .15s ease-in-out;				
+			} 	
+	    }
 	}
 	ul.nav-tabs li:first-child{
 	    border-top: none;
@@ -41,7 +60,6 @@ Main components
 	ul.nav-tabs li.active a {
 	    color: $offblack;
 	    background: $lightgrey;
-	    border: none;
 	}
 	ul.nav-tabs li:first-child a{
 	    border-radius: 4px 4px 0 0;
@@ -169,7 +187,7 @@ Main components
 		background-color: $lightgrey;
 	}
 	.grey {
-		color: $lightgrey;
+		color: $grey;
 	}
 	&.white {
 		background-color: white;
@@ -248,14 +266,17 @@ Main components
 			font-family: $fontthin;
 		}
 	}
+	.course-details {
+		padding: 3rem 0;
+	}
 	.course_badge {
 		display: inline-block;
 		float: left;
 		padding: 10px;
 	}
 	.course_icon {
-		margin-left: 25%;
-		margin-bottom: 20px;
+		// margin-left: 25%;
+		margin: 10px 0 0 20px;
 	}
 	// ~!~ Fix centering
 
@@ -302,55 +323,69 @@ Main components
 		}
 	}
 }
+.classroom-overlay{
+      background-image: image-url('hoc-tutor.jpg');  
+      position: relative;
+      min-height: 650px;
+      @include background-size;
+      background-color: rgba(0,0,0,0.4);
 
-// .accordion-caret .accordion-toggle:hover {
-//     text-decoration: none;
-// }
-// .accordion-caret .accordion-toggle:hover span,
-// .accordion-caret .accordion-toggle:hover strong {
-//     text-decoration: underline;
-// }
-// .accordion-caret .accordion-toggle:before {
-//     font-size: 25px;
-//     vertical-align: -3px;
-// }
-// .accordion-caret .accordion-toggle:not(.collapsed):before {
-//     content: "▾";
-//     margin-right: 0px;
-// }
-// .accordion-caret .accordion-toggle.collapsed:before {
-//     content: "▸";
-//     margin-right: 0px;
-// }
+      @media screen and (max-width: 519px) {
+        min-height: 800px;
+        background-position-x: 60%;
+      } 
 
-// .accordion-group [data-toggle="collapse"]:after
-// {
-//     font-family: 'Glyphicons Halflings';
-//     content: "\e072"; /* "play" icon */
-//     float: right;
-//     color: #b0c5d8;
-//     font-size: 18px;
-//     line-height: 22px;
+      @media screen and (min-width:520px) and (max-width: 767px) {
+        min-height: 700px;
+      }
 
-//     /* rotate "play" icon from > (right arrow) to down arrow */
-//     -webkit-transform: rotate(-90deg);
-//     -moz-transform:    rotate(-90deg);
-//     -ms-transform:     rotate(-90deg);
-//     -o-transform:      rotate(-90deg);
-//     transform:         rotate(-90deg);
-// }
-// .accordion-group [data-toggle="collapse"].collapsed:after
-// {
-//     /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
-//     -webkit-transform: rotate(90deg);
-//     -moz-transform:    rotate(90deg);
-//     -ms-transform:     rotate(90deg);
-//     -o-transform:      rotate(90deg);
-//     transform:         rotate(90deg);
-// }
+    #hero-overlay2 {
+     position: absolute;
+     top:0;
+     left:0;
+     height: 100%;
+     width: 100%;
+     background-color: rgba(0,0,0,0.6);
+    }
+   .classroom-structure {
+      color: white;
+      .overlay-icons {
+        float: left;
+        margin-right: 2rem;
+        margin-bottom: 3rem;
+        padding-top: 1.5rem;
+        display: inline-block;
+        img {
+        	float: left;
+          @media screen and (max-width: 767px){
+            width: 40px;
+            margin: 2rem 1rem;
+            display: inline-block;
+            }
+          }
+        }
+    .class-point {
+      padding: 0;
+      margin: 0;
+        p {
+          max-width: 600px;  
+          font-family: $fontthin;
+          text-align: left;
+        }
+        h1 {
+        	padding-bottom: 2rem;
+        }
+        h2 {
+          text-align: left;
+          color: $lightblue;
+        }
+      }
+    }
+  }
 
 .accordion {
 	margin: 2rem;
+	padding: 5rem 0;
 	.accordion-inner {
 
 	}
@@ -427,9 +462,20 @@ Main components
 	}
 }
 
+.tuition {
+	padding: 5rem 0;
+	color: black;
+	p {
+		font-family: $fontthin;
+		padding: 1rem;
+	}
+}
 
 .instructors {
 	padding: 5rem 0;
+	.instructor {
+		padding: 3rem;
+	}
 }
 
 .faq {

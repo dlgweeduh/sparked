@@ -83,6 +83,9 @@ h1 span {
 .grey {
   color: $grey;
 }
+.red {
+  color: $red;
+}
 
 .text-overlay{
   font-size:2rem;
@@ -809,8 +812,10 @@ header {
 .navbar-inverse {
   background-color: $clear;
   border: none;
-  min-height:70px;
-
+  min-height:65px;
+  .container-fluid {
+    margin-top: 7px;
+  }
   .navbar-nav {
     li {
       a {
@@ -828,18 +833,14 @@ header {
             color: $lightblue;
           }
         }
-        // &:focus {
-        // background-color: $white;
-        // color: $lightblue !important;
-        // }
       }
       &:last-child {
         a.apply {
-          border:1px solid $lightgreen;
+          border:4px solid $lightgreen;
           border-radius: 3px;
           margin-top: 2px;
-          line-height: 15px;
-          @include transition(100ms);
+          line-height: 10px;
+          @include transition(200ms);
           &:hover, &.focus {
             background-color: darken($lightgreen, 10%);
             color: white;
@@ -910,19 +911,14 @@ header {
   background-color: $clear;
   color: $blue;
 }
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+  padding: 12px 20px;
+}
 .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
   color: $blue !important;
   line-height: 2.3rem;
 }
-ul.dropdown-menu li:first-child {
-  background-color: $blue;
-}
-ul.dropdown-menu li:last-child {
-  background-color: $lightgrey;
-}
-ul.dropdown-menu li {
-  background-color: $green;
-}
+
 
 .offerings {
       color: $lightblue;
@@ -1505,17 +1501,21 @@ aside {
         margin: 9rem auto;    
         p {
           text-align: justify;
+          font-size: 2rem;
         }
         h4 {
           text-transform: uppercase;
         }
         @include transition((border, .2s));
-        
+        .press_badge {
+            width: 150px;
+            @include transition($medium);
+         }
         &:hover {
          text-decoration:none;
          cursor: pointer;
          .press_badge {
-            width: 110px;
+            width: 170px;
             @include transition($medium);
          }
       }
@@ -1556,7 +1556,7 @@ aside {
       background-color:#4AC948;
    }
    .badge_shell {
-      min-height: 120px;
+      min-height: 180px;
    }
    a {
       position: relative;
@@ -1574,10 +1574,10 @@ aside {
       .topics {
         color: $grey;
         list-style: none;
-        margin: -10px 0 0 0 ;
-        padding: 0;
+        margin: 10px 0 0 0 ;
+        padding: 2rem 6rem;
         line-height: 1.3em;
-        min-height: 175px;      }
+        min-height: 250px;      }
       .img-circle {
 
       }
@@ -1646,60 +1646,6 @@ aside {
 }
 
 
-.classroom-overlay{
-      background-image: image-url('hoc-tutor.jpg');  
-      position: relative;
-      min-height: 650px;
-      @include background-size;
-      background-color: rgba(0,0,0,0.4);
-
-      @media screen and (max-width: 519px) {
-        min-height: 800px;
-        background-position-x: 60%;
-      } 
-
-      @media screen and (min-width:520px) and (max-width: 767px) {
-        min-height: 700px;
-      }
-
-    #hero-overlay2 {
-     position: absolute;
-     top:0;
-     left:0;
-     height: 100%;
-     width: 100%;
-     background-color: rgba(0,0,0,0.6);
-    }
-   .classroom-structure {
-      color: white;
-      .overlay-icons {
-        float: left;
-        margin-right: 2rem;
-        margin-bottom: 3rem;
-        padding-top: 1.5rem;
-        img {
-          @media screen and (max-width: 767px){
-            width: 40px;
-            margin: 2rem 1rem;
-            display: inline-block;
-            }
-          }
-        }
-    .class-point {
-      padding: 0;
-      margin: 0;
-        p {
-          max-width: 600px;  
-          font-family: $fontthin;
-          text-align: left;
-        }
-        h2 {
-          text-align: left;
-          color: $lightblue;
-        }
-      }
-    }
-  }
 // .classroom {
 //     background-image: image-url('hoc-tutor.jpg');  
 
