@@ -97,7 +97,7 @@ Main components
 			}
 		}
 	}
-	a.jr-apply  {
+	a.web-apply  {
 		background: darken($blue, 10%) !important;
 		&:focus, &:hover {
 			background: darken($blue, 10%) !important;					
@@ -107,7 +107,7 @@ Main components
 	li:last-child a {
 		text-align: center;
 		color: white;
-		&.jr-apply {
+		&.web-apply {
 			background: darken($blue, 10%) !important;				
 			border: 1px solid darken($blue, 10%) !important;
 			&:focus, &:hover {
@@ -116,23 +116,23 @@ Main components
 				color: white;	
 			}
 		}	
-		&.int-apply {
+		&.mobile-apply {
 			background: darken($green, 10%) !important;	
 			border: 1px solid darken($green, 10%) !important;						
 			&:focus, &:hover {
 				background-color: darken($green, 10%);					
 			}
 		}	
-		&.sr-apply {
-			background: darken($lightgrey, 10%) !important;
-			border: 1px solid darken($lightgrey, 10%) !important;				
-			&:focus, &:hover {
-				background-color: $offblack;					
-			}
-		}							
+		// &.sr-apply {
+		// 	background: darken($lightgrey, 10%) !important;
+		// 	border: 1px solid darken($lightgrey, 10%) !important;				
+		// 	&:focus, &:hover {
+		// 		background-color: $offblack;					
+		// 	}
+		// }							
 	}
 
-	.jr-apply h4{
+	.web-apply h4{
 		border-radius: 3px;
 		line-height: 50px;
 		font-weight: 600;
@@ -143,7 +143,7 @@ Main components
 			color: white;
 			}
 	}	
-	.int-apply h4{
+	.mobile-apply h4{
 		border-radius: 3px;
 		line-height: 50px;
 		font-weight: 600;
@@ -338,7 +338,9 @@ Main components
       @media screen and (min-width:520px) and (max-width: 767px) {
         min-height: 700px;
       }
-
+      &.mobile {
+      	background-image: image-url('hoc-student6.jpg');        	
+      }
     #hero-overlay2 {
      position: absolute;
      top:0;
@@ -377,7 +379,6 @@ Main components
         }
         h2 {
           text-align: left;
-          color: $lightblue;
         }
       }
     }
@@ -471,14 +472,21 @@ Main components
 	}
 }
 
-.instructors {
+.instructor-info {
 	padding: 5rem 0;
-	.instructor {
-		padding: 3rem;
+	.instructor-profile {
+		color: black;
+	}
+	p {
+		padding: 0 1rem;	
+		font-family: $fontthin;	
+	}
+	&.black {
 	}
 }
 
 .faq {
+	padding: 3rem 0;
 	h3 {
 	
 	}

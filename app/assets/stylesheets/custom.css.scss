@@ -41,6 +41,10 @@ textarea {
   text-align: center;
   margin: 0 auto;
 }
+.spacer {
+  padding: 3rem 0;
+}
+
 // .landing {
 //   position: relative;
 //   overflow: hidden;
@@ -161,6 +165,12 @@ hr.style-blue {
   height: 0;
   border-top: 1px solid $lightblue;
   border-bottom: 1px solid $lightblue;
+} 
+hr.style-green {   
+  border: 0;
+  height: 0;
+  border-top: 1px solid $lightgreen;
+  border-bottom: 1px solid $lightgreen;
 }    
 hr.style-two {
     border: 0;
@@ -628,6 +638,9 @@ header {
 .lightblue {
   color: $lightblue;
 }
+.lightgreen {
+  color: $lightgreen;
+}
 
 // ~!~ Separators
 
@@ -641,7 +654,7 @@ header {
   background-clip: initial;
   min-height: 600px;    
   @include background-size;
-  &.jr {
+  &.web {
     background-image: image-url('hoc-rocc2.jpg');
     @media screen and (min-width:1150px) {
       background-position-y: 60%;
@@ -650,15 +663,15 @@ header {
       background-position-x: 50%;
     }
   }
-  &.int {
+  &.mobile {
     background-image: image-url('hoc-david.jpg');   
     @media screen and (min-width:1050px) {
       background-position-y: 60%;
     }    
   }
-  &.sr {
-    background-image: image-url('hoc-student8.jpg');    
-  }
+  // &.sr {
+  //   background-image: image-url('hoc-student8.jpg');    
+  // }
 }
 
 
