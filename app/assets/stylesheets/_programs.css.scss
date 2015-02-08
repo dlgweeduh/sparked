@@ -340,6 +340,13 @@ Main components
       }
       &.mobile {
       	background-image: image-url('hoc-student6.jpg');        	
+		@media screen and (max-width: 1000px) {
+        	min-height: 800px;
+        	background-position-x: 60%;
+      	}       	
+      	@media screen and (min-width:520px) and (max-width: 767px) {
+        	min-height: 700px;
+      	}
       }
     #hero-overlay2 {
      position: absolute;
