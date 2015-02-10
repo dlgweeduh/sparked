@@ -5,7 +5,7 @@ $(document).ready(function() {
 		strings: [ "Thinkers.", "Creators.", "Sparked."],
 		typeSpeed: 70, // typing speed
            
-	});   
+	})   
 });   	
 
 // var ready;
