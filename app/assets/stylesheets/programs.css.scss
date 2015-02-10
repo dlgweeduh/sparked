@@ -1,4 +1,3 @@
-@import "bourbon"; // http://bourbon.io/
 @import "custom";
 @import "settings";
 /* -------------------------------- 
@@ -450,15 +449,6 @@ Main components
 	&:focus, &:visited {
 		color: $black;	
 	}
-	&::before {
-		@include transform(rotate(45deg));
-		right: 32px;
-	}
-
-	&::after {
-		@include transform(rotate(-45deg));
-	}
-
 }
 
 .accordion-body {
