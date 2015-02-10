@@ -1,4 +1,5 @@
-$(function(){
+
+$(document).ready(function() {
     var windowH = $(window).height();
     var wrapperH = $('#heroLanding, #heroLanding2').height();
     if(windowH > wrapperH) {                            
