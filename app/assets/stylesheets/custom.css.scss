@@ -374,13 +374,19 @@ hr.style-three {
   border-radius: 20px;
 }
 
+
 .bttn-2h:hover {
   box-shadow: 0 4px $green;
   top: 2px;
+  @include transition($medium);
+  color: white;
+
 }
 
 .bttn-2h:active {
   box-shadow: 0 0 $green;
+  color: white;
+  @include transition($medium);
   top: 6px;
 }
 
@@ -564,6 +570,9 @@ header {
 }
 .skills-description {
   padding: 3rem;
+  h3 {
+    padding: 2rem;
+  }
 }
 
 
@@ -632,7 +641,8 @@ header {
   padding: 20rem 0 3rem 0;
 }
 .water-bg {
-  background-image: image-url('concrete-texture.jpg');
+  background-image: image-url('concrete-tex
+    re.jpg');
   margin-top: -100px;
 }
 
@@ -758,9 +768,11 @@ header {
   background-position-x: 30%;
  }
   &.toronto {
-    background-color: $blue;  
-    min-height: 900px;
-    background-image: image-url('torontonight.jpg');   
+    background-image: url("http://sparkedtech.s3.amazonaws.com/torontoday-reduced.jpg");   
+    background-repeat: no-repeat;
+    .lightgreen {
+      margin-left: -15px;
+    }
   }
 }
 .quote {
@@ -856,13 +868,14 @@ header {
           line-height: 10px;
           @include transition(200ms);
           &:hover, &.focus {
-            background-color: darken($lightgreen, 10%);
-            color: white;
+            background-color: $lightgreen;
+            color: white !important;
             text-shadow: 0.5px 0.5px 1.5px #666;            
           }
         }
       }
     }
+    // END LI
   }
 }
 
@@ -1065,7 +1078,7 @@ header {
 .arrow-wrap {
   position:absolute;
   z-index:1;
-  left:50%;
+  left:53%;
   top:-10em;
   margin-left:-5em;
   display:block;
@@ -1563,14 +1576,16 @@ aside {
       text-align:center;
       }
 
-    .label-warning {
-      top: 7px;
-      left: 50%;
-      position: absolute;
-      background-color:#4AC948;
-   }
-   .badge_shell {
+   .badge_shell {    
       min-height: 180px;
+      position: relative;
+      .label-warning {
+        top: 7px;
+        left: 50%;
+        font-size: 14px;
+        position: absolute;
+        background-color: $lightgreen;
+      }      
    }
    a {
       position: relative;
@@ -1591,7 +1606,7 @@ aside {
         margin: 10px 0 0 0 ;
         padding: 2rem 6rem;
         line-height: 1.3em;
-        min-height: 250px;      }
+        min-height: 188px;      }
       .img-circle {
 
       }
@@ -1659,22 +1674,14 @@ aside {
 
 }
 
+.workshop-instructions {
+  color: black;
+  li {
+    padding: 2rem;
+    line-height: 2.5rem;
+  }
+}
 
-// .classroom {
-//     background-image: image-url('hoc-tutor.jpg');  
-
-//     @media screen and (min-width:898px) {
-//       background-position-y: 60%;  
-//     }
-//     #hero-overlay {
-//       position: absolute;
-//       top:0;
-//       left:0;
-//       height: 100%;
-//       width: 100%;
-//       background-color: rgba(0,0,0,0.4);
-//    }    
-//   }
 
 // ~!~ Pictures
 

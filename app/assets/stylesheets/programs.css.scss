@@ -14,8 +14,6 @@ Main components
 -------------------------------- */
 
 
-
-
 .sp-categories {
 	ul.nav-tabs{
 		z-index: 100;
@@ -220,6 +218,9 @@ Main components
 		padding-bottom: 4rem;
 		h1 {
 			text-align: left;
+		}
+		h3 {
+			color: $lightblue;
 		}
 	}
 	.core-skill {
@@ -477,6 +478,10 @@ Main components
 		font-family: $fontthin;
 		padding: 1rem;
 	}
+	h2 {
+		min-height: 50px;
+		color: $lightblue;
+	}
 }
 
 .instructor-info {
@@ -490,12 +495,21 @@ Main components
 	}
 	&.black {
 	}
+	.profile {
+		min-height: 300px;
+		img {
+			margin-top: 40%;
+		}
+	}
 }
 
 .faq {
 	padding: 3rem 0;
 	h3 {
 	
+	}
+	p {
+		font-family: $fontthin;
 	}
 }
 
