@@ -4,6 +4,8 @@
 <head>
 	<title><%= full_title(yield(:title)) %></title>  
     <%= render "layouts/head" %>
+    <%= favicon_link_tag 'favicon.png' %>	    
+	<%= render 'layouts/shim' %>
 		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>    
 </head>
 <body data-spy="scroll" data-target="#secondaryNavbar">
@@ -13,8 +15,6 @@
 
 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
-	  <%= favicon_link_tag 'favicon.png' %>
-	    <%= render 'layouts/shim' %>
 
 </body>
 </html>
