@@ -218,9 +218,6 @@ Main components
 		h1 {
 			text-align: left;
 		}
-		h3 {
-			color: $lightblue;
-		}
 	}
 	.core-skill {
 		img {
@@ -231,6 +228,14 @@ Main components
 		}
 		p {
 			display: inline-block;
+		}
+	}
+	.skill-description {
+		&.web {
+			color: $lightblue;
+		}
+		&.mobile {
+			color: $lightgreen;
 		}
 	}
 }
@@ -387,6 +392,9 @@ Main components
         h2 {
           text-align: left;
         }
+        .lightgreen {
+        	color: $lightgreen;
+        }
       }
     }
   }
@@ -472,7 +480,7 @@ Main components
 		font-family: $fontthin;
 		padding: 1rem;
 	}
-	h2 {
+	.web h2 {
 		min-height: 50px;
 		color: $lightblue;
 	}
