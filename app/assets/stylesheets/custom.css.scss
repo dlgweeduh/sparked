@@ -139,7 +139,6 @@ h1 {
 h2 {
   font-size: 2em;
   letter-spacing: 0.5px;
-  font-weight: 200;
 }
 h3 {
   font-family: $fontsbold;
@@ -206,7 +205,6 @@ hr.style-three {
   margin: 15px 30px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 700;
   outline: none;
   position: relative;
   @include transition($medium);
@@ -860,18 +858,26 @@ header {
         }
       }
       &:last-child {
-        a.apply {
-          border:4px solid $lightgreen;
-          border-radius: 3px;
-          margin-top: 2px;
-          line-height: 10px;
-          @include transition(200ms);
-          &:hover, &.focus {
-            background-color: $lightgreen;
-            color: white !important;
-            text-shadow: 0.5px 0.5px 1.5px #666;            
-          }
+        color: white;
+        margin-top: -15px;
+
+        &::hover {
+          color: white;
+          background-color: $lightgreen;
         }
+
+        // a {
+        //   border:4px solid $lightgreen;
+        //   border-radius: 3px;
+        //   margin-top: 2px;
+        //   line-height: 10px;
+        //   @include transition(200ms);
+        //   &:hover, &.focus {
+        //     background-color: $lightgreen;
+        //     color: white !important;
+        //     text-shadow: 0.5px 0.5px 1.5px #666;            
+        //   }
+        // }
       }
     }
     // END LI
