@@ -840,7 +840,7 @@ header {
     margin-top: 7px;
   }
   .navbar-nav {
-    li {
+    .navbar-inverse {
       a {
         @include transition((all, 100ms));        
         font-size: 17px;
@@ -857,6 +857,7 @@ header {
           }
         }
       }
+    li {
       &:last-child {
         color: white;
         margin-top: -15px;
@@ -865,21 +866,10 @@ header {
           color: white;
           background-color: $lightgreen;
         }
-
-        // a {
-        //   border:4px solid $lightgreen;
-        //   border-radius: 3px;
-        //   margin-top: 2px;
-        //   line-height: 10px;
-        //   @include transition(200ms);
-        //   &:hover, &.focus {
-        //     background-color: $lightgreen;
-        //     color: white !important;
-        //     text-shadow: 0.5px 0.5px 1.5px #666;            
-        //   }
-        // }
       }
     }
+    }
+
     // END LI
   }
 }
@@ -942,15 +932,32 @@ header {
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
   background-color: $clear;
   color: $blue;
+  &.apply {
+  }
 }
 .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+    &.apply {
+      background-color: $lightgreen;
+      &::hover {
+        background-color: $lightgreen;
+      }
+    }
   padding: 12px 20px;
 }
 .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
   color: $blue !important;
   line-height: 2.3rem;
+} 
+.navbar-inverse .navbar-nav > li > a{
+ color: white;
 }
+.navbar-inverse .navbar-nav > li:last-child > a, .navbar-inverse .navbar-nav > li:last-child > a {
+  margin-top: 0;
+} 
 
+.navbar-inverse .navbar-nav > li:last-child > a:hover, .navbar-inverse .navbar-nav > li:last-child > a:focus {
+  background-color: $lightgreen;
+}
 
 .offerings {
       color: $lightblue;
