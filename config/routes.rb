@@ -12,8 +12,8 @@ Rails.application.routes.draw do
 
   root             'static_pages#home'
   get 'about'   => 'static_pages#about'
-  get 'web'=> 'static_pages#web'
-  get 'mobile'=> 'static_pages#mobile'
+  get 'web-creators'=> 'static_pages#web-creators'
+  get 'mobile-creators'=> 'static_pages#mobile-creators'
   # get 'senior'=> 'static_pages#senior'
   get 'workshops'     => 'static_pages#workshops'
   get 'hoc' => 'static_pages#hoc'
