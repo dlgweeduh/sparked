@@ -343,6 +343,9 @@ Main components
       @media screen and (min-width:520px) and (max-width: 767px) {
         min-height: 700px;
       }
+      @media screen and (min-width:768px)  {
+      	background-position-y: 60%;
+      }
       &.mobile {
       	background-image: image-url('hoc-student6.jpg');        	
 		@media screen and (max-width: 1000px) {
