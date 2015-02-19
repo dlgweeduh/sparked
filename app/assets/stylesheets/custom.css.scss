@@ -1711,7 +1711,17 @@ aside {
     color: black;
   }
 }
-
+.crash-instructions {
+  color: black;
+  h4 {
+    padding: 2rem 0;
+  }
+  li {
+    padding: 2rem;
+    line-height: 2.5rem;
+    color: black;
+  } 
+}
 
 // ~!~ Pictures
 
