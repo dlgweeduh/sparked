@@ -946,7 +946,6 @@ header {
 }
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
   background-color: $clear;
-  color: white;
   &.apply {
   }
 }
@@ -964,7 +963,6 @@ header {
   line-height: 2.3rem;
 } 
 .navbar-inverse .navbar-nav > li > a{
- color: white;
  font-size: 18px;
 }
 .navbar-inverse .navbar-nav > li:last-child > a, .navbar-inverse .navbar-nav > li:last-child > a {
@@ -975,7 +973,10 @@ header {
 .navbar-inverse .navbar-nav > li:last-child > a:hover, .navbar-inverse .navbar-nav > li:last-child > a:focus {
   background-color: $lightgreen;
 }
-
+.nav-course > li > a{
+  color: $blue;
+  text-shadow: 0 0 0 0;
+}
 .offerings {
       color: $lightblue;
   ul {
