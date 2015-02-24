@@ -288,7 +288,10 @@ Main components
 	.course-section {
       	padding-left: 5rem;
       	padding-right: 5rem;      	
-		color: white;      	
+		color: white;
+		&.grey {
+			color: black;
+		}      	
       h1 {
 		text-align: left;
       }	
