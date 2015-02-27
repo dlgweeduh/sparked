@@ -90,7 +90,9 @@ h1 span {
 .red {
   color: $red;
 }
-
+.white {
+  color: white;
+}
 .text-overlay{
   font-size:2rem;
   text-align:center;
@@ -745,14 +747,28 @@ header {
   background-origin: initial;
   background-clip: initial;
   min-height: 600px;
-  &.header-blue {
+  &.header-lightblue {
     background-color: $lightblue;
     background-image: image-url('bc-lightblue.jpg');
   }
-  &.header-green {
+  &.header-blue {
+    background-image: image-url('bc-blue.jpg'); 
+    color: white;
+    &.not-fixed {
+      background-attachment: scroll;
+    }    
+  }
+  &.header-lightgreen {
     background-color: $lightgreen;  
     background-image: image-url('bc-lightgreen.jpg');
   }
+  &.header-green {
+    background-image: image-url('bc-green.jpg'); 
+    color: white;
+    &.not-fixed {
+      background-attachment: scroll;
+    }    
+  }  
   &.header-grey {
     background-color: $grey;
     background-image: image-url('bc-grey.jpg');    
@@ -1008,6 +1024,7 @@ header {
       text-align: left;
       margin-left: 25px;
       word-spacing: 0;
+      min-height: 300px;
       &.about {
         padding-top: 10%;
         @media screen and (max-width: 923px) {
