@@ -1795,7 +1795,7 @@ aside {
       padding-top:50px;
    }
 
-    .subnavtitle{
+    .subnavtitle {
       color: $lightblue;
       text-align:left;
       padding-left:40px;
@@ -1830,16 +1830,35 @@ aside {
    }
 
 /*Footer Social Icons*/
+  .hiring {
+    line-height: 2.2rem; 
+    width: 300px;
+    display: inline-block;
+    padding-top: 5px;
+    > li > h3 > a{
+      font-size: 30px;
+      color: $green;
+      font-family: $fontregular;
+    }
+  }
+
   .social {
-    margin: 0 auto;
+    width: 300px;
+    @media screen and (max-width: 480px) {
+      max-width: 300px;
+    }
   }
   .social a  {
     width: 50px;
     height: 50px;
     float: left;
   }
+  .social ul {
+
+  }
   .social li {
     margin: 0 auto; 
+    float: left;
   }
   .social a:hover {
     @include Opacity(0.5);

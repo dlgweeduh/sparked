@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get 'about'   => 'static_pages#about'
   get 'web-creators'=> 'static_pages#web-creators'
   get 'mobile-creators'=> 'static_pages#mobile-creators'
-  # get 'senior'=> 'static_pages#senior'
+  get 'junior-creators'=> 'static_pages#junior-creators'
   get 'workshops'     => 'static_pages#workshops'
   get 'hoc' => 'static_pages#hoc'
   get 'contact' => 'static_pages#contact'

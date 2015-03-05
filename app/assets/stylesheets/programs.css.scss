@@ -100,6 +100,12 @@ Main components
 			background: darken($blue, 10%) !important;					
 		}		
 	}
+	a.jr-apply  {
+		background: darken($grey, 10%) !important;
+		&:focus, &:hover {
+			background: darken($grey, 10%) !important;					
+		}		
+	}
 
 	li:last-child a {
 		text-align: center;
@@ -150,7 +156,7 @@ Main components
 			background-color: darken($lightgreen, 20%);
 			}
 	}
-	.sr-apply h4{
+	.jr-apply h4{
 		border-radius: 3px;
 		line-height: 50px;
 		font-weight: 600;
@@ -412,7 +418,6 @@ Main components
 .accordion {
 	margin: 2rem;
 	padding: 5rem 0;
-	color: white;
 	.accordion-inner {
 
 	}
@@ -477,7 +482,7 @@ Main components
 .accordion-body {
 	background-color: $white;
 	text-align: left;
-	p {
+	ul {
 		line-height: 1.4;
 		color: $black;
 		padding: 2.5rem;
