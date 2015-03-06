@@ -12,4 +12,5 @@ $(document).ready(function(){
             $('.nav-course > li > a').css({"text-shadow": "0 0 0", "color": "#2A779F"});                        
         }
     });
+
 });
