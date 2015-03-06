@@ -90,7 +90,9 @@ h1 span {
 .red {
   color: $red;
 }
-
+.white {
+  color: white;
+}
 .text-overlay{
   font-size:2rem;
   text-align:center;
@@ -717,9 +719,6 @@ header {
       background-position-y: 30%;
     }    
   }
-  // &.sr {
-  //   background-image: image-url('hoc-student8.jpg');    
-  // }
 }
 
 
@@ -748,14 +747,28 @@ header {
   background-origin: initial;
   background-clip: initial;
   min-height: 600px;
-  &.header-blue {
+  &.header-lightblue {
     background-color: $lightblue;
     background-image: image-url('bc-lightblue.jpg');
   }
-  &.header-green {
+  &.header-blue {
+    background-image: image-url('bc-blue.jpg'); 
+    color: white;
+    &.not-fixed {
+      background-attachment: scroll;
+    }    
+  }
+  &.header-lightgreen {
     background-color: $lightgreen;  
     background-image: image-url('bc-lightgreen.jpg');
   }
+  &.header-green {
+    background-image: image-url('bc-green.jpg'); 
+    color: white;
+    &.not-fixed {
+      background-attachment: scroll;
+    }    
+  }  
   &.header-grey {
     background-color: $grey;
     background-image: image-url('bc-grey.jpg');    
@@ -1179,7 +1192,6 @@ header {
 }
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
   background-color: $clear;
-  color: white;
   &.apply {
   }
 }
@@ -1197,7 +1209,6 @@ header {
   line-height: 2.3rem;
 } 
 .navbar-inverse .navbar-nav > li > a{
- color: white;
  font-size: 18px;
 }
 .navbar-inverse .navbar-nav > li:last-child > a, .navbar-inverse .navbar-nav > li:last-child > a {
@@ -1208,7 +1219,10 @@ header {
 .navbar-inverse .navbar-nav > li:last-child > a:hover, .navbar-inverse .navbar-nav > li:last-child > a:focus {
   background-color: $lightgreen;
 }
-
+.nav-course > li > a{
+  color: $blue;
+  text-shadow: 0 0 0 0;
+}
 .offerings {
       color: $lightblue;
   ul {
@@ -1240,6 +1254,7 @@ header {
       text-align: left;
       margin-left: 25px;
       word-spacing: 0;
+      min-height: 300px;
       &.about {
         padding-top: 10%;
         @media screen and (max-width: 923px) {
@@ -1941,9 +1956,20 @@ aside {
   li {
     padding: 2rem;
     line-height: 2.5rem;
+    color: black;
   }
 }
-
+.crash-instructions {
+  color: black;
+  h4 {
+    padding: 2rem 0;
+  }
+  li {
+    padding: 2rem;
+    line-height: 2.5rem;
+    color: black;
+  } 
+}
 
 // ~!~ Pictures
 
@@ -1999,7 +2025,7 @@ aside {
       padding-top:50px;
    }
 
-    .subnavtitle{
+    .subnavtitle {
       color: $lightblue;
       text-align:left;
       padding-left:40px;
@@ -2034,16 +2060,35 @@ aside {
    }
 
 /*Footer Social Icons*/
+  .hiring {
+    line-height: 2.2rem; 
+    width: 300px;
+    display: inline-block;
+    padding-top: 5px;
+    > li > h3 > a{
+      font-size: 30px;
+      color: $green;
+      font-family: $fontregular;
+    }
+  }
+
   .social {
-    margin: 0 auto;
+    width: 300px;
+    @media screen and (max-width: 480px) {
+      max-width: 300px;
+    }
   }
   .social a  {
     width: 50px;
     height: 50px;
     float: left;
   }
+  .social ul {
+
+  }
   .social li {
     margin: 0 auto; 
+    float: left;
   }
   .social a:hover {
     @include Opacity(0.5);
