@@ -1179,7 +1179,15 @@ hr.style-three {
       @media screen and (max-width: 480px) {
         font-size: 4.5rem;  
         padding-top: 37%;      
+      }        
+      @media screen and (max-width: 445px) {
+        font-size: 4rem;  
+        padding-top: 37%;      
       }   
+      @media screen and (max-width: 400px) {
+        font-size: 3.75rem;  
+        padding-top: 37%;      
+      }         
     }
     .hero-description {
       font-family: $fontregular;
@@ -1194,8 +1202,17 @@ hr.style-three {
         font-size: 3.5rem;
       }  
       @media screen and (max-width: 712px) {
-        font-size: 3.5rem;
+        font-size: 3rem;
       } 
+      @media screen and (max-width: 480px) {
+        font-size: 2.75rem;     
+      }        
+      @media screen and (max-width: 445px) {
+        font-size: 2.5rem;     
+      }   
+      @media screen and (max-width: 400px) {
+        font-size: 2.25rem;  
+      }            
    }
 
   video{
@@ -1702,6 +1719,15 @@ aside {
         p {
           text-align: justify;
           font-size: 2rem;
+          @media screen and (max-width: 993px) {
+            font-size: 1.75rem;        
+          }   
+          @media screen and (max-width: 712px) {
+            font-size: 1.5rem;        
+          }   
+          @media screen and (max-width: 480px) {
+            font-size: 1.25rem;    
+          } 
         }
         h4 {
           text-transform: uppercase;

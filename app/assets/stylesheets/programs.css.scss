@@ -347,6 +347,7 @@ Main components
       min-height: 650px;
       @include background-size;
       background-color: rgba(0,0,0,0.4);
+      background-size: cover;
 
       @media screen and (max-width: 519px) {
         min-height: 800px;
