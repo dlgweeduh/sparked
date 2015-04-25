@@ -658,6 +658,9 @@ hr.style-three {
 .lightgrey-bg {
   background-color: $lightgrey2;
 }
+.lightgrey2 {
+  color: $lightgrey2;
+}
 .green-transparent {
   background-color: $green-transparent;
 }
@@ -888,6 +891,13 @@ hr.style-three {
 }
 
 /* Landing */
+.navbar-subtitle{
+  text-transform:uppercase;
+  color: $green;
+  padding-left: 8px;
+  padding-top: 5px;
+}
+
 .navbar-inverse {
   background-color: $clear;
   border: none;

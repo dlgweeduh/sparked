@@ -199,6 +199,12 @@ Main components
 	.white {
 		color: white;
 	}	
+	&.lightgrey {
+		background-color: $lightgrey2;
+	}
+	.grey {
+		color: $grey;
+	}	
 }
 
 .overview { 
@@ -247,6 +253,9 @@ Main components
 		&.mobile {
 			color: $lightgreen;
 		}
+		&.ios {
+			color: $black;
+		}		
 	}
 }
 	
