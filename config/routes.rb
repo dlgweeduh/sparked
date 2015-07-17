@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get 'faq' => 'static_pages#faq'
   get 'apply' => 'static_pages#apply'
   get 'crashcreators' => 'static_pages#crashcreators'
-
+  
   get 'signup'  => 'users#new'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
