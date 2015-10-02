@@ -2,10 +2,7 @@
 @import "bootstrap";
 @import "fonts";
 @import "settings";
-
-
 /* universal */
-
 html {
     overflow-x: hidden;
     margin: 0;
@@ -22,7 +19,6 @@ body {
   padding: 0;
   overflow-x: hidden;
   // padding-top: 70px;
-
 }
 
 section {
@@ -44,21 +40,6 @@ textarea {
 .spacer {
   padding: 3rem 0;
 }
-
-// .landing {
-//   position: relative;
-//   overflow: hidden;
-//   height: 100%;
-//   background-repeat: no-repeat no-repeat;
-//   background-color: $blue;
-//   @include background-size;
-
-//   @media screen and (max-width: 480px) {
-//      height:400px;
-//      background-image: image-url('hoc-group.jpg');
-//   }
-// }
-
 h1 span {
   @media screen and (max-width: 712px) {
      // font-size: 3rem;
@@ -1154,13 +1135,12 @@ hr.style-three {
       font-family: $fontregular;
       color: $lightgreen;
       @include text-shadow; 
-      font-size: 10rem;
-      // font-size: 80px;
+      font-size: 70px;
+      font-size: 80px;
       padding-top: 20%;
       text-align: left;
       margin-left: 25px;
       word-spacing: 0;
-      min-height: 300px;
       &.about {
         padding-top: 10%;
         @media screen and (max-width: 923px) {
@@ -1181,21 +1161,21 @@ hr.style-three {
         padding-right: 0;        
       }
       @media screen and (max-width: 921px) {
-        font-size: 8rem;        
+        font-size: 60px;    
       } 
       @media screen and (max-width: 712px) {
-        font-size: 5rem;        
+         font-size: 50px;      
       }   
       @media screen and (max-width: 480px) {
-        font-size: 4.5rem;  
+        font-size: 40px;
         padding-top: 37%;      
       }        
       @media screen and (max-width: 445px) {
-        font-size: 4rem;  
+        font-size: 35px; 
         padding-top: 37%;      
       }   
       @media screen and (max-width: 400px) {
-        font-size: 3.75rem;  
+        font-size: 30px;  
         padding-top: 37%;      
       }         
     }
@@ -1205,24 +1185,17 @@ hr.style-three {
       text-align: left;
       margin-left: 25px;      
       text-shadow: 1.5px 1.5px 3px #666;
-      padding-top: 3%;
       margin-left: 25px;
-      font-size: 5rem;
-      @media screen and (max-width: 850px) {
-        font-size: 3.5rem;
+      font-size: 40px;
+      @media screen and (max-width: 921px) {
+        font-size: 30px;
       }  
       @media screen and (max-width: 712px) {
-        font-size: 3rem;
+        font-size: 25px;
       } 
       @media screen and (max-width: 480px) {
-        font-size: 2.75rem;     
+        font-size: 20px;     
       }        
-      @media screen and (max-width: 445px) {
-        font-size: 2.5rem;     
-      }   
-      @media screen and (max-width: 400px) {
-        font-size: 2.25rem;  
-      }            
    }
 
   video{
@@ -2003,82 +1976,13 @@ aside {
       font-family: $fontregular;
     }
   }
-
-  .social {
-    width: 300px;
-    @media screen and (max-width: 480px) {
-      max-width: 300px;
-    }
-  }
-  .social a  {
-    width: 50px;
-    height: 50px;
-    float: left;
-  }
-  .social ul {
-
-  }
-  .social li {
-    margin: 0 auto; 
-    float: left;
-  }
-  .social a:hover {
-    @include Opacity(0.5);
-  }
+  .social a  {width: 50px;height: 50px;float: left;}
+  .social li {margin: 0 auto; float: left;}
+  .social a:hover {@include Opacity(0.5);}
 } 
-
-.footerlogo {
-  display: inline-block;
-  height: 82px;
-  overflow: hidden;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  padding-top: 0px;
-  width: 60px;
-  line-height: 0px;
-  pointer: cursor;  
-/*  padding-top: 4px;*/
-  margin-top: 0;
-}
-
-.footerlogo:hover, .footerlogo:focus {
-  border: 0;
-  border-top-color: initial;
-  border-top-style: initial;
-  border-top-width: 0px;
-  border-right-color: initial;
-  border-right-style: initial;
-  border-right-width: 0px;
-  border-bottom-color: initial;
-  border-bottom-style: initial;
-  border-bottom-width: 0px;
-  border-left-color: initial;
-  border-left-style: initial;
-  border-left-width: 0px;
-  pointer: cursor;  
-}
-.footerlogo:hover img, .footerlogo:focus img {
-  position: relative;
-  top: -80px;
-  pointer: cursor;
-}
-
-.copyright {
-  margin: 0;
-  padding: 0;
-  text-align: right;
-  h5 {
-    line-height: 4;
-    vertical-align: middle;
-    margin-bottom: 50px;
-    padding: 0;
-    display: inline-block;
+.copyright { margin: 0;padding: 0;text-align: right;
+  h5 { line-height: 4;vertical-align: middle;margin-bottom: 50px;padding: 0;display: inline-block;}
+  img { padding-bottom: 10px;
+    &:hover, &:focus { padding-bottom: 5px;}
   }
-  img {
-    padding-bottom: 10px;
-    &:hover, &:focus {
-      padding-bottom: 5px;
-    }
-  }
-
 }
